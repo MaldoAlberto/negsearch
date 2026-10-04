@@ -1,0 +1,15 @@
+\begin{table*}[t]\centering\small
+\caption{Fault-tolerant estimates for the median instance: expected logical $T$-count to find a solution, surface-code distance $d$, physical qubits and runtime (model in the text). Classical reps.: expected repetitions $1/p$ of the classical algorithm with the same negative conditions.}\label{tab:resources}
+\begin{tabular}{lr|rrrr|rrrr|r}\toprule
+ & & \multicolumn{4}{c|}{Grover (uniform)} & \multicolumn{4}{c|}{Negation-forced + ZX} & \\
+Family & $n$ & $T$ & $d$ & qubits & time & $T$ & $d$ & qubits & time & classical reps.\\\midrule
+3-SAT & 40 & 1.0e9 & 29 & 9.7e5 & 8.2\,h & 2.5e6 & 23 & 6.1e5 & 58.1\,s & 1.0e5\\
+3-SAT & 80 & 5.3e14 & 41 & 3.8e6 & 690.3\,y & 3.1e9 & 29 & 1.9e6 & 1.0\,d & 3.9e10\\
+4-SAT & 40 & 1.4e10 & 31 & 2.3e6 & 5.1\,d & 6.4e7 & 27 & 1.8e6 & 28.8\,min & 4.8e6\\
+4-SAT & 70 & 3.2e14 & 41 & 7.2e6 & 420.4\,y & 2.6e10 & 33 & 4.6e6 & 10.0\,d & 2.6e11\\
+1-in-3-SAT & 40 & 1.4e8 & 25 & 4.4e5 & 58.7\,min & 8.3e4 & 19 & 2.5e5 & 1.6\,s & 6.5e2\\
+1-in-3-SAT & 70 & 2.3e12 & 35 & 1.5e6 & 2.6\,y & 1.0e7 & 23 & 6.4e5 & 3.8\,min & 3.3e6\\
+3-COL & 30 & 6.0e7 & 25 & 4.8e5 & 25.2\,min & 9.4e5 & 21 & 3.4e5 & 19.7\,s & 1.5e4\\
+3-COL & 80 & 4.2e14 & 41 & 3.4e6 & 552.7\,y & 1.0e10 & 31 & 1.9e6 & 3.6\,d & 2.4e11\\
+\bottomrule\end{tabular}
+\end{table*}

@@ -1,0 +1,110 @@
+[
+ {
+  "family": "3-SAT",
+  "n": 6,
+  "component": "A",
+  "qubits": 34,
+  "T_orig": 936,
+  "T_zx": 416,
+  "CX_orig": 804,
+  "CX_zx": 955,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ },
+ {
+  "family": "3-SAT",
+  "n": 6,
+  "component": "O",
+  "qubits": 55,
+  "T_orig": 1708,
+  "T_zx": 712,
+  "CX_orig": 1464,
+  "CX_zx": 1500,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ },
+ {
+  "family": "3-SAT",
+  "n": 6,
+  "component": "S0",
+  "qubits": 10,
+  "T_orig": 98,
+  "T_zx": 32,
+  "CX_orig": 85,
+  "CX_zx": 71,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 8,
+  "component": "A",
+  "qubits": 21,
+  "T_orig": 408,
+  "T_zx": 178,
+  "CX_orig": 392,
+  "CX_zx": 557,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 8,
+  "component": "O",
+  "qubits": 47,
+  "T_orig": 938,
+  "T_zx": 372,
+  "CX_orig": 804,
+  "CX_zx": 767,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 8,
+  "component": "S0",
+  "qubits": 14,
+  "T_orig": 154,
+  "T_zx": 48,
+  "CX_orig": 133,
+  "CX_zx": 108,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ },
+ {
+  "family": "3-COL",
+  "n": 8,
+  "component": "A",
+  "qubits": 20,
+  "T_orig": 1010,
+  "T_zx": 498,
+  "CX_orig": 878,
+  "CX_zx": 1112,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ },
+ {
+  "family": "3-COL",
+  "n": 8,
+  "component": "O",
+  "qubits": 45,
+  "T_orig": 1596,
+  "T_zx": 516,
+  "CX_orig": 1368,
+  "CX_zx": 1199,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ },
+ {
+  "family": "3-COL",
+  "n": 8,
+  "component": "S0",
+  "qubits": 14,
+  "T_orig": 154,
+  "T_zx": 48,
+  "CX_orig": 133,
+  "CX_zx": 108,
+  "shots": 800,
+  "nonzero_outcomes": 0
+ }
+]

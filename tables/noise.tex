@@ -1,0 +1,17 @@
+\begin{table}[h]\centering\small
+\caption{Noisy simulation with the \texttt{FakeFez} (IBM Heron) noise model, binary $2\times2$ Sudoku ($N=16$, $M=2$); $L$: idle relaxation added per mid-circuit measurement. Cost: oracle queries per valid solution (random guessing: 8). Cert.: $P(\text{valid}\mid\text{herald click})$.}\label{tab:noise}
+\begin{tabular}{lrrrr}\toprule Method & $L$ (ns) & $P$(valid) & cert. & cost\\\midrule
+Grover textbook & 0 & 0.401 & -- & 7.5\\
+Grover coherent-rccx & 0 & 0.358 & -- & 8.4\\
+Grover MBU-rccx & 0 & 0.421 & -- & 7.1\\
+Heralded T=2 & 0 & 0.380 & 0.67 & 7.0\\
+Heralded T=4 & 0 & 0.339 & 0.57 & 11.3\\
+Heralded T=6 & 0 & 0.336 & 0.49 & 14.0\\
+Grover textbook & 2000 & 0.401 & -- & 7.5\\
+Grover coherent-rccx & 2000 & 0.358 & -- & 8.4\\
+Grover MBU-rccx & 2000 & 0.102 & -- & 29.3\\
+Heralded T=2 & 2000 & 0.340 & 0.60 & 7.9\\
+Heralded T=4 & 2000 & 0.308 & 0.51 & 12.5\\
+Heralded T=6 & 2000 & 0.297 & 0.43 & 16.1\\
+\bottomrule\end{tabular}
+\end{table}

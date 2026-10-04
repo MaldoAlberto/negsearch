@@ -1,0 +1,206 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\usepackage[expansion=false]{microtype}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\RepoURL}{\url{https://github.com/USERNAME/negsearch}} % TODO: replace USERNAME after pushing the repository
+
+\input{numbers}
+
+\title{\textbf{Negation-forced amplitude amplification: fewer decisions, fewer gates, and ZX-guided condition selection for quantum constraint satisfaction}}
+\author{Alberto Maldonado Romo\\ \small Quantum Open Source Foundation (QOSF)\\ \small \href{mailto:alberto@qosf.net}{\texttt{alberto@qosf.net}}}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dynamic quantum circuits make it tempting to solve constraint problems by measuring constraint ancillas mid-circuit and correcting violated constraints with classically controlled flips. We first prove that any such measure-and-flip circuit built from permutations, diagonal gates and computational-basis measurements is exactly a classical randomized algorithm, and confirm this numerically on the original proposals that motivated this work. We then show how the same intuition---\emph{read each clause as the negation of a forbidden pattern and use it as a condition that forces a variable}---can be made genuinely quantum. In our \emph{negation-forced} state preparation every variable is its own coin: it receives a Hadamard only if no clause forces it, so no decision register or history is needed. We prove that forced values never contradict a solution, which yields the exact success probability $p_\pi=\sum_{a\in\mathrm{Sol}}2^{-D_\pi(a)}$, where $D_\pi(a)$ counts unforced variables. Amplitude amplification over this preparation needs $O^*(2^{(1-1/k)n/2})$ gates for $k$-CNF, versus $O^*(2^{n/2})$ for Grover's uniform preparation. Across \NInstances{} satisfiable instances of four families (random 3-SAT, 4-SAT, 1-in-3-SAT and graph 3-colouring, up to $n=80$), the effective quantum cost base drops from \GroverBaseRange{} to \NFBaseRange{}. Circuit-level simulations with matrix-product states (up to \MaxMPSQubits{} qubits) reproduce the predicted probabilities. ZX-calculus simplification removes on average \ZXTRange{} of the $T$ gates of each component, with verified equivalence, and makes the number of negative conditions worth checking an explicit, instance-dependent optimisation. Under a standard surface-code model these reductions lower the required code distance and physical-qubit count. We are explicit about the limits: the speedup is relative to Grover and to the classical algorithm with the same rules, not to modern CDCL solvers.
+\end{abstract}
+
+\section{Introduction}
+Grover's algorithm~\cite{grover1996} and its generalisation, amplitude amplification~\cite{bhmt2002}, give a quadratic speedup for unstructured search. Applied to a constraint satisfaction problem (CSP) with $n$ Boolean variables, Grover's algorithm amplifies the uniform superposition and therefore needs $\Theta(\sqrt{2^n/M})$ oracle calls for $M$ solutions---it ignores the structure of the constraints entirely.
+
+Mid-circuit measurement and classical feed-forward (``dynamic circuits'')~\cite{corcoles2021} suggest an appealing alternative: compute whether each constraint is violated into an ancilla, measure it, and flip variables when a constraint is violated. This paper started from such a proposal. Our first result (\cref{sec:classical}) is negative and general: when the measured quantities are functions of the computational-basis state and the corrections are permutations, the circuit is \emph{exactly} a classical randomized algorithm, so no quantum advantage is possible regardless of qubit count.
+
+The constructive part of the paper keeps the intuition and changes where it acts. A CNF clause $(\ell_1\vee\dots\vee\ell_k)$ is the negation of the forbidden pattern $\neg\ell_1\wedge\dots\wedge\neg\ell_k$. Read as a \emph{negative condition}, it says: once all literals but one are false, the remaining one is forced. Using these conditions inside a coherent state preparation reduces the number of genuine decisions, which (i)~raises the success probability exponentially, (ii)~reduces the number of amplitude-amplification rounds quadratically in that gain, and therefore (iii)~reduces the total gate count and the error-correction overhead.
+
+\paragraph{Contributions.}
+\begin{enumerate}\itemsep0pt
+\item A classicality lemma for measure-and-flip dynamic circuits, with numerical confirmation (\cref{sec:classical}).
+\item An in-place \emph{negation-forced} preparation $A_\pi$ in which each variable is its own coin, a soundness lemma, an exact closed form for its success probability, and an $O^*(2^{(1-1/k)n/2})$ gate bound for amplitude amplification over it (\cref{sec:nf}).
+\item A ZX-calculus co-design: verified $T$-count reductions of every component and a cost model that selects how many negative conditions to check (\cref{sec:zx}).
+\item Large-scale numerics on four problem families up to $n=80$, MPS circuit simulations up to \MaxMPSQubits{} qubits, and fault-tolerant resource estimates (\cref{sec:exp}). All code and data are released.
+\end{enumerate}
+
+\section{Related work}
+\paragraph{Classical algorithms.} The PPZ algorithm~\cite{ppz1999} assigns variables in random order, setting a variable when a clause forces it and guessing otherwise; its analysis shows that each variable is forced with probability at least $1/k$ for uniquely satisfiable $k$-CNF, giving $2^{(1-1/k)n}$ expected repetitions. PPSZ~\cite{ppsz2005,hertli2014,ppszbetter} strengthens the forcing rule with bounded-width resolution. Sch\"oning's random walk~\cite{schoening1999} instead repairs violated clauses.
+\paragraph{Quantum speedups of randomized solvers.} Any Las Vegas algorithm whose random choices can be put in superposition can be amplitude-amplified~\cite{bhmt2002,ambainis2004}; this was used for Sch\"oning and PPSZ-type algorithms~\cite{ambainis2004,dunjko2018}, and Montanaro's quantum backtracking~\cite{montanaro2018} speeds up tree search with propagation. Recent work places Grover inside local search~\cite{zhang2026hybrid}. Our exponent for full forcing coincides with amplified PPZ; our contributions are the in-place construction, the exact success formula, the condition-selection trade-off and the resource chain down to physical qubits.
+\paragraph{Measurement-driven search.} Search by measurement~\cite{childs2002}, damped and weakly measured search~\cite{mizel2009,andres2022,prabhat2026}, measurement-driven SAT solvers~\cite{benjamin2017,zhang2024zeno} and the quantum Lov\'asz local lemma~\cite{schwarz2013,gilyen2017} use measurements of constraint projectors. Our classicality lemma delineates when such schemes collapse to classical algorithms.
+\paragraph{ZX-calculus.} The ZX-calculus~\cite{coecke2011} with graph-theoretic simplification~\cite{duncan2020} reduces non-Clifford counts~\cite{kissinger2020tcount}; we use PyZX~\cite{pyzx}. Relative-phase and measurement-based uncomputation tricks~\cite{gidney2018} are complementary.
+
+\section{Measure-and-flip dynamic circuits are classical}\label{sec:classical}
+\begin{lemma}[Classicality]\label{lem:classical}
+Consider a circuit on qubits initialised to $|0\rangle$, with a layer of Hadamards on a subset $S$, followed by any sequence of (i)~permutation gates in the computational basis (X, CNOT, Toffoli, multi-controlled X), (ii)~diagonal gates, (iii)~computational-basis measurements and resets, and (iv)~classically controlled versions of (i)--(iii). The joint distribution of all measurement outcomes equals that of the classical algorithm that samples the bits in $S$ uniformly and applies (i), (iii), (iv) to bit strings.
+\end{lemma}
+\begin{proof}
+Let $\Delta$ be complete dephasing in the computational basis. For a permutation $P$ and a diagonal unitary $D$, $\Delta(P\rho P^\dagger)=P\Delta(\rho)P^\dagger$ and $\Delta(D\rho D^\dagger)=\Delta(\rho)$; computational-basis measurement and reset commute with $\Delta$, and so do their classically controlled versions. Hence inserting $\Delta$ right after the Hadamard layer does not change any outcome statistics. Since $\Delta(|{+}\rangle\langle{+}|)=\mathbb{1}/2$, the state after dephasing is a uniform mixture over bit strings on $S$, evolved by permutations and measurements, i.e. a classical randomized algorithm.
+\end{proof}
+The lemma also applies at block level: a quantum adder acting on a register initialised to $|0\rangle$ is a permutation of basis states even if implemented with QFT rotations. \Cref{tab:classical} confirms the lemma on the two original proposals: a measure-and-flip 2-colouring of path graphs (simulated with the stabilizer method, $n$ up to 60) and a measure-and-flip subset-sum circuit with a QFT adder.
+
+\input{tables/classical}
+
+\section{Negation-forced state preparation}\label{sec:nf}
+Let $F$ be a CNF formula over $x_1,\dots,x_n$ and $\pi$ an order of the variables.
+\begin{definition}[Negative conditions]
+For a variable $v$, let $\mathcal C_1(v)$ ($\mathcal C_0(v)$) be the clauses containing the literal $v$ ($\neg v$) whose other variables all precede $v$ in $\pi$. Given an assignment of the preceding variables, $v$ is \emph{forced to 1} (resp.\ 0) if some clause in $\mathcal C_1(v)$ ($\mathcal C_0(v)$) has all its other literals false. $\mathcal C^{K}$ keeps at most $K$ clauses of each polarity.
+\end{definition}
+\begin{definition}[In-place preparation $A_\pi^K$]
+Process the variables in order $\pi$. For $v$: compute the flags $f_1,f_0$ (OR over clauses of the AND of their negated other literals), apply $\mathrm{CNOT}(f_1\!\to\!x_v)$, apply a Hadamard on $x_v$ controlled on $\neg f_1\wedge\neg f_0$, then uncompute the flags. All work qubits return to $|0\rangle$.
+\end{definition}
+The variable qubit is its own coin; no register of random choices and no history is stored. The circuit uses only Toffoli, controlled-Hadamard, CNOT and X gates (\cref{alg:prep}); the number of Toffolis is $O(\sum_v |\mathcal C(v)|\,k)=O(km)$.
+
+\begin{algorithm}[t]
+\caption{Negation-forced preparation $A^K_\pi$}\label{alg:prep}
+\begin{algorithmic}[1]
+\For{$v$ in order $\pi$}
+\For{$c\in\mathcal C_1^K(v)\cup\mathcal C_0^K(v)$}
+\State $a_c \gets \bigwedge_{\ell\in c\setminus\{v\}} \neg\ell$ \Comment{negative condition}
+\EndFor
+\State $f_1\gets\bigvee_{c\in\mathcal C_1}a_c$;\; $f_0\gets\bigvee_{c\in\mathcal C_0}a_c$
+\State $x_v \mathrel{\oplus}= f_1$;\; \textbf{if} $\neg f_1\wedge\neg f_0$ \textbf{then} $H(x_v)$ \Comment{decision}
+\State uncompute $f_1,f_0,a_c$
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/fig_step.pdf}
+\caption{One negation-forced step for variable $x_2$ with clauses $(x_0\vee x_1\vee x_2)\in\mathcal C_1$ and $(\neg x_0\vee x_1\vee\neg x_2)\in\mathcal C_0$. Left: negative conditions $a_c$ (all other literals false) and flags $f_1,f_0$. Middle: forced value and the decision (controlled Hadamard on the variable itself). Right: uncomputation; all ancillas return to $|0\rangle$ and are reused for the next variable.}
+\label{fig:step}
+\end{figure}
+
+\begin{lemma}[Soundness]\label{lem:sound}
+If the variables preceding $v$ agree with a satisfying assignment $a$, then a forced value of $v$ equals $a_v$, and $v$ is never forced both ways.
+\end{lemma}
+\begin{proof}
+If $c\in\mathcal C_1(v)$ has all other literals false under $a$, then $a$ satisfies $c$ only through the literal $v$, so $a_v=1$. Symmetrically for $\mathcal C_0(v)$. Both cannot hold.
+\end{proof}
+
+\begin{lemma}[Exact success probability]\label{lem:exact}
+Let $D_\pi^K(a)$ be the number of unforced variables met when following $a$. Then
+\begin{equation}
+p_\pi^K=\big\|\Pi_{\mathrm{Sol}}A^K_\pi|0\rangle\big\|^2=\sum_{a\in\mathrm{Sol}}2^{-D^K_\pi(a)}.\label{eq:exact}
+\end{equation}
+Moreover $p^K_\pi$ is non-decreasing in $K$.
+\end{lemma}
+\begin{proof}
+$A^K_\pi|0\rangle=\sum_x \alpha_x|x\rangle$ with $\alpha_x\ge 0$: each basis assignment $x$ is produced by a unique branch, whose amplitude is $2^{-1/2}$ per Hadamard applied to $|0\rangle$ and $1$ per forced step (all ancillas are restored). By \cref{lem:sound} every solution $a$ is reachable, its branch follows $a$, and $\alpha_a^2=2^{-D^K_\pi(a)}$. Increasing $K$ enlarges the sets of forcing clauses, so $D^K_\pi(a)$ can only decrease.
+\end{proof}
+\Cref{eq:exact} reduces the computation of $p_\pi$ to model enumeration and is what makes our large-$n$ numerics exact. We verified it against exhaustive branch enumeration (zero discrepancy on all tested instances) and against circuit simulation (\cref{sec:exp}).
+
+\begin{theorem}[Gate complexity]\label{thm:main}
+Let $F$ be a $k$-CNF with $n$ variables and $m$ clauses and a unique solution. Amplitude amplification over $A_\pi$ with random orders and an unknown-probability schedule~\cite{bbht1998,bhmt2002} finds the solution with $O\!\big(n\,2^{((1-1/k)n+1)/2}\big)$ expected applications of $A_\pi$, $A_\pi^\dagger$ and the phase oracle, i.e.\ $O^*(2^{(1-1/k)n/2})$ gates, using $n+O(m)$ qubits.
+\end{theorem}
+\begin{proof}
+By \cref{lem:exact}, $p_\pi\ge 2^{-D_\pi(a^*)}$. The satisfiability coding lemma of PPZ~\cite{ppz1999} gives $\mu=\mathbb E_\pi[D_\pi(a^*)]\le(1-1/k)n$. By Markov's inequality $\Pr_\pi[D_\pi(a^*)<\mu+1]\ge 1/(\mu+1)$, so after an expected $O(n)$ random orders one has $p_\pi\ge2^{-(\mu+1)}$; for each order, amplitude amplification with an exponential schedule capped at $O(2^{(\mu+1)/2})$ rounds succeeds with constant probability~\cite{bbht1998}. Each application of $A_\pi$ or the oracle costs $O(km)$ Toffolis.
+\end{proof}
+For several solutions, \cref{eq:exact} sums over all of them and the bound only improves. The PPZ exponent is not new~\cite{ambainis2004,dunjko2018}; what \cref{lem:exact} adds is an exact, cheaply computable probability for \emph{every} instance and every condition budget $K$, which enables the selection procedure of \cref{sec:zx}.
+
+\section{ZX-calculus co-design}\label{sec:zx}
+\paragraph{Pipeline.} Each component---$A_\pi^K$, the phase oracle $O_F$ (clause ANDs, a global AND, a $Z$), and the reflection $S_0$---is compiled to Clifford+$T$, converted to a ZX-diagram, simplified with \texttt{full\_reduce} and re-extracted~\cite{duncan2020,pyzx}. Compute/uncompute pairs of Toffolis that share controls fuse into phase gadgets, which is where most $T$ gates disappear.
+\paragraph{Verification.} Every optimised component is checked against the original: exactly with statevectors for small instances, and for larger ones by running $U_{\rm orig}U_{\rm ZX}^\dagger$ on random inputs (with a Hadamard to expose relative phases) under MPS simulation and requiring that every shot returns the input.
+\paragraph{Condition selection.} Checking more negative conditions raises $p^K_\pi$ (\cref{lem:exact}) but makes $A^K_\pi$ more expensive. With $G(\cdot)$ the post-ZX $T$-count,
+\begin{equation}
+\mathcal T(K)=\frac{\pi}{4\sqrt{p^K_\pi}}\big(2G(A^K_\pi)+G(O_F)+G(S_0)\big),\qquad K^*=\arg\min_K\mathcal T(K).\label{eq:select}
+\end{equation}
+Both factors are computable without running the quantum algorithm: $p^K_\pi$ via \cref{eq:exact} and $G$ via ZX simplification.
+
+\section{Experiments}\label{sec:exp}
+\paragraph{Setup.} Families: random 3-SAT at clause density $4.2$, random 4-SAT at $9.6$, positive 1-in-3-SAT with $0.6n$ triples (encoded as one 3-clause and three 2-clauses each), and Erd\H{o}s--R\'enyi graph 3-colouring with two bits per vertex (average degree $4.2$, or $3.0$ below 10 vertices). Only satisfiable instances are kept; solutions are enumerated with MiniSat~\cite{minisat} through PySAT~\cite{pysat} (instances with more than $2\times10^4$ solutions are rejected). Circuits are built in Qiskit~\cite{qiskit2024}; MPS simulations~\cite{vidal2003} use Qiskit Aer; ZX optimisation uses PyZX~\cite{pyzx}. All runs used two CPU cores.
+
+\paragraph{E2: circuit-level validation with MPS.} \Cref{fig:mps} compares the success probability of the simulated circuit $A_\pi|0\rangle$ with \cref{eq:exact} for \NMPSA{} instances with $n$ up to \MaxMPSn{} (up to \MaxMPSQubits{} qubits), and the success probability after $k^*$ full amplification rounds with the prediction $\sin^2((2k^*+1)\arcsin\sqrt p)$, for both the negation-forced preparation and Grover's uniform preparation. \MPSAgreement{} Runs exceeding 15 minutes were stopped (preparation: 3-COL at $n=20,24$ and 3-SAT at $n=24$; amplification: the uniform baseline for 4-SAT and beyond $n=8$): the MPS bond dimension grows with $n$ and the number of rounds, which limits the validation, not the algorithm.
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/fig_mps.pdf}
+\caption{MPS circuit simulations versus theory. Left: success probability of $A_\pi|0\rangle$ (one point per instance; error bars are $2\sigma$ shot noise). Right: success after $k^*$ amplification rounds for negation-forced (NF) and uniform (Grover) preparations; the label gives $k^*$.}
+\label{fig:mps}
+\end{figure}
+
+\paragraph{E3: scaling across problem families.} \Cref{fig:scaling} and \cref{tab:scaling} report $\log_2 p$ versus $n$ for \NInstances{} instances (10 per size, 10 random orders each). Fitting $p\propto2^{-sn}$ with bootstrap confidence intervals, the effective quantum base $2^{s/2}$ drops from \GroverBaseRange{} for the uniform preparation to \NFBaseRange{} with negative conditions. The measured fraction of decisions per variable stays below the PPZ bound $1-1/k$ (\cref{tab:scaling}).
+
+\begin{figure*}[t]\centering
+\includegraphics[width=0.95\textwidth]{figures/fig_scaling.pdf}
+\caption{Success probability of the prepared state versus number of variables (median over 10 instances per size; dotted lines: least-squares fits). Orange: uniform superposition (Grover). Blue/green: negation-forced preparation, median and best of 10 variable orders.}
+\label{fig:scaling}
+\end{figure*}
+\input{tables/scaling}
+
+\paragraph{E4: ZX simplification.} \Cref{tab:zx} lists $T$ and two-qubit gate counts per component before and after ZX simplification, together with the equivalence checks. \ZXSummary{} For 4-SAT, PyZX extraction of the oracle (77 four-literal clauses) did not finish within one CPU-hour; ZX extraction cost is a practical limitation of the approach at this size.
+
+\input{tables/zx}
+
+\paragraph{E5: selecting negative conditions.} \Cref{fig:select} shows $\mathcal T(K)$ from \cref{eq:select} for $K\in\{0,1,2,3,\infty\}$, where $K=0$ is Grover's algorithm. \SelectSummary{}
+
+\begin{figure}[t]\centering
+\includegraphics[width=\columnwidth]{figures/fig_select.pdf}
+\caption{Total expected $T$-count (\cref{eq:select}, after ZX) versus the number of negative conditions $K$ checked per variable and polarity, normalised by Grover ($K=0$, no ZX). Each line is one instance; stars mark $K^*$.}
+\label{fig:select}
+\end{figure}
+
+\paragraph{E6: fault-tolerant resources and classical baselines.} We count logical $T$ gates of the generated circuits exactly for $n$ up to 80, combine them with the median $p$ from E3, and estimate surface-code resources~\cite{fowler2012,litinski2019} with physical error rate $10^{-3}$, threshold $10^{-2}$, logical error $p_L(d)=0.1(p/p_{\rm th})^{(d+1)/2}$, a total failure budget of $1\%$, one 15-to-1 factory~\cite{bravyi2005} and a $1\,\mu$s code cycle; ZX ratios from E4 are applied as measured averages per component (for 4-SAT, the average over the other families). \Cref{tab:resources} reports the result. \ResourceSummary{}
+
+\input{tables/resources}
+
+\section{Discussion and limitations}
+\paragraph{What the speedup is relative to.} The gains are relative to Grover's uniform preparation and are quadratic relative to the classical randomized algorithm that uses the same negative conditions (\Cref{tab:resources}, column ``classical reps.''). They are \emph{not} gains over industrial CDCL solvers: MiniSat solved every instance in our study with at most \MiniSatMaxConflicts{} conflicts. Random instances near the threshold are easy for CDCL at these sizes; our numerics measure exponents, not practical runtimes.
+\paragraph{Qubits.} Negative conditions do not reduce the number of logical qubits by themselves---the oracle's clause register dominates. The physical-qubit savings come from fewer gates, which permits a smaller code distance.
+\paragraph{``Partial'' error tolerance.} The algorithm is Las Vegas: candidate solutions are verified classically, so an error costs a repetition but never yields a wrong answer. This is error \emph{detection} at the algorithmic level, not fault tolerance; we use it only to motivate the reduced error budget.
+\paragraph{Scope of the numerics.} ZX optimisation and full amplification were simulated only for small instances; the large-$n$ resource estimates combine exact gate counts with ZX ratios measured at small $n$. The surface-code model is deliberately simple.
+\paragraph{Outlook.} Stronger negative conditions (PPSZ-style implications via bounded-width resolution) fit the same framework and \cref{lem:exact} still applies whenever forced values are sound. Heralded weak measurements of the satisfaction flag can replace the unknown-$p$ schedule on dynamic-circuit hardware.
+
+\section{Perspective: constraint-guided quantum computing}\label{sec:perspective}
+The results suggest a research programme that we tentatively call \emph{constraint-guided quantum computing}: the co-design of the logical structure of a problem and the diagrammatic (ZX) structure of the circuit that searches it. Complexity-theoretic analyses typically treat the oracle and the initial state as black boxes of unit cost, while compilers optimise generic circuits without access to the logic of the problem; works such as quantum backtracking~\cite{montanaro2018} and amplified classical solvers~\cite{ambainis2004,dunjko2018} already connect the two at the level of query complexity, and the present work makes the connection explicit at the level of gates and fault-tolerant resources. We see four directions.
+\begin{enumerate}\itemsep0pt
+\item \textbf{Informed instead of uniform preparation.} Search and variational algorithms usually start from $|{+}\rangle^{\otimes n}$. Constraint propagation, Boolean pruning and local consistency can be compiled into a coherent in-place preparation, so that amplification only explores assignments compatible with the problem's logic; \cref{lem:exact} shows that the benefit can be computed exactly beforehand.
+\item \textbf{Compilation for non-monotone trade-offs.} Checking every available condition is not always optimal (\cref{fig:select}): the right amount of logic to inject depends on the non-Clifford cost that survives ZX simplification. This calls for compilers that optimise jointly over the condition budget, the $T$-count and magic-state distillation.
+\item \textbf{Richer constraint languages.} Beyond CNF and graph colouring (and the knapsack example in the repository), the same soundness argument applies to general CSPs, pseudo-Boolean and mixed-integer constraints, routing and formal verification, where forced values take richer algebraic forms and compact encodings (adders, sorting networks) replace cover enumeration.
+\item \textbf{Hybridisation with classical reasoning engines.} Rather than competing with CDCL or CP-SAT solvers, a quantum routine can act as an amplification module inside a deductive pipeline, receiving the propagation rules (and, potentially, learned clauses) that the classical engine has already derived.
+\end{enumerate}
+Whether these directions yield practical advantages remains open; the present results establish the exact accounting needed to answer that question for each problem class.
+
+\section{Conclusion}
+Measure-and-flip constraint repair on dynamic circuits is classical. Used coherently, the same negative conditions shrink the space that amplitude amplification has to search: fewer decisions, exponentially higher success probability, fewer rounds and fewer gates, consistently across four problem families. ZX-calculus removes a large fraction of the remaining $T$ gates and turns the choice of which conditions to check into a computable optimisation.
+
+\paragraph{Code and data availability.} The \texttt{negsearch} package, the experiment scripts, the raw results, the figure scripts, a hardware-ready notebook (multiple knapsack on IBM Quantum) and every problem instance used in this work (DIMACS format, with generator seeds and the variable orders evaluated) are available at \RepoURL{}.
+\paragraph{Acknowledgements and use of AI tools.} The author thanks the Quantum Open Source Foundation community. In the spirit of methodological transparency, the author declares that an AI assistant (Claude, Anthropic) was used to support literature search, software development, the design and execution of numerical experiments, and the drafting and editing of the manuscript. All code, data and claims were reviewed by the author, who takes full responsibility for the content of this work. Simulations used Qiskit, Qiskit Aer, PyZX and PySAT on commodity CPUs.
+
+
+\appendix
+\section{Unknown success probability: heralded weak measurement}\label{app:herald}
+Theorem~\ref{thm:main} uses an exponential schedule because $p_\pi$ is unknown. On dynamic-circuit hardware an alternative is to copy the satisfaction flag weakly to a herald qubit inside every oracle call ($\mathrm{CR}_y(2\varphi_t)$, no extra queries) and measure it before the reflection; a click projects onto the solution subspace and certifies the answer before readout~\cite{mizel2009,andres2022,prabhat2026}. With the schedule $\sin^2\varphi_t=\min(1/2,5/(t+1))$ the expected cost approaches $1.01\sqrt{N/M}$ without knowing $M$, versus $\approx1.45\sqrt{N/M}$ for BBHT (\cref{tab:herald}); the 2-D model was validated against full circuit simulations. The same schedule applies verbatim to amplification over $A_\pi$ with $N/M$ replaced by $1/p_\pi$.
+\input{tables/herald}
+
+\section{Noisy intermediate-scale simulation}\label{app:noise}
+For completeness, \cref{tab:noise} reports a small instance under the \texttt{FakeFez} noise model with relaxation charged to every mid-circuit measurement. At $N=16$ all methods are at the noise floor (cost $\approx8$, equal to guessing and verifying); measurement-based uncomputation (MBU: ancillas uncomputed by $X$-basis measurement and classically controlled phase fixes~\cite{gidney2018}), which needs many mid-circuit measurements, degrades sharply with latency. ``Textbook'' uses Qiskit's multi-controlled gates; ``coherent-rccx'' uses relative-phase Toffolis; ``Heralded $T$'' is the scheme of \cref{app:herald} with at most $T$ iterations. The advantages discussed in the paper therefore concern query and gate complexity in the fault-tolerant regime, not present-day hardware.
+\input{tables/noise}
+
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+\end{document}

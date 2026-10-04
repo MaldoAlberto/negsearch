@@ -1,0 +1,1106 @@
+[
+ {
+  "family": "3-SAT",
+  "n": 20,
+  "m": 84,
+  "logical_qubits": 187,
+  "T_A": 2868,
+  "T_O": 5838,
+  "T_S0": 490,
+  "p_grover": 7.152557373046875e-06,
+  "p_nf": 0.002471923828125,
+  "iters_grover": 293.6697451287284,
+  "iters_nf": 15.796917113451968,
+  "zx_ratio": {
+   "A": 0.39872774952475465,
+   "O": 0.4314972539393263,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 404.5432098765432,
+  "minisat_conflicts_median": 4.0,
+  "T_total": {
+   "Grover": 1858342.1471745933,
+   "Grover+ZX": 784130.8965749991,
+   "Negation-forced": 190574.00805668454,
+   "Negation-forced+ZX": 78308.6930290178
+  },
+  "surface": {
+   "Grover": {
+    "d": 21,
+    "physical_qubits": 257544,
+    "runtime_s": 39.025185090666454
+   },
+   "Grover+ZX": {
+    "d": 21,
+    "physical_qubits": 257544,
+    "runtime_s": 16.46674882807498
+   },
+   "Negation-forced": {
+    "d": 19,
+    "physical_qubits": 210824,
+    "runtime_s": 3.6209061530770064
+   },
+   "Negation-forced+ZX": {
+    "d": 19,
+    "physical_qubits": 210824,
+    "runtime_s": 1.4878651675513381
+   }
+  }
+ },
+ {
+  "family": "3-SAT",
+  "n": 30,
+  "m": 126,
+  "logical_qubits": 281,
+  "T_A": 4400,
+  "T_O": 8778,
+  "T_S0": 770,
+  "p_grover": 6.891787052154541e-08,
+  "p_nf": 0.0004591047763824463,
+  "iters_grover": 2991.7407467498933,
+  "iters_nf": 36.65506346957637,
+  "zx_ratio": {
+   "A": 0.39872774952475465,
+   "O": 0.4314972539393263,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 2178.152028562155,
+  "minisat_conflicts_median": 11.5,
+  "T_total": {
+   "Grover": 28565140.649967983,
+   "Grover+ZX": 12041805.05687197,
+   "Negation-forced": 672547.1045397872,
+   "Negation-forced+ZX": 276152.66581856273
+  },
+  "surface": {
+   "Grover": {
+    "d": 25,
+    "physical_qubits": 541250,
+    "runtime_s": 714.1285162491996
+   },
+   "Grover+ZX": {
+    "d": 23,
+    "physical_qubits": 458114,
+    "runtime_s": 276.96151630805525
+   },
+   "Negation-forced": {
+    "d": 21,
+    "physical_qubits": 381906,
+    "runtime_s": 14.123489195335528
+   },
+   "Negation-forced+ZX": {
+    "d": 21,
+    "physical_qubits": 381906,
+    "runtime_s": 5.799205982189817
+   }
+  }
+ },
+ {
+  "family": "3-SAT",
+  "n": 40,
+  "m": 168,
+  "logical_qubits": 375,
+  "T_A": 5792,
+  "T_O": 11718,
+  "T_S0": 1050,
+  "p_grover": 9.777068044058979e-11,
+  "p_nf": 9.671784937381744e-06,
+  "iters_grover": 79430.18288916598,
+  "iters_nf": 252.54371563902222,
+  "zx_ratio": {
+   "A": 0.39872774952475465,
+   "O": 0.4314972539393263,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 103393.53143957631,
+  "minisat_conflicts_median": 17.0,
+  "T_total": {
+   "Grover": 1014164575.1288713,
+   "Grover+ZX": 427328123.67747027,
+   "Negation-forced": 6149944.563241469,
+   "Negation-forced+ZX": 2525129.9207448578
+  },
+  "surface": {
+   "Grover": {
+    "d": 29,
+    "physical_qubits": 965468,
+    "runtime_s": 29410.772678737267
+   },
+   "Grover+ZX": {
+    "d": 27,
+    "physical_qubits": 836892,
+    "runtime_s": 11537.859339291696
+   },
+   "Negation-forced": {
+    "d": 23,
+    "physical_qubits": 607292,
+    "runtime_s": 141.44872495455377
+   },
+   "Negation-forced+ZX": {
+    "d": 23,
+    "physical_qubits": 607292,
+    "runtime_s": 58.07798817713172
+   }
+  }
+ },
+ {
+  "family": "3-SAT",
+  "n": 50,
+  "m": 210,
+  "logical_qubits": 469,
+  "T_A": 7198,
+  "T_O": 14658,
+  "T_S0": 1330,
+  "p_grover": 3.019806626980426e-14,
+  "p_nf": 1.0617804946377873e-07,
+  "iters_grover": 4519603.27265635,
+  "iters_nf": 2410.307820687262,
+  "zx_ratio": {
+   "A": 0.39872774952475465,
+   "O": 0.4314972539393263,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 9418142.497909958,
+  "minisat_conflicts_median": 40.0,
+  "T_total": {
+   "Grover": 72259417123.22974,
+   "Grover+ZX": 30438742272.977486,
+   "Negation-forced": 73234792.82376176,
+   "Negation-forced+ZX": 30068375.122283857
+  },
+  "surface": {
+   "Grover": {
+    "d": 33,
+    "physical_qubits": 1557270,
+    "runtime_s": 2384560.765066581
+   },
+   "Grover+ZX": {
+    "d": 31,
+    "physical_qubits": 1374230,
+    "runtime_s": 943601.010462302
+   },
+   "Negation-forced": {
+    "d": 25,
+    "physical_qubits": 893750,
+    "runtime_s": 1830.8698205940439
+   },
+   "Negation-forced+ZX": {
+    "d": 25,
+    "physical_qubits": 893750,
+    "runtime_s": 751.7093780570965
+   }
+  }
+ },
+ {
+  "family": "3-SAT",
+  "n": 60,
+  "m": 252,
+  "logical_qubits": 563,
+  "T_A": 8590,
+  "T_O": 17598,
+  "T_S0": 1610,
+  "p_grover": 1.4137996329210978e-15,
+  "p_nf": 1.1044937764381757e-07,
+  "iters_grover": 20887956.245249618,
+  "iters_nf": 2363.2422635315215,
+  "zx_ratio": {
+   "A": 0.39872774952475465,
+   "O": 0.4314972539393263,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 9053921.546075596,
+  "minisat_conflicts_median": 40.0,
+  "T_total": {
+   "Grover": 401215863558.75464,
+   "Grover+ZX": 168977949233.14008,
+   "Negation-forced": 85993659.485385,
+   "Negation-forced+ZX": 35306541.26083233
+  },
+  "surface": {
+   "Grover": {
+    "d": 33,
+    "physical_qubits": 1864368,
+    "runtime_s": 13240123.497438902
+   },
+   "Grover+ZX": {
+    "d": 33,
+    "physical_qubits": 1864368,
+    "runtime_s": 5576272.324693622
+   },
+   "Negation-forced": {
+    "d": 27,
+    "physical_qubits": 1248048,
+    "runtime_s": 2321.828806105395
+   },
+   "Negation-forced+ZX": {
+    "d": 25,
+    "physical_qubits": 1070000,
+    "runtime_s": 882.6635315208083
+   }
+  }
+ },
+ {
+  "family": "3-SAT",
+  "n": 70,
+  "m": 294,
+  "logical_qubits": 657,
+  "T_A": 10080,
+  "T_O": 20538,
+  "T_S0": 1890,
+  "p_grover": 1.6940658945086007e-19,
+  "p_nf": 4.1109160520136356e-10,
+  "iters_grover": 1908203691.934657,
+  "iters_nf": 38736.5177811602,
+  "zx_ratio": {
+   "A": 0.39872774952475465,
+   "O": 0.4314972539393263,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 2432547849.061947,
+  "minisat_conflicts_median": 75.0,
+  "T_total": {
+   "Grover": 42797192402710.49,
+   "Grover+ZX": 18022289390945.52,
+   "Negation-forced": 1649710819.2640505,
+   "Negation-forced+ZX": 677230055.6335881
+  },
+  "surface": {
+   "Grover": {
+    "d": 39,
+    "physical_qubits": 3032874,
+    "runtime_s": 1669090503.7057092
+   },
+   "Grover+ZX": {
+    "d": 37,
+    "physical_qubits": 2729786,
+    "runtime_s": 666824707.4649842
+   },
+   "Negation-forced": {
+    "d": 29,
+    "physical_qubits": 1676954,
+    "runtime_s": 47841.61375865746
+   },
+   "Negation-forced+ZX": {
+    "d": 29,
+    "physical_qubits": 1676954,
+    "runtime_s": 19639.671613374052
+   }
+  }
+ },
+ {
+  "family": "3-SAT",
+  "n": 80,
+  "m": 336,
+  "logical_qubits": 751,
+  "T_A": 11444,
+  "T_O": 23478,
+  "T_S0": 2170,
+  "p_grover": 1.4426029882924803e-21,
+  "p_nf": 2.584932268234752e-11,
+  "iters_grover": 20678377889.39401,
+  "iters_nf": 154477.52311959417,
+  "zx_ratio": {
+   "A": 0.39872774952475465,
+   "O": 0.4314972539393263,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 38685733173.30667,
+  "minisat_conflicts_median": 66.5,
+  "T_total": {
+   "Grover": 530359036107177.56,
+   "Grover+ZX": 223316990095431.47,
+   "Negation-forced": 7497721062.132623,
+   "Negation-forced+ZX": 3078060693.6246486
+  },
+  "surface": {
+   "Grover": {
+    "d": 41,
+    "physical_qubits": 3825956,
+    "runtime_s": 21744720480.39428
+   },
+   "Grover+ZX": {
+    "d": 39,
+    "physical_qubits": 3461796,
+    "runtime_s": 8709362613.721827
+   },
+   "Negation-forced": {
+    "d": 31,
+    "physical_qubits": 2187236,
+    "runtime_s": 232429.35292611129
+   },
+   "Negation-forced+ZX": {
+    "d": 29,
+    "physical_qubits": 1914116,
+    "runtime_s": 89263.7601151148
+   }
+  }
+ },
+ {
+  "family": "4-SAT",
+  "n": 20,
+  "m": 192,
+  "logical_qubits": 403,
+  "T_A": 12906,
+  "T_O": 18774,
+  "T_S0": 490,
+  "p_grover": 6.67572021484375e-06,
+  "p_nf": 0.0013275146484375,
+  "iters_grover": 303.9770654012738,
+  "iters_nf": 21.55610152491486,
+  "zx_ratio": {
+   "A": 0.44202243413591263,
+   "O": 0.3851216017940788,
+   "S0": 0.3064023695602643
+  },
+  "classical_ppz_repetitions": 753.2873563218391,
+  "minisat_conflicts_median": 18.5,
+  "T_total": {
+   "Grover": 5855814.1878901385,
+   "Grover+ZX": 2243475.4076582557,
+   "Negation-forced": 971662.8323370623,
+   "Negation-forced+ZX": 405036.84509683726
+  },
+  "surface": {
+   "Grover": {
+    "d": 23,
+    "physical_qubits": 651728,
+    "runtime_s": 134.6837263214732
+   },
+   "Grover+ZX": {
+    "d": 23,
+    "physical_qubits": 651728,
+    "runtime_s": 51.59993437613988
+   },
+   "Negation-forced": {
+    "d": 21,
+    "physical_qubits": 543312,
+    "runtime_s": 20.404919479078305
+   },
+   "Negation-forced+ZX": {
+    "d": 21,
+    "physical_qubits": 543312,
+    "runtime_s": 8.505773747033583
+   }
+  }
+ },
+ {
+  "family": "4-SAT",
+  "n": 30,
+  "m": 288,
+  "logical_qubits": 605,
+  "T_A": 19100,
+  "T_O": 28182,
+  "T_S0": 770,
+  "p_grover": 8.847564458847046e-09,
+  "p_nf": 1.728534698486328e-05,
+  "iters_grover": 8349.837310022445,
+  "iters_nf": 188.90820891307806,
+  "zx_ratio": {
+   "A": 0.44202243413591263,
+   "O": 0.3851216017940788,
+   "S0": 0.3064023695602643
+  },
+  "classical_ppz_repetitions": 57852.46896551724,
+  "minisat_conflicts_median": 51.0,
+  "T_total": {
+   "Grover": 241744489.79976985,
+   "Grover+ZX": 92594909.69419159,
+   "Negation-forced": 12685564.044931017,
+   "Negation-forced+ZX": 5284647.409737934
+  },
+  "surface": {
+   "Grover": {
+    "d": 27,
+    "physical_qubits": 1339902,
+    "runtime_s": 6527.101224593786
+   },
+   "Grover+ZX": {
+    "d": 27,
+    "physical_qubits": 1339902,
+    "runtime_s": 2500.062561743173
+   },
+   "Negation-forced": {
+    "d": 25,
+    "physical_qubits": 1148750,
+    "runtime_s": 317.1391011232754
+   },
+   "Negation-forced+ZX": {
+    "d": 23,
+    "physical_qubits": 972302,
+    "runtime_s": 121.54689042397248
+   }
+  }
+ },
+ {
+  "family": "4-SAT",
+  "n": 40,
+  "m": 384,
+  "logical_qubits": 807,
+  "T_A": 25364,
+  "T_O": 37590,
+  "T_S0": 1050,
+  "p_grover": 4.547473508864641e-12,
+  "p_nf": 2.086162567138672e-07,
+  "iters_grover": 368302.606570788,
+  "iters_nf": 1719.5539541634191,
+  "zx_ratio": {
+   "A": 0.44202243413591263,
+   "O": 0.3851216017940788,
+   "S0": 0.3064023695602643
+  },
+  "classical_ppz_repetitions": 4793490.285714285,
+  "minisat_conflicts_median": 312.5,
+  "T_total": {
+   "Grover": 14231212717.895248,
+   "Grover+ZX": 5450305314.048171,
+   "Negation-forced": 153673097.77567643,
+   "Negation-forced+ZX": 64004132.5343559
+  },
+  "surface": {
+   "Grover": {
+    "d": 31,
+    "physical_qubits": 2348684,
+    "runtime_s": 441167.5942547527
+   },
+   "Grover+ZX": {
+    "d": 31,
+    "physical_qubits": 2348684,
+    "runtime_s": 168959.4647354933
+   },
+   "Negation-forced": {
+    "d": 27,
+    "physical_qubits": 1781676,
+    "runtime_s": 4149.173639943263
+   },
+   "Negation-forced+ZX": {
+    "d": 27,
+    "physical_qubits": 1781676,
+    "runtime_s": 1728.1115784276094
+   }
+  }
+ },
+ {
+  "family": "4-SAT",
+  "n": 50,
+  "m": 480,
+  "logical_qubits": 1009,
+  "T_A": 31740,
+  "T_O": 46998,
+  "T_S0": 1330,
+  "p_grover": 2.5757174171303632e-14,
+  "p_nf": 2.203341864515096e-08,
+  "iters_grover": 4893738.671048688,
+  "iters_nf": 5291.136166885337,
+  "zx_ratio": {
+   "A": 0.44202243413591263,
+   "O": 0.3851216017940788,
+   "S0": 0.3064023695602643
+  },
+  "classical_ppz_repetitions": 45385603.39205812,
+  "minisat_conflicts_median": 340.5,
+  "T_total": {
+   "Grover": 236504602494.44098,
+   "Grover+ZX": 90570673647.5836,
+   "Negation-forced": 591591352.5471158,
+   "Negation-forced+ZX": 246392572.3419583
+  },
+  "surface": {
+   "Grover": {
+    "d": 33,
+    "physical_qubits": 3321450,
+    "runtime_s": 7804651.882316552
+   },
+   "Grover+ZX": {
+    "d": 33,
+    "physical_qubits": 3321450,
+    "runtime_s": 2988832.2303702584
+   },
+   "Negation-forced": {
+    "d": 29,
+    "physical_qubits": 2565050,
+    "runtime_s": 17156.149223866356
+   },
+   "Negation-forced+ZX": {
+    "d": 27,
+    "physical_qubits": 2223450,
+    "runtime_s": 6652.599453232875
+   }
+  }
+ },
+ {
+  "family": "4-SAT",
+  "n": 60,
+  "m": 576,
+  "logical_qubits": 1211,
+  "T_A": 38186,
+  "T_O": 56406,
+  "T_S0": 1610,
+  "p_grover": 5.074066167232161e-17,
+  "p_nf": 4.4654768771579256e-10,
+  "iters_grover": 110258433.57852718,
+  "iters_nf": 37166.867459212466,
+  "zx_ratio": {
+   "A": 0.44202243413591263,
+   "O": 0.3851216017940788,
+   "S0": 0.3064023695602643
+  },
+  "classical_ppz_repetitions": 2239402481.5474014,
+  "minisat_conflicts_median": 1967.5,
+  "T_total": {
+   "Grover": 6396753282491.833,
+   "Grover+ZX": 2449553941060.633,
+   "Negation-forced": 4994780984.1086445,
+   "Negation-forced+ZX": 2080401068.0040464
+  },
+  "surface": {
+   "Grover": {
+    "d": 37,
+    "physical_qubits": 5005064,
+    "runtime_s": 236679871.4521978
+   },
+   "Grover+ZX": {
+    "d": 37,
+    "physical_qubits": 5005064,
+    "runtime_s": 90633495.8192434
+   },
+   "Negation-forced": {
+    "d": 31,
+    "physical_qubits": 3513416,
+    "runtime_s": 154838.21050736797
+   },
+   "Negation-forced+ZX": {
+    "d": 29,
+    "physical_qubits": 3074696,
+    "runtime_s": 60331.630972117346
+   }
+  }
+ },
+ {
+  "family": "4-SAT",
+  "n": 70,
+  "m": 672,
+  "logical_qubits": 1413,
+  "T_A": 44520,
+  "T_O": 65814,
+  "T_S0": 1890,
+  "p_grover": 2.710505431213761e-20,
+  "p_nf": 3.863576125695545e-12,
+  "iters_grover": 4770509229.836643,
+  "iters_nf": 399572.0892865047,
+  "zx_ratio": {
+   "A": 0.44202243413591263,
+   "O": 0.3851216017940788,
+   "S0": 0.3064023695602643
+  },
+  "classical_ppz_repetitions": 258827564791.4078,
+  "minisat_conflicts_median": 13095.5,
+  "T_total": {
+   "Grover": 322982556896860.06,
+   "Grover+ZX": 123677806406424.89,
+   "Negation-forced": 62630527563.12389,
+   "Negation-forced+ZX": 26085333077.431625
+  },
+  "surface": {
+   "Grover": {
+    "d": 41,
+    "physical_qubits": 7164422,
+    "runtime_s": 13242284832.771261
+   },
+   "Grover+ZX": {
+    "d": 39,
+    "physical_qubits": 6482502,
+    "runtime_s": 4823434449.850571
+   },
+   "Negation-forced": {
+    "d": 33,
+    "physical_qubits": 4641318,
+    "runtime_s": 2066807.4095830882
+   },
+   "Negation-forced+ZX": {
+    "d": 33,
+    "physical_qubits": 4641318,
+    "runtime_s": 860815.9915552436
+   }
+  }
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 20,
+  "m": 48,
+  "logical_qubits": 114,
+  "T_A": 1034,
+  "T_O": 2310,
+  "T_S0": 490,
+  "p_grover": 2.6702880859375e-05,
+  "p_nf": 0.01953125,
+  "iters_grover": 151.9885327006369,
+  "iters_nf": 5.619851784832581,
+  "zx_ratio": {
+   "A": 0.4328404205377796,
+   "O": 0.4021822106399221,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 51.2,
+  "minisat_conflicts_median": 2.0,
+  "T_total": {
+   "Grover": 425567.8915617833,
+   "Grover+ZX": 164158.43836060146,
+   "Negation-forced": 27357.438488565003,
+   "Negation-forced+ZX": 11100.248067552266
+  },
+  "surface": {
+   "Grover": {
+    "d": 19,
+    "physical_qubits": 131404,
+    "runtime_s": 8.085789939673882
+   },
+   "Grover+ZX": {
+    "d": 19,
+    "physical_qubits": 131404,
+    "runtime_s": 3.1190103288514277
+   },
+   "Negation-forced": {
+    "d": 17,
+    "physical_qubits": 105196,
+    "runtime_s": 0.465076454305605
+   },
+   "Negation-forced+ZX": {
+    "d": 17,
+    "physical_qubits": 105196,
+    "runtime_s": 0.1887042171483885
+   }
+  }
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 30,
+  "m": 72,
+  "logical_qubits": 169,
+  "T_A": 1698,
+  "T_O": 3486,
+  "T_S0": 770,
+  "p_grover": 2.4586915969848633e-07,
+  "p_nf": 0.00823974609375,
+  "iters_grover": 1583.9368142032322,
+  "iters_nf": 8.652327842077039,
+  "zx_ratio": {
+   "A": 0.4328404205377796,
+   "O": 0.4021822106399221,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 121.36296296296297,
+  "minisat_conflicts_median": 1.0,
+  "T_total": {
+   "Grover": 6741235.081248956,
+   "Grover+ZX": 2596611.800047671,
+   "Negation-forced": 66207.6126475735,
+   "Negation-forced+ZX": 26902.393865805716
+  },
+  "surface": {
+   "Grover": {
+    "d": 23,
+    "physical_qubits": 280370,
+    "runtime_s": 155.04840686872598
+   },
+   "Grover+ZX": {
+    "d": 21,
+    "physical_qubits": 233730,
+    "runtime_s": 54.528847801001085
+   },
+   "Negation-forced": {
+    "d": 19,
+    "physical_qubits": 191330,
+    "runtime_s": 1.2579446403038967
+   },
+   "Negation-forced+ZX": {
+    "d": 17,
+    "physical_qubits": 153170,
+    "runtime_s": 0.4573406957186971
+   }
+  }
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 40,
+  "m": 96,
+  "logical_qubits": 225,
+  "T_A": 2264,
+  "T_O": 4662,
+  "T_S0": 1050,
+  "p_grover": 1.014996087178588e-09,
+  "p_nf": 0.0015463829040527344,
+  "iters_grover": 24652.314373569116,
+  "iters_nf": 19.972450869332523,
+  "zx_ratio": {
+   "A": 0.4328404205377796,
+   "O": 0.4021822106399221,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 646.6703669441874,
+  "minisat_conflicts_median": 1.0,
+  "T_total": {
+   "Grover": 140814019.70182678,
+   "Grover+ZX": 54200820.70509664,
+   "Negation-forced": 204517.89690196502,
+   "Negation-forced+ZX": 83055.66170678087
+  },
+  "surface": {
+   "Grover": {
+    "d": 25,
+    "physical_qubits": 436250,
+    "runtime_s": 3520.3504925456696
+   },
+   "Grover+ZX": {
+    "d": 25,
+    "physical_qubits": 436250,
+    "runtime_s": 1355.0205176274158
+   },
+   "Negation-forced": {
+    "d": 19,
+    "physical_qubits": 251978,
+    "runtime_s": 3.8858400411373353
+   },
+   "Negation-forced+ZX": {
+    "d": 19,
+    "physical_qubits": 251978,
+    "runtime_s": 1.5780575724288364
+   }
+  }
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 50,
+  "m": 120,
+  "logical_qubits": 281,
+  "T_A": 2592,
+  "T_O": 5838,
+  "T_S0": 1330,
+  "p_grover": 6.423306331271306e-12,
+  "p_nf": 0.0002185925841331482,
+  "iters_grover": 309892.1422492816,
+  "iters_nf": 53.121725001416564,
+  "zx_ratio": {
+   "A": 0.4328404205377796,
+   "O": 0.4021822106399221,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 4574.720610791097,
+  "minisat_conflicts_median": 1.5,
+  "T_total": {
+   "Grover": 2221306875.6428504,
+   "Grover+ZX": 854645074.6523739,
+   "Negation-forced": 656159.5472174974,
+   "Negation-forced+ZX": 265700.2004716694
+  },
+  "surface": {
+   "Grover": {
+    "d": 29,
+    "physical_qubits": 728306,
+    "runtime_s": 64417.899393642656
+   },
+   "Grover+ZX": {
+    "d": 27,
+    "physical_qubits": 631314,
+    "runtime_s": 23075.417015614094
+   },
+   "Negation-forced": {
+    "d": 21,
+    "physical_qubits": 381906,
+    "runtime_s": 13.779350491567444
+   },
+   "Negation-forced+ZX": {
+    "d": 21,
+    "physical_qubits": 381906,
+    "runtime_s": 5.579704209905057
+   }
+  }
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 60,
+  "m": 144,
+  "logical_qubits": 337,
+  "T_A": 3214,
+  "T_O": 7014,
+  "T_S0": 1610,
+  "p_grover": 1.199040866595169e-14,
+  "p_nf": 7.0035457611083984e-06,
+  "iters_grover": 7172538.51046297,
+  "iters_nf": 296.77744802312833,
+  "zx_ratio": {
+   "A": 0.4328404205377796,
+   "O": 0.4021822106399221,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 142784.8170212766,
+  "minisat_conflicts_median": 3.0,
+  "T_total": {
+   "Grover": 61855972114.23265,
+   "Grover+ZX": 23792375000.186623,
+   "Negation-forced": 4467094.147644128,
+   "Negation-forced+ZX": 1810178.217932768
+  },
+  "surface": {
+   "Grover": {
+    "d": 31,
+    "physical_qubits": 993674,
+    "runtime_s": 1917535.135541212
+   },
+   "Grover+ZX": {
+    "d": 31,
+    "physical_qubits": 993674,
+    "runtime_s": 737563.6250057853
+   },
+   "Negation-forced": {
+    "d": 23,
+    "physical_qubits": 546986,
+    "runtime_s": 102.74316539581494
+   },
+   "Negation-forced+ZX": {
+    "d": 23,
+    "physical_qubits": 546986,
+    "runtime_s": 41.63409901245366
+   }
+  }
+ },
+ {
+  "family": "1-in-3-SAT",
+  "n": 70,
+  "m": 168,
+  "logical_qubits": 394,
+  "T_A": 3612,
+  "T_O": 8190,
+  "T_S0": 1890,
+  "p_grover": 1.1709383462843448e-17,
+  "p_nf": 3.0407682061195374e-07,
+  "iters_grover": 229521232.33481503,
+  "iters_nf": 1424.2893389121348,
+  "zx_ratio": {
+   "A": 0.4328404205377796,
+   "O": 0.4021822106399221,
+   "S0": 0.30822510822510824
+  },
+  "classical_ppz_repetitions": 3288642.646248086,
+  "minisat_conflicts_median": 4.5,
+  "T_total": {
+   "Grover": 2313574021934.9355,
+   "Grover+ZX": 889720181247.7892,
+   "Negation-forced": 24645902.72053558,
+   "Negation-forced+ZX": 9974664.222445032
+  },
+  "surface": {
+   "Grover": {
+    "d": 35,
+    "physical_qubits": 1474900,
+    "runtime_s": 80975090.76772274
+   },
+   "Grover+ZX": {
+    "d": 35,
+    "physical_qubits": 1474900,
+    "runtime_s": 31140206.34367262
+   },
+   "Negation-forced": {
+    "d": 25,
+    "physical_qubits": 752500,
+    "runtime_s": 616.1475680133894
+   },
+   "Negation-forced+ZX": {
+    "d": 23,
+    "physical_qubits": 636916,
+    "runtime_s": 229.4172771162357
+   }
+  }
+ },
+ {
+  "family": "3-COL",
+  "n": 30,
+  "m": 111,
+  "logical_qubits": 251,
+  "T_A": 6472,
+  "T_O": 9996,
+  "T_S0": 770,
+  "p_grover": 1.955777406692505e-08,
+  "p_nf": 6.771087646484375e-05,
+  "iters_grover": 5616.039697180734,
+  "iters_nf": 95.44664419320121,
+  "zx_ratio": {
+   "A": 0.49449913234520365,
+   "O": 0.3216853408029879,
+   "S0": 0.30275689223057645
+  },
+  "classical_ppz_repetitions": 14768.676056338029,
+  "minisat_conflicts_median": 10.0,
+  "T_total": {
+   "Grover": 60462283.37984778,
+   "Grover+ZX": 19367976.98745986,
+   "Negation-forced": 2263039.933820801,
+   "Negation-forced+ZX": 940100.4088985943
+  },
+  "surface": {
+   "Grover": {
+    "d": 25,
+    "physical_qubits": 485000,
+    "runtime_s": 1511.5570844961944
+   },
+   "Grover+ZX": {
+    "d": 25,
+    "physical_qubits": 485000,
+    "runtime_s": 484.19942468649646
+   },
+   "Negation-forced": {
+    "d": 23,
+    "physical_qubits": 410504,
+    "runtime_s": 52.04991847787842
+   },
+   "Negation-forced+ZX": {
+    "d": 21,
+    "physical_qubits": 342216,
+    "runtime_s": 19.74210858687048
+   }
+  }
+ },
+ {
+  "family": "3-COL",
+  "n": 60,
+  "m": 219,
+  "logical_qubits": 497,
+  "T_A": 12958,
+  "T_O": 19740,
+  "T_S0": 1610,
+  "p_grover": 4.0592529337857286e-16,
+  "p_nf": 5.364654498407617e-09,
+  "iters_grover": 38982243.033191554,
+  "iters_nf": 10723.06658539712,
+  "zx_ratio": {
+   "A": 0.49449913234520365,
+   "O": 0.3216853408029879,
+   "S0": 0.30275689223057645
+  },
+  "classical_ppz_repetitions": 186405294.1893702,
+  "minisat_conflicts_median": 49.5,
+  "T_total": {
+   "Grover": 832270888758.6396,
+   "Grover+ZX": 266541368344.9181,
+   "Negation-forced": 506836465.2253803,
+   "Negation-forced+ZX": 210739856.46869797
+  },
+  "surface": {
+   "Grover": {
+    "d": 35,
+    "physical_qubits": 1854650,
+    "runtime_s": 29129481.106552385
+   },
+   "Grover+ZX": {
+    "d": 33,
+    "physical_qubits": 1648746,
+    "runtime_s": 8795865.155382296
+   },
+   "Negation-forced": {
+    "d": 27,
+    "physical_qubits": 1103706,
+    "runtime_s": 13684.584561085267
+   },
+   "Negation-forced+ZX": {
+    "d": 27,
+    "physical_qubits": 1103706,
+    "runtime_s": 5689.976124654845
+   }
+  }
+ },
+ {
+  "family": "3-COL",
+  "n": 70,
+  "m": 257,
+  "logical_qubits": 583,
+  "T_A": 15204,
+  "T_O": 23184,
+  "T_S0": 1890,
+  "p_grover": 7.369186641112413e-19,
+  "p_nf": 8.713385568626109e-11,
+  "iters_grover": 914913642.0415897,
+  "iters_nf": 84138.81968080638,
+  "zx_ratio": {
+   "A": 0.49449913234520365,
+   "O": 0.3216853408029879,
+   "S0": 0.30275689223057645
+  },
+  "classical_ppz_repetitions": 11476595315.61021,
+  "minisat_conflicts_median": 51.0,
+  "T_total": {
+   "Grover": 22940544660550.82,
+   "Grover+ZX": 7346906104232.665,
+   "Negation-forced": 4668189993.530499,
+   "Negation-forced+ZX": 1940821157.7780924
+  },
+  "surface": {
+   "Grover": {
+    "d": 37,
+    "physical_qubits": 2425868,
+    "runtime_s": 848800152.4403803
+   },
+   "Grover+ZX": {
+    "d": 37,
+    "physical_qubits": 2425868,
+    "runtime_s": 271835525.85660857
+   },
+   "Negation-forced": {
+    "d": 29,
+    "physical_qubits": 1490252,
+    "runtime_s": 135377.5098123845
+   },
+   "Negation-forced+ZX": {
+    "d": 29,
+    "physical_qubits": 1490252,
+    "runtime_s": 56283.81357556468
+   }
+  }
+ },
+ {
+  "family": "3-COL",
+  "n": 80,
+  "m": 292,
+  "logical_qubits": 663,
+  "T_A": 17240,
+  "T_O": 26334,
+  "T_S0": 2170,
+  "p_grover": 2.779326858178173e-21,
+  "p_nf": 4.218896065832922e-12,
+  "iters_grover": 14897728977.27754,
+  "iters_nf": 382375.8611915982,
+  "zx_ratio": {
+   "A": 0.49449913234520365,
+   "O": 0.3216853408029879,
+   "S0": 0.30275689223057645
+  },
+  "classical_ppz_repetitions": 237028830384.93942,
+  "minisat_conflicts_median": 63.5,
+  "T_total": {
+   "Grover": 424644866768319.0,
+   "Grover+ZX": 135990108440567.19,
+   "Negation-forced": 24083561241.29162,
+   "Negation-forced+ZX": 10010054894.301867
+  },
+  "surface": {
+   "Grover": {
+    "d": 41,
+    "physical_qubits": 3382172,
+    "runtime_s": 17410439537.50108
+   },
+   "Grover+ZX": {
+    "d": 39,
+    "physical_qubits": 3060252,
+    "runtime_s": 5303614229.182119
+   },
+   "Negation-forced": {
+    "d": 31,
+    "physical_qubits": 1933532,
+    "runtime_s": 746590.3984800401
+   },
+   "Negation-forced+ZX": {
+    "d": 31,
+    "physical_qubits": 1933532,
+    "runtime_s": 310311.70172335784
+   }
+  }
+ }
+]

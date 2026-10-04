@@ -1,0 +1,16 @@
+\begin{table}[t]\centering\small
+\caption{Classicality check (Lemma~\ref{lem:classical}): success probability of the measure-and-flip circuits (stabilizer simulation, 50\,000 shots) versus the same rules executed classically ($2\times10^6$ trials); all differences are within $2\sigma$ of shot noise.}\label{tab:classical}
+\begin{tabular}{lrrr}\toprule Circuit & iters & quantum & classical\\\midrule
+2-col path P10 & 2 & 0.0086 & 0.0078\\
+2-col path P10 & 5 & 0.0624 & 0.0624\\
+2-col path P10 & 10 & 1.0000 & 1.0000\\
+2-col path P10 & 20 & 1.0000 & 1.0000\\
+2-col path P30 & 7 & 0.0000 & 0.0000\\
+2-col path P30 & 15 & 0.0001 & 0.0001\\
+2-col path P30 & 30 & 1.0000 & 1.0000\\
+2-col path P30 & 60 & 1.0000 & 1.0000\\
+2-col path P60 & 15 & 0.0000 & 0.0000\\
+2-col path P60 & 30 & 0.0000 & 0.0000\\
+\midrule \multicolumn{4}{l}{Subset sum $\{1,2,3,4\}$, target 7, QFT adder: TV distance 0.0008}\\
+\bottomrule\end{tabular}
+\end{table}

@@ -1,0 +1,10 @@
+qiskit>=2.1
+qiskit-aer>=0.17
+qiskit-ibm-runtime>=0.40
+pyzx>=0.9
+python-sat>=1.8
+numpy
+matplotlib
+pylatexenc
+nbformat
+jupyter

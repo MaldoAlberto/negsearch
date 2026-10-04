@@ -1,0 +1,82 @@
+[
+ {
+  "problem": "2-col path P10",
+  "iters": 2,
+  "quantum_stabilizer": 0.00858,
+  "classical": 0.0078405,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P10",
+  "iters": 5,
+  "quantum_stabilizer": 0.06236,
+  "classical": 0.062422,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P10",
+  "iters": 10,
+  "quantum_stabilizer": 1.0,
+  "classical": 1.0,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P10",
+  "iters": 20,
+  "quantum_stabilizer": 1.0,
+  "classical": 1.0,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P30",
+  "iters": 7,
+  "quantum_stabilizer": 0.0,
+  "classical": 0.0,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P30",
+  "iters": 15,
+  "quantum_stabilizer": 6e-05,
+  "classical": 5.8e-05,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P30",
+  "iters": 30,
+  "quantum_stabilizer": 1.0,
+  "classical": 1.0,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P30",
+  "iters": 60,
+  "quantum_stabilizer": 1.0,
+  "classical": 1.0,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P60",
+  "iters": 15,
+  "quantum_stabilizer": 0.0,
+  "classical": 0.0,
+  "shots": 50000,
+  "classical_trials": 2000000
+ },
+ {
+  "problem": "2-col path P60",
+  "iters": 30,
+  "quantum_stabilizer": 0.0,
+  "classical": 0.0,
+  "shots": 50000,
+  "classical_trials": 2000000
+ }
+]

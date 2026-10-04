@@ -1,0 +1,56 @@
+[
+ {
+  "inst": "sudoku",
+  "L": 2000.0,
+  "method": "Grover textbook",
+  "p_valid": 0.4005,
+  "cost": 7.49063670411985,
+  "cert": null,
+  "p_click": null
+ },
+ {
+  "inst": "sudoku",
+  "L": 2000.0,
+  "method": "Grover coherent-rccx",
+  "p_valid": 0.358,
+  "cost": 8.379888268156424,
+  "cert": null,
+  "p_click": null
+ },
+ {
+  "inst": "sudoku",
+  "L": 2000.0,
+  "method": "Grover MBU-rccx",
+  "p_valid": 0.1025,
+  "cost": 29.26829268292683,
+  "cert": null,
+  "p_click": null
+ },
+ {
+  "inst": "sudoku",
+  "L": 2000.0,
+  "method": "Heralded T=2",
+  "p_valid": 0.34,
+  "cost": 7.882352941176471,
+  "cert": 0.5964214711729622,
+  "p_click": 0.2515
+ },
+ {
+  "inst": "sudoku",
+  "L": 2000.0,
+  "method": "Heralded T=4",
+  "p_valid": 0.3085,
+  "cost": 12.478119935170179,
+  "cert": 0.507182320441989,
+  "p_click": 0.4525
+ },
+ {
+  "inst": "sudoku",
+  "L": 2000.0,
+  "method": "Heralded T=6",
+  "p_valid": 0.297,
+  "cost": 16.095959595959595,
+  "cert": 0.4344335414808207,
+  "p_click": 0.5605
+ }
+]

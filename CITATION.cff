@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "negsearch: Negation-forced amplitude amplification"
+authors:
+  - family-names: "Maldonado Romo"
+    given-names: "Alberto"
+    affiliation: "Quantum Open Source Foundation (QOSF)"
+    email: "alberto@qosf.net"
+date-released: 2026-10-04
+license: MIT
