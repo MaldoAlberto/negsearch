@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{\orig{exact automaton construction} Variable order and automaton width for conflict constraints (random pair-exclusion graphs with repeated, subsumed and unit clauses injected). Width of the reduced automaton for the index order, a low-degree-first order, a degeneracy order, a colouring-layer order and the best order found by hill climbing on adjacent swaps (starting from the best of the four). Cleaning removes repeated and subsumed clauses and propagates unit clauses (forced variables stop being qubits); the repeated and subsumed clauses are injected, so the reduction in clauses is not an estimate for natural instances.}\label{tab:large_order}
+\begin{tabular}{rrrrrrrr}
+\toprule
+$n$ & clauses (raw$\to$clean) & qubits & index & low degree & degeneracy & colouring & searched\\
+\midrule
+14 & 38$\to$20 & 12 & 10 & 24 & 12 & 11 & 5\\
+18 & 52$\to$29 & 17 & 20 & 66 & 23 & 23 & 14\\
+22 & 42$\to$23 & 19 & 20 & 120 & 20 & 56 & 18\\
+26 & 64$\to$39 & 25 & 269 & 188 & 100 & 182 & 49\\
+\bottomrule
+\end{tabular}
+\end{table*}

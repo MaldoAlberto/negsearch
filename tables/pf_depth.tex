@@ -1,0 +1,19 @@
+\begin{table}[t]\centering\small
+\caption{\orig{compiled counts} CZ gates / depth on \texttt{ibm\_fez} (FakeFez, level 3) for one and two layers. v1: counters uncomputed; v2: shorts-first order, lean counters; v3: v2 + path XY + linear phase; counts+Dicke: counts drawn classically, Dicke preparation (most expensive count sector).}\label{tab:pf_depth}
+\resizebox{\linewidth}{!}{\begin{tabular}{lccc}\toprule circuit & a003 (12) & a004 (16) & a005 (20)\\\midrule
+penalty, slack QUBO, $p=1$ & 311/312 & 588/460 & 854/664\\
+penalty, unbalanced, $p=1$ & 92/128 & 185/184 & 301/279\\
+hybrid v1, $p=1$ & 511/952 & 1323/2291 & 1857/3053\\
+hybrid v2, $p=1$ & 330/387 & 762/696 & 1064/936\\
+hybrid v3, $p=1$ & 178/225 & 446/567 & 541/652\\
+counts+Dicke, $p=1$ & 24/32 & 156/127 & --\\
+\midrule
+penalty, slack QUBO, $p=2$ & 693/639 & 1231/986 & 1863/1219\\
+penalty, unbalanced, $p=2$ & 206/258 & 408/422 & 674/610\\
+hybrid v1, $p=2$ & 678/1361 & 1618/2982 & 2400/3456\\
+hybrid v2, $p=2$ & 481/567 & 1100/1040 & 1617/1635\\
+hybrid v3, $p=2$ & 200/255 & 454/528 & 601/690\\
+counts+Dicke, $p=2$ & 40/49 & 184/148 & --\\
+\midrule
+CG-QAOA (Grover mixer), $p=1$ & 4013/9882 & 9203/20872 & 13364/31631\\
+\bottomrule\end{tabular}}\end{table}

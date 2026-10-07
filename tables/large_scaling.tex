@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{2.6pt}
+\caption{\orig{exact automaton construction and compiled counts} Multi-period portfolio with sector caps, long/short exclusivity and a global trading budget ($A$ assets, $T$ periods, sectors of $3$--$5$ assets). Left: the coherent state $A_q$ over all constraints (binary register, period-major order). Right: classical preprocessing that conditions on the interface. CZ counts (thousands) use Qiskit's default ancilla-free multi-controlled synthesis, before routing (routing roughly doubles them). ``Per-period'' conditions on the number of positions of each period (binary registers, sum over periods); ``per-sector'' also on the counts of each sector (one-hot registers; typical total over the blocks, and the largest single block in CZ). The uniform column is the share of feasible strings in the uniform state; the slack column is the number of qubits of a slack-variable QUBO.}\label{tab:large_scaling}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+ & & & \multicolumn{3}{c}{coherent $A_q$} & & & \multicolumn{3}{c}{conditioned (k CZ)}\\
+\cmidrule(lr){4-6}\cmidrule(lr){9-11}
+$A,T$ & $n$ & constr. & width & qubits & kCZ & unif. & slack q. & per-period & per-sector & max block\\
+\midrule
+6,2 & 24 & 21 & 11 & 88 & 12.9 & $2^{-13}$ & 39 & 1.3 & 0.3 & 115\\
+8,3 & 48 & 37 & 27 & 207 & 116.5 & $2^{-30}$ & 69 & 3.4 & 0.7 & 209\\
+10,4 & 80 & 57 & 31 & 380 & 339.4 & $2^{-53}$ & 107 & 6.3 & 1.7 & 349\\
+10,6 & 120 & 85 & 52 & 636 & 1,189.6 & $2^{-77}$ & 160 & 9.4 & 2.5 & 349\\
+12,8 & 192 & 137 & 103 & 1156 & 5,058.5 & $2^{-131}$ & 252 & 29.0 & 2.9 & 209\\
+\bottomrule
+\end{tabular}
+\end{table*}

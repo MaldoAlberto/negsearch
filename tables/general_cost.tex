@@ -1,0 +1,14 @@
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{3.5pt}
+\caption{\orig{compiled counts} Gate cost of amplitude amplification, standard Grover against $A_q$ (CZ after transpilation to $\{$CZ, $R_z$, $\sqrt X$, $X$, $R_y\}$, no hand optimisation; the objective-threshold oracle is common to both and not counted). Standard iteration: feasibility oracle (automaton compute, phase, uncompute) + diffusion. $A_q$ iteration: $A_q^\dagger$, $A_q$, and the phase flip on all qubits. ``default: Qiskit's ancilla-free multi-controlled gates; ``V-chain: the two all-qubit phase flips use Toffoli V-chains with clean ancillas (extra $N-3$ qubits for $A_q$). Totals = iterations $\times$ cost per iteration (+ one $A_q$).}\label{tab:gen_cost}
+\begin{tabular}{lrrrrrrrrrr}\toprule
+& & & & & & \multicolumn{2}{c}{total CZ, default} & \multicolumn{2}{c}{total CZ, V-chain}\\\cmidrule(lr){7-8}\cmidrule(lr){9-10}
+family & $n$ & $w$ & CZ($A_q$) & CZ(oracle) & $k_{\rm std}\!\to\!k_{A_q}$ & standard & $A_q$ & standard & $A_q$\\\midrule
+cardinality & 10 & 5 & 912 & 2\,608 & $25\to17$ & 76\,300 & 129\,908 & 66\,400 & 34\,674\\
+knapsack & 10 & 14 & 3\,227 & 9\,732 & $17\to14$ & 172\,992 & 207\,319 & 166\,260 & 96\,271\\
+independent set & 10 & 9 & 1\,351 & 4\,912 & $25\to8$ & 133\,900 & 80\,023 & 124\,000 & 24\,407\\
+set packing & 10 & 4 & 335 & 1\,660 & $14\to1$ & 29\,456 & 5\,169 & 23\,912 & 1\,143\\
+exact cover & 10 & 4 & 276 & 1\,864 & $25\to1$ & 57\,700 & 5\,368 & 47\,800 & 972\\
+3-colouring & 10 & 15 & 1\,810 & 7\,598 & $25\to4$ & 201\,050 & 48\,786 & 191\,150 & 17\,058\\
+assignment $3\times3$ & 9 & 5 & 358 & 1\,998 & $8\to0$ & 18\,576 & 358 & 16\,320 & 358\\
+assignment $4\times4$ & 16 & 9 & 2\,078 & 10\,654 & $201\to4$ & 2\,442\,954 & 108\,310 & 2\,158\,338 & 19\,974\\
+\bottomrule\end{tabular}\end{table*}

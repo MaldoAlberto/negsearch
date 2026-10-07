@@ -1,0 +1,13 @@
+\begin{table*}[t]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{\orig{compiled counts and ESP (model); nothing executed} Hardware circuits generated for the conditioned multi-constraint case, compiled on the \texttt{ibm\_fez} topology (FakeFez snapshot; best of 10 transpiler seeds by estimated success probability; ranges over the interface tuples compiled). Nothing was executed on a device. The QAOA layer is not executable at $n=24$ (about $3.8$--$4.4$ thousand CZ, estimated success probability $\approx0$), so only the preparation was generated there.}\label{tab:large_hw}
+\begin{tabular}{llrrrrr}
+\toprule
+instance & circuit & qubits & CZ & depth & $\mu$s & ESP\\
+\midrule
+$n=24$ & $A_q$ only & 40--42 & 150--184 & 136--238 & 6.4--10.3 & 0.39--0.46\\
+$n=8$ & $A_q$ only & 12 & 20--22 & 34 & 2.7 & 0.89--0.90\\
+$n=8$ & $A_q$ + QAOA $p{=}1$ & 16 & 443--488 & 693--775 & 28.1--31.5 & 0.18--0.20\\
+\bottomrule
+\end{tabular}
+\end{table*}

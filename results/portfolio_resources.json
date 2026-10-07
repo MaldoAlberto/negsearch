@@ -1,0 +1,152 @@
+{
+ "a003_t02": {
+  "qubits_x": 12,
+  "qubits_slack_qubo": 20,
+  "A_q (preparation only)": {
+   "qubits": 15,
+   "twoq": 324,
+   "depth": 788,
+   "twoq_depth": 253
+  },
+  "penalty_slack": {
+   "qubits": 20,
+   "twoq": 311,
+   "depth": 312,
+   "twoq_depth": 99,
+   "p2_twoq": 693,
+   "p2_depth": 639
+  },
+  "penalty_unbalanced": {
+   "qubits": 12,
+   "twoq": 99,
+   "depth": 136,
+   "twoq_depth": 41,
+   "p2_twoq": 206,
+   "p2_depth": 255
+  },
+  "A_init_Xmixer": {
+   "qubits": 15,
+   "twoq": 468,
+   "depth": 884,
+   "twoq_depth": 291,
+   "p2_twoq": 569,
+   "p2_depth": 1324
+  },
+  "A_init_XYmixer": {
+   "qubits": 15,
+   "twoq": 511,
+   "depth": 952,
+   "twoq_depth": 321,
+   "p2_twoq": 678,
+   "p2_depth": 1361
+  },
+  "A_init_Grover_mixer": {
+   "qubits": 15,
+   "twoq": 4013,
+   "depth": 9882,
+   "twoq_depth": 2923,
+   "p2_twoq": 7861,
+   "p2_depth": 19310
+  }
+ },
+ "a004_t02": {
+  "qubits_x": 16,
+  "qubits_slack_qubo": 26,
+  "A_q (preparation only)": {
+   "qubits": 20,
+   "twoq": 898,
+   "depth": 1988,
+   "twoq_depth": 642
+  },
+  "penalty_slack": {
+   "qubits": 26,
+   "twoq": 588,
+   "depth": 460,
+   "twoq_depth": 143,
+   "p2_twoq": 1231,
+   "p2_depth": 986
+  },
+  "penalty_unbalanced": {
+   "qubits": 16,
+   "twoq": 185,
+   "depth": 183,
+   "twoq_depth": 57,
+   "p2_twoq": 412,
+   "p2_depth": 385
+  },
+  "A_init_Xmixer": {
+   "qubits": 20,
+   "twoq": 1215,
+   "depth": 2298,
+   "twoq_depth": 771,
+   "p2_twoq": 1454,
+   "p2_depth": 2524
+  },
+  "A_init_XYmixer": {
+   "qubits": 20,
+   "twoq": 1323,
+   "depth": 2291,
+   "twoq_depth": 761,
+   "p2_twoq": 1618,
+   "p2_depth": 2982
+  },
+  "A_init_Grover_mixer": {
+   "qubits": 20,
+   "twoq": 9203,
+   "depth": 20872,
+   "twoq_depth": 6629,
+   "p2_twoq": 18364,
+   "p2_depth": 42887
+  }
+ },
+ "a005_t02": {
+  "qubits_x": 20,
+  "qubits_slack_qubo": 30,
+  "A_q (preparation only)": {
+   "qubits": 24,
+   "twoq": 1233,
+   "depth": 2587,
+   "twoq_depth": 852
+  },
+  "penalty_slack": {
+   "qubits": 30,
+   "twoq": 854,
+   "depth": 664,
+   "twoq_depth": 220,
+   "p2_twoq": 1863,
+   "p2_depth": 1219
+  },
+  "penalty_unbalanced": {
+   "qubits": 20,
+   "twoq": 301,
+   "depth": 282,
+   "twoq_depth": 81,
+   "p2_twoq": 687,
+   "p2_depth": 633
+  },
+  "A_init_Xmixer": {
+   "qubits": 24,
+   "twoq": 1705,
+   "depth": 3049,
+   "twoq_depth": 997,
+   "p2_twoq": 2083,
+   "p2_depth": 3254
+  },
+  "A_init_XYmixer": {
+   "qubits": 24,
+   "twoq": 1857,
+   "depth": 3053,
+   "twoq_depth": 1035,
+   "p2_twoq": 2400,
+   "p2_depth": 3456
+  },
+  "A_init_Grover_mixer": {
+   "qubits": 24,
+   "twoq": 13364,
+   "depth": 31631,
+   "twoq_depth": 9638,
+   "p2_twoq": 27802,
+   "p2_depth": 64761
+  }
+ }
+}

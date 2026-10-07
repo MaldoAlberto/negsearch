@@ -1,0 +1,902 @@
+[
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "all-to-all",
+  "gates": "CZ",
+  "two_q": 84,
+  "depth": 202,
+  "depth_2q": 56,
+  "esp": 0.6777156202913145
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "all-to-all",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 74,
+  "depth": 183,
+  "depth_2q": 49,
+  "esp": 0.7059467946836675
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "line",
+  "gates": "CZ",
+  "two_q": 205,
+  "depth": 400,
+  "depth_2q": 143,
+  "esp": 0.4189400400083184
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "line",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 195,
+  "depth": 394,
+  "depth_2q": 134,
+  "esp": 0.4301087597842492
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "ring",
+  "gates": "CZ",
+  "two_q": 172,
+  "depth": 358,
+  "depth_2q": 124,
+  "esp": 0.4822359564470089
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "ring",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 162,
+  "depth": 353,
+  "depth_2q": 117,
+  "esp": 0.4934854738603031
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "grid 2x5",
+  "gates": "CZ",
+  "two_q": 129,
+  "depth": 272,
+  "depth_2q": 85,
+  "esp": 0.5681861978676448
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "grid 2x5",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 119,
+  "depth": 257,
+  "depth_2q": 78,
+  "esp": 0.5864046814240047
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ",
+  "two_q": 125,
+  "depth": 282,
+  "depth_2q": 92,
+  "esp": 0.576354986414319
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 115,
+  "depth": 268,
+  "depth_2q": 86,
+  "esp": 0.5967719987232726
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ",
+  "two_q": 173,
+  "depth": 378,
+  "depth_2q": 130,
+  "esp": 0.48078849479756225
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours_p0",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 163,
+  "depth": 376,
+  "depth_2q": 122,
+  "esp": 0.49040762859825077
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "all-to-all",
+  "gates": "CZ",
+  "two_q": 209,
+  "depth": 392,
+  "depth_2q": 113,
+  "esp": 0.39512322818300466
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "all-to-all",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 168,
+  "depth": 364,
+  "depth_2q": 93,
+  "esp": 0.46264089533634517
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "line",
+  "gates": "CZ",
+  "two_q": 480,
+  "depth": 908,
+  "depth_2q": 294,
+  "esp": 0.12835015862749596
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "line",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 450,
+  "depth": 915,
+  "depth_2q": 282,
+  "esp": 0.14049817214366855
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "ring",
+  "gates": "CZ",
+  "two_q": 412,
+  "depth": 733,
+  "depth_2q": 226,
+  "esp": 0.16892150669633801
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "ring",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 382,
+  "depth": 712,
+  "depth_2q": 213,
+  "esp": 0.18407916742858638
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "grid 2x5",
+  "gates": "CZ",
+  "two_q": 343,
+  "depth": 642,
+  "depth_2q": 206,
+  "esp": 0.22590484213343448
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "grid 2x5",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 309,
+  "depth": 609,
+  "depth_2q": 189,
+  "esp": 0.253743070150443
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ",
+  "two_q": 337,
+  "depth": 668,
+  "depth_2q": 216,
+  "esp": 0.23041926431334905
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 301,
+  "depth": 628,
+  "depth_2q": 195,
+  "esp": 0.25933497180000425
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ",
+  "two_q": 459,
+  "depth": 914,
+  "depth_2q": 298,
+  "esp": 0.14031543663325047
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "ours",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 427,
+  "depth": 894,
+  "depth_2q": 282,
+  "esp": 0.15382828284373593
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "all-to-all",
+  "gates": "CZ",
+  "two_q": 90,
+  "depth": 105,
+  "depth_2q": 34,
+  "esp": 0.6810898088938383
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "all-to-all",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 45,
+  "depth": 48,
+  "depth_2q": 17,
+  "esp": 0.818909648347191
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "line",
+  "gates": "CZ",
+  "two_q": 152,
+  "depth": 235,
+  "depth_2q": 75,
+  "esp": 0.5057555774584546
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "line",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 136,
+  "depth": 182,
+  "depth_2q": 63,
+  "esp": 0.5318710190113821
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "ring",
+  "gates": "CZ",
+  "two_q": 152,
+  "depth": 224,
+  "depth_2q": 71,
+  "esp": 0.50562913856409
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "ring",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 136,
+  "depth": 168,
+  "depth_2q": 58,
+  "esp": 0.5330692260636577
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "grid 2x5",
+  "gates": "CZ",
+  "two_q": 112,
+  "depth": 158,
+  "depth_2q": 42,
+  "esp": 0.6021781665318333
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "grid 2x5",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 86,
+  "depth": 117,
+  "depth_2q": 33,
+  "esp": 0.6639546137890715
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ",
+  "two_q": 132,
+  "depth": 286,
+  "depth_2q": 90,
+  "esp": 0.5606968675038008
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 96,
+  "depth": 199,
+  "depth_2q": 69,
+  "esp": 0.6489813194017559
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ",
+  "two_q": 140,
+  "depth": 236,
+  "depth_2q": 77,
+  "esp": 0.5355954306997075
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "lcu",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 121,
+  "depth": 168,
+  "depth_2q": 59,
+  "esp": 0.5706324593669493
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "all-to-all",
+  "gates": "CZ",
+  "two_q": 90,
+  "depth": 117,
+  "depth_2q": 34,
+  "esp": 0.676507363010193
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "all-to-all",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 45,
+  "depth": 47,
+  "depth_2q": 17,
+  "esp": 0.818909648347191
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "line",
+  "gates": "CZ",
+  "two_q": 152,
+  "depth": 234,
+  "depth_2q": 75,
+  "esp": 0.504618764695667
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "line",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 136,
+  "depth": 186,
+  "depth_2q": 63,
+  "esp": 0.5325363567052391
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "ring",
+  "gates": "CZ",
+  "two_q": 152,
+  "depth": 221,
+  "depth_2q": 71,
+  "esp": 0.5049974180801017
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "ring",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 136,
+  "depth": 170,
+  "depth_2q": 58,
+  "esp": 0.5333358606604967
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "grid 2x5",
+  "gates": "CZ",
+  "two_q": 112,
+  "depth": 157,
+  "depth_2q": 42,
+  "esp": 0.602328748719013
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "grid 2x5",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 86,
+  "depth": 118,
+  "depth_2q": 33,
+  "esp": 0.6637886251356242
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ",
+  "two_q": 132,
+  "depth": 287,
+  "depth_2q": 90,
+  "esp": 0.5598563476806734
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 96,
+  "depth": 207,
+  "depth_2q": 69,
+  "esp": 0.6488190740719054
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ",
+  "two_q": 140,
+  "depth": 243,
+  "depth_2q": 77,
+  "esp": 0.5342579474813048
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "unbalanced",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 121,
+  "depth": 169,
+  "depth_2q": 59,
+  "esp": 0.5709178826258946
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "all-to-all",
+  "gates": "CZ",
+  "two_q": 106,
+  "depth": 141,
+  "depth_2q": 36,
+  "esp": 0.6222498275987662
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "all-to-all",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 61,
+  "depth": 54,
+  "depth_2q": 20,
+  "esp": 0.7686414628522842
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "line",
+  "gates": "CZ",
+  "two_q": 180,
+  "depth": 236,
+  "depth_2q": 70,
+  "esp": 0.445357788072184
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "line",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 170,
+  "depth": 208,
+  "depth_2q": 64,
+  "esp": 0.458146282241247
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "ring",
+  "gates": "CZ",
+  "two_q": 178,
+  "depth": 241,
+  "depth_2q": 74,
+  "esp": 0.4500644044340296
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "ring",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 165,
+  "depth": 201,
+  "depth_2q": 66,
+  "esp": 0.4706997470440345
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "grid 2x5",
+  "gates": "CZ",
+  "two_q": 126,
+  "depth": 171,
+  "depth_2q": 44,
+  "esp": 0.5590362124520926
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "grid 2x5",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 101,
+  "depth": 128,
+  "depth_2q": 36,
+  "esp": 0.6264826101819688
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ",
+  "two_q": 153,
+  "depth": 256,
+  "depth_2q": 78,
+  "esp": 0.5041114608025505
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "grid 3x4 (10 of 12)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 117,
+  "depth": 193,
+  "depth_2q": 80,
+  "esp": 0.6011080076687138
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ",
+  "two_q": 177,
+  "depth": 263,
+  "depth_2q": 85,
+  "esp": 0.45618484217445116
+ },
+ {
+  "block": 8,
+  "ls": [
+   1,
+   1
+  ],
+  "F": 20,
+  "method": "xy",
+  "topology": "heavy-hex (12-ring patch)",
+  "gates": "CZ+RZZ(fractional)",
+  "two_q": 158,
+  "depth": 207,
+  "depth_2q": 69,
+  "esp": 0.4914035573098505
+ }
+]

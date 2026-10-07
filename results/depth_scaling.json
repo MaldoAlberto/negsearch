@@ -1,0 +1,1584 @@
+{
+ "mis": [
+  {
+   "source": "karate",
+   "n": 6,
+   "m": 5,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 36,
+    "twoq": 10
+   },
+   "routed": {
+    "depth": 59,
+    "twoq": 16
+   }
+  },
+  {
+   "source": "karate",
+   "n": 6,
+   "m": 5,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 270,
+    "twoq": 114
+   },
+   "routed": {
+    "depth": 760,
+    "twoq": 213
+   }
+  },
+  {
+   "source": "karate",
+   "n": 6,
+   "m": 5,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 23,
+    "twoq": 10
+   },
+   "routed": {
+    "depth": 71,
+    "twoq": 16
+   }
+  },
+  {
+   "source": "karate",
+   "n": 6,
+   "m": 5,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 94,
+    "twoq": 50
+   },
+   "routed": {
+    "depth": 311,
+    "twoq": 101
+   }
+  },
+  {
+   "source": "karate",
+   "n": 6,
+   "m": 5,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 38,
+    "twoq": 14
+   },
+   "routed": {
+    "depth": 69,
+    "twoq": 23
+   }
+  },
+  {
+   "source": "karate",
+   "n": 6,
+   "m": 5,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 172,
+    "twoq": 74
+   },
+   "routed": {
+    "depth": 508,
+    "twoq": 202
+   }
+  },
+  {
+   "source": "karate",
+   "n": 10,
+   "m": 9,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 60,
+    "twoq": 18
+   },
+   "routed": {
+    "depth": 116,
+    "twoq": 36
+   }
+  },
+  {
+   "source": "karate",
+   "n": 10,
+   "m": 9,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 1098,
+    "twoq": 498
+   },
+   "routed": {
+    "depth": 3571,
+    "twoq": 1209
+   }
+  },
+  {
+   "source": "karate",
+   "n": 10,
+   "m": 9,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 35,
+    "twoq": 18
+   },
+   "routed": {
+    "depth": 158,
+    "twoq": 39
+   }
+  },
+  {
+   "source": "karate",
+   "n": 10,
+   "m": 9,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 305,
+    "twoq": 138
+   },
+   "routed": {
+    "depth": 1000,
+    "twoq": 348
+   }
+  },
+  {
+   "source": "karate",
+   "n": 10,
+   "m": 9,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 62,
+    "twoq": 22
+   },
+   "routed": {
+    "depth": 132,
+    "twoq": 58
+   }
+  },
+  {
+   "source": "karate",
+   "n": 10,
+   "m": 9,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 292,
+    "twoq": 122
+   },
+   "routed": {
+    "depth": 1078,
+    "twoq": 517
+   }
+  },
+  {
+   "source": "karate",
+   "n": 14,
+   "m": 14,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 106,
+    "twoq": 32
+   },
+   "routed": {
+    "depth": 191,
+    "twoq": 71
+   }
+  },
+  {
+   "source": "karate",
+   "n": 14,
+   "m": 14,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 2788,
+    "twoq": 1180
+   },
+   "routed": {
+    "depth": 8830,
+    "twoq": 3214
+   }
+  },
+  {
+   "source": "karate",
+   "n": 14,
+   "m": 14,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 47,
+    "twoq": 28
+   },
+   "routed": {
+    "depth": 235,
+    "twoq": 61
+   }
+  },
+  {
+   "source": "karate",
+   "n": 14,
+   "m": 14,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 541,
+    "twoq": 222
+   },
+   "routed": {
+    "depth": 1548,
+    "twoq": 588
+   }
+  },
+  {
+   "source": "karate",
+   "n": 14,
+   "m": 14,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 112,
+    "twoq": 42
+   },
+   "routed": {
+    "depth": 261,
+    "twoq": 138
+   }
+  },
+  {
+   "source": "karate",
+   "n": 14,
+   "m": 14,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 448,
+    "twoq": 206
+   },
+   "routed": {
+    "depth": 1857,
+    "twoq": 1029
+   }
+  },
+  {
+   "source": "karate",
+   "n": 18,
+   "m": 32,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 364,
+    "twoq": 136
+   },
+   "routed": {
+    "depth": 746,
+    "twoq": 283
+   }
+  },
+  {
+   "source": "karate",
+   "n": 18,
+   "m": 32,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 5894,
+    "twoq": 2388
+   },
+   "routed": {
+    "depth": 18774,
+    "twoq": 6915
+   }
+  },
+  {
+   "source": "karate",
+   "n": 18,
+   "m": 32,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 65,
+    "twoq": 64
+   },
+   "routed": {
+    "depth": 327,
+    "twoq": 169
+   }
+  },
+  {
+   "source": "karate",
+   "n": 18,
+   "m": 32,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 1455,
+    "twoq": 578
+   },
+   "routed": {
+    "depth": 5011,
+    "twoq": 1928
+   }
+  },
+  {
+   "source": "karate",
+   "n": 18,
+   "m": 32,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 326,
+    "twoq": 158
+   },
+   "routed": {
+    "depth": 1280,
+    "twoq": 496
+   }
+  },
+  {
+   "source": "karate",
+   "n": 18,
+   "m": 32,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 1105,
+    "twoq": 578
+   },
+   "routed": {
+    "depth": 5364,
+    "twoq": 2554
+   }
+  },
+  {
+   "source": "karate",
+   "n": 22,
+   "m": 52,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 683,
+    "twoq": 278
+   },
+   "routed": {
+    "depth": 1517,
+    "twoq": 623
+   }
+  },
+  {
+   "source": "karate",
+   "n": 22,
+   "m": 52,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 9913,
+    "twoq": 3966
+   },
+   "routed": {
+    "depth": 30523,
+    "twoq": 11688
+   }
+  },
+  {
+   "source": "karate",
+   "n": 22,
+   "m": 52,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 95,
+    "twoq": 104
+   },
+   "routed": {
+    "depth": 600,
+    "twoq": 320
+   }
+  },
+  {
+   "source": "karate",
+   "n": 22,
+   "m": 52,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 2220,
+    "twoq": 988
+   },
+   "routed": {
+    "depth": 7384,
+    "twoq": 2935
+   }
+  },
+  {
+   "source": "karate",
+   "n": 22,
+   "m": 52,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 637,
+    "twoq": 302
+   },
+   "routed": {
+    "depth": 2419,
+    "twoq": 1023
+   }
+  },
+  {
+   "source": "karate",
+   "n": 22,
+   "m": 52,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 2080,
+    "twoq": 1034
+   },
+   "routed": {
+    "depth": 9468,
+    "twoq": 4832
+   }
+  },
+  {
+   "source": "karate",
+   "n": 26,
+   "m": 59,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 737,
+    "twoq": 310
+   },
+   "routed": {
+    "depth": 1622,
+    "twoq": 760
+   }
+  },
+  {
+   "source": "karate",
+   "n": 26,
+   "m": 59,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 13899,
+    "twoq": 5470
+   },
+   "routed": {
+    "depth": 45506,
+    "twoq": 17518
+   }
+  },
+  {
+   "source": "karate",
+   "n": 26,
+   "m": 59,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 98,
+    "twoq": 118
+   },
+   "routed": {
+    "depth": 561,
+    "twoq": 403
+   }
+  },
+  {
+   "source": "karate",
+   "n": 26,
+   "m": 59,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 2362,
+    "twoq": 1124
+   },
+   "routed": {
+    "depth": 8320,
+    "twoq": 3644
+   }
+  },
+  {
+   "source": "karate",
+   "n": 26,
+   "m": 59,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 721,
+    "twoq": 342
+   },
+   "routed": {
+    "depth": 2662,
+    "twoq": 1236
+   }
+  },
+  {
+   "source": "karate",
+   "n": 26,
+   "m": 59,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 2386,
+    "twoq": 1178
+   },
+   "routed": {
+    "depth": 11005,
+    "twoq": 5955
+   }
+  },
+  {
+   "source": "karate",
+   "n": 30,
+   "m": 70,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 779,
+    "twoq": 370
+   },
+   "routed": {
+    "depth": 1781,
+    "twoq": 916
+   }
+  },
+  {
+   "source": "karate",
+   "n": 30,
+   "m": 70,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 18655,
+    "twoq": 7314
+   },
+   "routed": {
+    "depth": 62010,
+    "twoq": 23652
+   }
+  },
+  {
+   "source": "karate",
+   "n": 30,
+   "m": 70,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 110,
+    "twoq": 140
+   },
+   "routed": {
+    "depth": 669,
+    "twoq": 467
+   }
+  },
+  {
+   "source": "karate",
+   "n": 30,
+   "m": 70,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 2927,
+    "twoq": 1346
+   },
+   "routed": {
+    "depth": 10423,
+    "twoq": 4481
+   }
+  },
+  {
+   "source": "karate",
+   "n": 30,
+   "m": 70,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 864,
+    "twoq": 418
+   },
+   "routed": {
+    "depth": 3164,
+    "twoq": 1464
+   }
+  },
+  {
+   "source": "karate",
+   "n": 30,
+   "m": 70,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 2865,
+    "twoq": 1430
+   },
+   "routed": {
+    "depth": 13419,
+    "twoq": 7310
+   }
+  },
+  {
+   "source": "karate",
+   "n": 34,
+   "m": 78,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 779,
+    "twoq": 402
+   },
+   "routed": {
+    "depth": 1920,
+    "twoq": 1089
+   }
+  },
+  {
+   "source": "karate",
+   "n": 34,
+   "m": 78,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 24040,
+    "twoq": 9330
+   }
+  },
+  {
+   "source": "karate",
+   "n": 34,
+   "m": 78,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 116,
+    "twoq": 156
+   },
+   "routed": {
+    "depth": 615,
+    "twoq": 540
+   }
+  },
+  {
+   "source": "karate",
+   "n": 34,
+   "m": 78,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 3149,
+    "twoq": 1490
+   },
+   "routed": {
+    "depth": 11891,
+    "twoq": 5393
+   }
+  },
+  {
+   "source": "karate",
+   "n": 34,
+   "m": 78,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 945,
+    "twoq": 462
+   },
+   "routed": {
+    "depth": 3505,
+    "twoq": 1663
+   }
+  },
+  {
+   "source": "karate",
+   "n": 34,
+   "m": 78,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 3156,
+    "twoq": 1586
+   },
+   "routed": {
+    "depth": 14845,
+    "twoq": 8423
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 6,
+   "m": 5,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 36,
+    "twoq": 10
+   },
+   "routed": {
+    "depth": 59,
+    "twoq": 16
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 6,
+   "m": 5,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 270,
+    "twoq": 114
+   },
+   "routed": {
+    "depth": 760,
+    "twoq": 213
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 6,
+   "m": 5,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 23,
+    "twoq": 10
+   },
+   "routed": {
+    "depth": 71,
+    "twoq": 16
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 6,
+   "m": 5,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 94,
+    "twoq": 50
+   },
+   "routed": {
+    "depth": 311,
+    "twoq": 101
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 6,
+   "m": 5,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 38,
+    "twoq": 14
+   },
+   "routed": {
+    "depth": 69,
+    "twoq": 23
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 6,
+   "m": 5,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 172,
+    "twoq": 74
+   },
+   "routed": {
+    "depth": 508,
+    "twoq": 202
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 10,
+   "m": 19,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 266,
+    "twoq": 94
+   },
+   "routed": {
+    "depth": 524,
+    "twoq": 184
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 10,
+   "m": 19,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 1634,
+    "twoq": 726
+   },
+   "routed": {
+    "depth": 4859,
+    "twoq": 1767
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 10,
+   "m": 19,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 44,
+    "twoq": 38
+   },
+   "routed": {
+    "depth": 183,
+    "twoq": 74
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 10,
+   "m": 19,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 660,
+    "twoq": 316
+   },
+   "routed": {
+    "depth": 2190,
+    "twoq": 766
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 10,
+   "m": 19,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 251,
+    "twoq": 116
+   },
+   "routed": {
+    "depth": 787,
+    "twoq": 312
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 10,
+   "m": 19,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 782,
+    "twoq": 404
+   },
+   "routed": {
+    "depth": 3053,
+    "twoq": 1374
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 14,
+   "m": 34,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 418,
+    "twoq": 186
+   },
+   "routed": {
+    "depth": 1063,
+    "twoq": 384
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 14,
+   "m": 34,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 3759,
+    "twoq": 1642
+   },
+   "routed": {
+    "depth": 11738,
+    "twoq": 4210
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 14,
+   "m": 34,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 65,
+    "twoq": 68
+   },
+   "routed": {
+    "depth": 340,
+    "twoq": 167
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 14,
+   "m": 34,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 1397,
+    "twoq": 660
+   },
+   "routed": {
+    "depth": 4872,
+    "twoq": 1881
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 14,
+   "m": 34,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 433,
+    "twoq": 204
+   },
+   "routed": {
+    "depth": 1582,
+    "twoq": 622
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 14,
+   "m": 34,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 1403,
+    "twoq": 692
+   },
+   "routed": {
+    "depth": 5797,
+    "twoq": 2732
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 18,
+   "m": 43,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 522,
+    "twoq": 224
+   },
+   "routed": {
+    "depth": 1284,
+    "twoq": 503
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 18,
+   "m": 43,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 6384,
+    "twoq": 2652
+   },
+   "routed": {
+    "depth": 19398,
+    "twoq": 7020
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 18,
+   "m": 43,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 77,
+    "twoq": 86
+   },
+   "routed": {
+    "depth": 404,
+    "twoq": 227
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 18,
+   "m": 43,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 1764,
+    "twoq": 812
+   },
+   "routed": {
+    "depth": 6161,
+    "twoq": 2441
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 18,
+   "m": 43,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 525,
+    "twoq": 248
+   },
+   "routed": {
+    "depth": 1920,
+    "twoq": 793
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 18,
+   "m": 43,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 1720,
+    "twoq": 848
+   },
+   "routed": {
+    "depth": 7505,
+    "twoq": 3568
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 22,
+   "m": 55,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 681,
+    "twoq": 298
+   },
+   "routed": {
+    "depth": 1620,
+    "twoq": 688
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 22,
+   "m": 55,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 10022,
+    "twoq": 4026
+   },
+   "routed": {
+    "depth": 31975,
+    "twoq": 11979
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 22,
+   "m": 55,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 89,
+    "twoq": 110
+   },
+   "routed": {
+    "depth": 521,
+    "twoq": 329
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 22,
+   "m": 55,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 2355,
+    "twoq": 1088
+   },
+   "routed": {
+    "depth": 8526,
+    "twoq": 3494
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 22,
+   "m": 55,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 674,
+    "twoq": 320
+   },
+   "routed": {
+    "depth": 2420,
+    "twoq": 1043
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 22,
+   "m": 55,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 2216,
+    "twoq": 1088
+   },
+   "routed": {
+    "depth": 10156,
+    "twoq": 5011
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 26,
+   "m": 69,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 914,
+    "twoq": 386
+   },
+   "routed": {
+    "depth": 2117,
+    "twoq": 902
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 26,
+   "m": 69,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 14547,
+    "twoq": 5698
+   },
+   "routed": {
+    "depth": 46575,
+    "twoq": 17452
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 26,
+   "m": 69,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 107,
+    "twoq": 138
+   },
+   "routed": {
+    "depth": 683,
+    "twoq": 444
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 26,
+   "m": 69,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 3084,
+    "twoq": 1388
+   },
+   "routed": {
+    "depth": 10775,
+    "twoq": 4346
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 26,
+   "m": 69,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 821,
+    "twoq": 394
+   },
+   "routed": {
+    "depth": 3337,
+    "twoq": 1414
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 26,
+   "m": 69,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 2705,
+    "twoq": 1334
+   },
+   "routed": {
+    "depth": 12452,
+    "twoq": 6099
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 30,
+   "m": 88,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 1058,
+    "twoq": 502
+   },
+   "routed": {
+    "depth": 3197,
+    "twoq": 1339
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 30,
+   "m": 88,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 19593,
+    "twoq": 7710
+   },
+   "routed": {
+    "depth": 62026,
+    "twoq": 22740
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 30,
+   "m": 88,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 119,
+    "twoq": 176
+   },
+   "routed": {
+    "depth": 707,
+    "twoq": 647
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 30,
+   "m": 88,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 3921,
+    "twoq": 1844
+   },
+   "routed": {
+    "depth": 15306,
+    "twoq": 6203
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 30,
+   "m": 88,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 1123,
+    "twoq": 534
+   },
+   "routed": {
+    "depth": 4374,
+    "twoq": 2044
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 30,
+   "m": 88,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 3659,
+    "twoq": 1778
+   },
+   "routed": {
+    "depth": 17979,
+    "twoq": 9316
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 34,
+   "m": 104,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 1259,
+    "twoq": 614
+   },
+   "routed": {
+    "depth": 3672,
+    "twoq": 1679
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 34,
+   "m": 104,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 25691,
+    "twoq": 9966
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 34,
+   "m": 104,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 131,
+    "twoq": 208
+   },
+   "routed": {
+    "depth": 898,
+    "twoq": 796
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 34,
+   "m": 104,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 4917,
+    "twoq": 2252
+   },
+   "routed": {
+    "depth": 18367,
+    "twoq": 7694
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 34,
+   "m": 104,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 1276,
+    "twoq": 608
+   },
+   "routed": {
+    "depth": 5142,
+    "twoq": 2440
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 34,
+   "m": 104,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 4166,
+    "twoq": 2024
+   },
+   "routed": {
+    "depth": 20332,
+    "twoq": 11271
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 38,
+   "m": 152,
+   "method": "NF preparation A_q",
+   "logical": {
+    "depth": 1913,
+    "twoq": 1114
+   },
+   "routed": {
+    "depth": 7029,
+    "twoq": 3103
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 38,
+   "m": 152,
+   "method": "CG-QAOA layer (p=1)",
+   "logical": {
+    "depth": 33729,
+    "twoq": 13642
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 38,
+   "m": 152,
+   "method": "Penalty QAOA layer (p=1)",
+   "logical": {
+    "depth": 140,
+    "twoq": 304
+   },
+   "routed": {
+    "depth": 917,
+    "twoq": 1189
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 38,
+   "m": 152,
+   "method": "Hadfield QAOA layer (p=1)",
+   "logical": {
+    "depth": 8139,
+    "twoq": 3644
+   },
+   "routed": {
+    "depth": 31783,
+    "twoq": 13868
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 38,
+   "m": 152,
+   "method": "NF preparation A_q (ancillas)",
+   "logical": {
+    "depth": 1891,
+    "twoq": 890
+   },
+   "routed": {
+    "depth": 9026,
+    "twoq": 4538
+   }
+  },
+  {
+   "source": "chesapeake",
+   "n": 38,
+   "m": 152,
+   "method": "CG-QAOA layer (ancillas)",
+   "logical": {
+    "depth": 6030,
+    "twoq": 2894
+   },
+   "routed": {
+    "depth": 33703,
+    "twoq": 18119
+   }
+  }
+ ],
+ "sat": [
+  {
+   "n": 8,
+   "m": 34,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 1206,
+    "twoq": 996
+   }
+  },
+  {
+   "n": 8,
+   "m": 34,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 5966,
+    "twoq": 4105
+   }
+  },
+  {
+   "n": 12,
+   "m": 50,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 1635,
+    "twoq": 1424
+   }
+  },
+  {
+   "n": 12,
+   "m": 50,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 8572,
+    "twoq": 6017
+   }
+  },
+  {
+   "n": 16,
+   "m": 67,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 2135,
+    "twoq": 1910
+   }
+  },
+  {
+   "n": 16,
+   "m": 67,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 11474,
+    "twoq": 8105
+   }
+  },
+  {
+   "n": 20,
+   "m": 84,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 2593,
+    "twoq": 2400
+   }
+  },
+  {
+   "n": 20,
+   "m": 84,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 14283,
+    "twoq": 10201
+   }
+  },
+  {
+   "n": 24,
+   "m": 101,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 2957,
+    "twoq": 2738
+   }
+  },
+  {
+   "n": 24,
+   "m": 101,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 16851,
+    "twoq": 11993
+   }
+  },
+  {
+   "n": 28,
+   "m": 118,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 3823,
+    "twoq": 3412
+   }
+  },
+  {
+   "n": 28,
+   "m": 118,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 20435,
+    "twoq": 14457
+   }
+  },
+  {
+   "n": 32,
+   "m": 134,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 4013,
+    "twoq": 3756
+   }
+  },
+  {
+   "n": 32,
+   "m": 134,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 22602,
+    "twoq": 16201
+   }
+  },
+  {
+   "n": 36,
+   "m": 151,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 4782,
+    "twoq": 4306
+   }
+  },
+  {
+   "n": 36,
+   "m": 151,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 26010,
+    "twoq": 18417
+   }
+  },
+  {
+   "n": 40,
+   "m": 168,
+   "method": "NF preparation A (3-SAT)",
+   "logical": {
+    "depth": 5097,
+    "twoq": 4684
+   }
+  },
+  {
+   "n": 40,
+   "m": 168,
+   "method": "Grover iterate Q (3-SAT)",
+   "logical": {
+    "depth": 28522,
+    "twoq": 20289
+   }
+  }
+ ]
+}

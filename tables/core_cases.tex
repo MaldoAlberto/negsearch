@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{\orig{compiled counts; ideal feasibility and quality from exact simulation; success probabilities from the ESP model; nothing executed} Three cases, one $p=1$ layer on the residual core, compiled to \texttt{ibm\_fez} (best of $3$--$4$ seeds). Feasible, quality ($1$ is the optimum, among feasible samples) and $P(\mathrm{opt})$ are ideal-simulation values; the Fourier-LCU and unbalanced baselines here start from the uniform state (a weak baseline; warm-started ones in \cref{tab:core_baselines}), were trained in dense simulation with few restarts, and at $n=192$ are compiled only. The cores were chosen to fit ($16$, $20$, $30$ free qubits). Grover rows: one compiled iteration with an ancilla-free and a V-chain reflection, and the iterations needed; $|F|$: feasible strings of the core.}\label{tab:core_cases}
+\begin{tabular}{rrrlrrrrrr}
+\toprule
+$n$ & free & $|F|$ & method & CZ & depth & ESP & feas. & qual. & $P$(opt)\\
+\midrule
+64 & 16 & 64 & ours (QAOA) & 473 & 541 & 0.191 & 100\,\% & 0.67 & 4.18\,\%\\
+ & &  & Fourier-LCU & 412 & 525 & 0.235 & 17\,\% & 0.73 & 0.96\,\%\\
+ & &  & unbalanced & 412 & 525 & 0.234 & 11\,\% & 0.65 & 0.62\,\%\\
+ & & & ours (Grover, 1 it., no ancilla) & 3454 & 8025 & $5.3\cdot10^{-6}$ & \multicolumn{3}{l}{16 qubits; 6 iterations}\\
+ & & & ours (Grover, 1 it., V-chain) & 323 & 578 & 0.306 & \multicolumn{3}{l}{31 qubits; 6 iterations}\\
+\midrule
+100 & 20 & 5000 & ours (QAOA) & 669 & 607 & 0.066 & 100\,\% & 0.65 & 0.40\,\%\\
+ & &  & Fourier-LCU & 413 & 307 & 0.184 & 10\,\% & 0.65 & 0.03\,\%\\
+ & &  & unbalanced & 413 & 310 & 0.184 & 12\,\% & 0.52 & 0.0086\,\%\\
+ & & & ours (Grover, 1 it., no ancilla) & 6270 & 14390 & $5.1\cdot10^{-11}$ & \multicolumn{3}{l}{20 qubits; 56 iterations}\\
+ & & & ours (Grover, 1 it., V-chain) & 800 & 968 & 0.033 & \multicolumn{3}{l}{40 qubits; 56 iterations}\\
+\midrule
+192 & 30 & 303750 & ours (QAOA) & 923 & 586 & 0.037 & 100\,\% & 0.59 & 0.0021\,\%\\
+ & &  & Fourier-LCU & 612 & 414 & 0.120 & -- & -- & --\\
+ & &  & unbalanced & 614 & 418 & 0.119 & -- & -- & --\\
+ & & & ours (Grover, 1 it., no ancilla) & 8743 & 19188 & $2.7\cdot10^{-20}$ & \multicolumn{3}{l}{30 qubits; 433 iterations}\\
+ & & & ours (Grover, 1 it., V-chain) & 1279 & 1555 & $3.2\cdot10^{-3}$ & \multicolumn{3}{l}{64 qubits; 433 iterations}\\
+\bottomrule
+\end{tabular}
+\end{table*}

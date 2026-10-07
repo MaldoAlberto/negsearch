@@ -1,0 +1,78 @@
+{
+ "a003_t02": {
+  "unbalanced p=1 | bond64": {
+   "p_feas": 0.6215,
+   "quality": 0.4937487827498261,
+   "best_gap": 0.0
+  },
+  "unbalanced p=1 | bond256": {
+   "p_feas": 0.6215,
+   "quality": 0.4937487827498261,
+   "best_gap": 0.0
+  },
+  "unbalanced p=1 | statevector": {
+   "p_feas": 0.61775,
+   "quality": 0.489443426849061,
+   "best_gap": 0.0
+  },
+  "hybrid p=1 | bond64": {
+   "p_feas": 1.0,
+   "quality": 0.7385802805471829,
+   "best_gap": 0.0
+  },
+  "hybrid p=1 | bond256": {
+   "p_feas": 1.0,
+   "quality": 0.7385802805471829,
+   "best_gap": 0.0
+  },
+  "hybrid p=1 | statevector": {
+   "p_feas": 1.0,
+   "quality": 0.7353267447252493,
+   "best_gap": 0.0
+  }
+ },
+ "a005_t04": {
+  "unbalanced p=1 | bond64": {
+   "p_feas": 0.0945,
+   "quality": 0.07124890185742973,
+   "best_gap": 0.05827476572958501
+  },
+  "unbalanced p=1 | bond256": {
+   "p_feas": 0.0955,
+   "quality": 0.07201172397925032,
+   "best_gap": 0.05827476572958501
+  },
+  "hybrid p=1 | bond64": {
+   "p_feas": 1.0,
+   "quality": 0.689420264390897,
+   "best_gap": 0.03208668005354753
+  },
+  "hybrid p=1 | bond256": {
+   "p_feas": 1.0,
+   "quality": 0.689420264390897,
+   "best_gap": 0.03208668005354753
+  }
+ },
+ "a010_t04": {
+  "unbalanced p=1 | bond64": {
+   "p_feas": 0.02275,
+   "quality": 0.013658503837836556,
+   "best_gap": 0.15453530096718235
+  },
+  "unbalanced p=1 | bond256": {
+   "p_feas": 0.021,
+   "quality": 0.01277839761412514,
+   "best_gap": 0.15453530096718235
+  },
+  "hybrid p=1 | bond64": {
+   "p_feas": 1.0,
+   "quality": 0.5938503956655022,
+   "best_gap": 0.13112806254604215
+  },
+  "hybrid p=1 | bond256": {
+   "p_feas": 1.0,
+   "quality": 0.5938503956655022,
+   "best_gap": 0.13112806254604215
+  }
+ }
+}

@@ -1,0 +1,13 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{\orig{compiled counts; nothing executed} Our construction with and without the symmetric (Dicke-based) lowering, on the three cores. Entries: symmetric lowering / generic automaton preparation $A_q$ with binary registers uncomputed in reverse / generic one-hot register with measurement-based uncomputation and one pool of reused register qubits. ``qubits'' are those of the preparation alone; CZ are for the preparation alone and for one QAOA layer (same objective and mixers; for the measurement-based version the layer uses the worst case, all corrections applied, and the preparation column the expected value, half of the corrections). Compiled to \texttt{ibm\_fez} (best of three seeds). The one-hot register with reverse uncomputation needs $90$, $119$ and $179$ qubits (it does not fit at $n=192$) and $1611$, $2385$ CZ at $n=64$, $100$.}\label{tab:core_generic}
+\begin{tabular}{rrrrr}
+\toprule
+$n$ & free & qubits (prep) & CZ (prep) & CZ (layer)\\
+\midrule
+64 & 16 & 16 / 58 / 60 & 28 / 795 / 1002 & 464 / 1543 / 2025\\
+100 & 20 & 20 / 90 / 61 & 215 / 3056 / 1841 & 581 / 3704 / 2886\\
+192 & 30 & 30 / 132 / 88 & 289 / 4791 / 3037 & 923 / 6375 / 4937\\
+\bottomrule
+\end{tabular}
+\end{table*}

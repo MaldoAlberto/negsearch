@@ -1,0 +1,10 @@
+{
+ "free": 16,
+ "couplings": 120,
+ "default_cz": 382,
+ "default_depth": 440,
+ "default_esp": 0.2717605576291377,
+ "swapnet_cz": 361,
+ "swapnet_depth": 175,
+ "swapnet_esp": 0.13367648525978354
+}

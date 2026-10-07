@@ -7,4 +7,6 @@ numpy
 matplotlib
 pylatexenc
 nbformat
+pandas
+qiskit-ibm-runtime>=0.40
 jupyter

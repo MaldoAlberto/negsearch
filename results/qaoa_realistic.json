@@ -1,0 +1,222 @@
+[
+ {
+  "cz": 443,
+  "depth": 774,
+  "qubits": 16,
+  "esp": 0.21218545494159488,
+  "dur_t2": 0.30550949202764566,
+  "case": "A=4,T=1 (n=8)",
+  "variant": "GM (first version)",
+  "n": 8,
+  "terms": 28
+ },
+ {
+  "cz": 243,
+  "depth": 385,
+  "qubits": 12,
+  "esp": 0.45008851164135794,
+  "dur_t2": 0.13140712939347152,
+  "case": "A=4,T=1 (n=8)",
+  "variant": "SWAP mixers",
+  "n": 8,
+  "terms": 28
+ },
+ {
+  "cz": 212,
+  "depth": 356,
+  "qubits": 12,
+  "esp": 0.49210704147651363,
+  "dur_t2": 0.12675523978399716,
+  "case": "A=4,T=1 (n=8)",
+  "variant": "SWAP + prune 10%",
+  "n": 8,
+  "terms": 20
+ },
+ {
+  "cz": 190,
+  "depth": 310,
+  "qubits": 12,
+  "esp": 0.5419515142492382,
+  "dur_t2": 0.10463278674637885,
+  "case": "A=4,T=1 (n=8)",
+  "variant": "SWAP + prune 25%",
+  "n": 8,
+  "terms": 12
+ },
+ {
+  "cz": 44,
+  "depth": 71,
+  "qubits": 10,
+  "esp": 0.8831645591492784,
+  "dur_t2": 0.02318503900848965,
+  "case": "A=4,T=1 (n=8)",
+  "variant": "preparation only",
+  "n": 8,
+  "terms": 28
+ },
+ {
+  "cz": 1481,
+  "depth": 2183,
+  "qubits": 28,
+  "esp": 0.0020173224560259572,
+  "dur_t2": 1.3648416048317111,
+  "case": "A=6,T=1 (n=12)",
+  "variant": "GM (first version)",
+  "n": 12,
+  "terms": 66
+ },
+ {
+  "cz": 696,
+  "depth": 1037,
+  "qubits": 22,
+  "esp": 0.08388957762332674,
+  "dur_t2": 0.38063277120464784,
+  "case": "A=6,T=1 (n=12)",
+  "variant": "SWAP mixers",
+  "n": 12,
+  "terms": 66
+ },
+ {
+  "cz": 626,
+  "depth": 934,
+  "qubits": 20,
+  "esp": 0.10041408010861921,
+  "dur_t2": 0.34392758593901157,
+  "case": "A=6,T=1 (n=12)",
+  "variant": "SWAP + prune 10%",
+  "n": 12,
+  "terms": 34
+ },
+ {
+  "cz": 579,
+  "depth": 881,
+  "qubits": 20,
+  "esp": 0.12080709753417135,
+  "dur_t2": 0.3274918196478434,
+  "case": "A=6,T=1 (n=12)",
+  "variant": "SWAP + prune 25%",
+  "n": 12,
+  "terms": 21
+ },
+ {
+  "cz": 158,
+  "depth": 293,
+  "qubits": 20,
+  "esp": 0.6093417073167167,
+  "dur_t2": 0.10462247582446636,
+  "case": "A=6,T=1 (n=12)",
+  "variant": "preparation only",
+  "n": 12,
+  "terms": 66
+ },
+ {
+  "cz": 1391,
+  "depth": 1551,
+  "qubits": 29,
+  "esp": 0.0028881605807880603,
+  "dur_t2": 0.9401938719005274,
+  "case": "A=4,T=2 (n=16)",
+  "variant": "GM (first version)",
+  "n": 16,
+  "terms": 72
+ },
+ {
+  "cz": 660,
+  "depth": 599,
+  "qubits": 24,
+  "esp": 0.0715235178064692,
+  "dur_t2": 0.35209862863303604,
+  "case": "A=4,T=2 (n=16)",
+  "variant": "SWAP mixers",
+  "n": 16,
+  "terms": 72
+ },
+ {
+  "cz": 616,
+  "depth": 636,
+  "qubits": 26,
+  "esp": 0.07656316378606781,
+  "dur_t2": 0.3990163442761331,
+  "case": "A=4,T=2 (n=16)",
+  "variant": "SWAP + prune 10%",
+  "n": 16,
+  "terms": 56
+ },
+ {
+  "cz": 378,
+  "depth": 318,
+  "qubits": 24,
+  "esp": 0.294647129988176,
+  "dur_t2": 0.10096486510311817,
+  "case": "A=4,T=2 (n=16)",
+  "variant": "SWAP + prune 25%",
+  "n": 16,
+  "terms": 24
+ },
+ {
+  "cz": 88,
+  "depth": 73,
+  "qubits": 20,
+  "esp": 0.7474688662632594,
+  "dur_t2": 0.02140113652434041,
+  "case": "A=4,T=2 (n=16)",
+  "variant": "preparation only",
+  "n": 16,
+  "terms": 72
+ },
+ {
+  "cz": 4002,
+  "depth": 4143,
+  "qubits": 48,
+  "esp": 4.2987572664358974e-153,
+  "dur_t2": 2.1015591397564473,
+  "case": "A=6,T=2 (n=24)",
+  "variant": "GM (first version)",
+  "n": 24,
+  "terms": 156
+ },
+ {
+  "cz": 1894,
+  "depth": 1202,
+  "qubits": 40,
+  "esp": 9.605329940749447e-05,
+  "dur_t2": 0.5775099461033463,
+  "case": "A=6,T=2 (n=24)",
+  "variant": "SWAP mixers",
+  "n": 24,
+  "terms": 156
+ },
+ {
+  "cz": 1657,
+  "depth": 1462,
+  "qubits": 47,
+  "esp": 7.74158354119607e-14,
+  "dur_t2": 0.6830365676436622,
+  "case": "A=6,T=2 (n=24)",
+  "variant": "SWAP + prune 10%",
+  "n": 24,
+  "terms": 92
+ },
+ {
+  "cz": 1202,
+  "depth": 1144,
+  "qubits": 43,
+  "esp": 0.009974937286866457,
+  "dur_t2": 0.4719232149662171,
+  "case": "A=6,T=2 (n=24)",
+  "variant": "SWAP + prune 25%",
+  "n": 24,
+  "terms": 36
+ },
+ {
+  "cz": 343,
+  "depth": 318,
+  "qubits": 38,
+  "esp": 0.2911829602062107,
+  "dur_t2": 0.12011695575737186,
+  "case": "A=6,T=2 (n=24)",
+  "variant": "preparation only",
+  "n": 24,
+  "terms": 156
+ }
+]

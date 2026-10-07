@@ -1,0 +1,19 @@
+\begin{table}[t]\centering\scriptsize\setlength{\tabcolsep}{2pt}
+\caption{\orig{compiled counts on the \texttt{ibm\_fez} snapshot; time is an estimate; nothing executed} The $120$-qubit circuits (twelve blocks in one circuit): total depth, two-qubit depth, CZ gates (all blocks), scheduled duration and estimated QPU time for $10^4$ shots (duration plus the default repetition delay of $250\,\mu$s per shot; job overhead not included).}\label{tab:hw100_cost}
+\begin{tabular}{lrrrrr}\toprule
+circuit & depth & 2q depth & CZ & dur. ($\mu$s) & QPU s\\\midrule
+ours $p{=}1$ light & 1008 & 310 & 4128 & 37 & 2.9\\
+ours $p{=}1$ full & 1196 & 371 & 5466 & 44 & 2.9\\
+ours, preparation & 449 & 149 & 1220 & 18 & 2.7\\
+uniform & 4 & 0 & 0 & 2 & 2.5\\
+Fourier-LCU, ws & 296 & 103 & 1838 & 13 & 2.6\\
+unbalanced, ws & 299 & 103 & 1838 & 13 & 2.6\\
+XY mixer, ws & 342 & 115 & 2289 & 15 & 2.6\\
+ours tilted, prep. & 457 & 143 & 1230 & 18 & 2.7\\
+ours tilted $p{=}1$ & 1028 & 319 & 4164 & 38 & 2.9\\
+LCU, tilted start & 298 & 103 & 1838 & 13 & 2.6\\
+unbalanced, tilted start & 296 & 103 & 1797 & 13 & 2.6\\
+XY, tilted start & 344 & 115 & 2274 & 15 & 2.6\\
+\midrule
+all twelve circuits & & & & & 32\\
+\bottomrule\end{tabular}\end{table}

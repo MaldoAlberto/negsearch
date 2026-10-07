@@ -1,0 +1,14 @@
+\begin{table*}[t]\centering\small
+\caption{\orig{exact simulation of the logical circuits, $12$ blocks of the $120$-qubit instance; no noise; nothing executed} Cost-informed preparation. Feasible: ideal fraction of feasible samples; quality among feasible samples ($1$ is the best of the block); $P(\mathrm{opt})$: probability of the block optimum at $p=0$. Tilt: product tilt $\exp(-\tau\sum_i g_ix_i)$ with the mean-field field $g$ of the block, $\tau=4$ (edge of the grid), realised by changing only the angles of the Dicke blocks. Boltzmann: $\exp(-\tau c(x))$, an upper bound (its smallest probability on $F$ is $4\cdot10^{-10}$, so the support is exact only in name). Baselines: warm start with $k/m$ (plain) or with the marginals of the tilted distribution (biased), $p=1$.}\label{tab:tilted_prep}
+\begin{tabular}{lrrrr}\toprule
+preparation / method & feasible & quality $p{=}0$ & quality $p{=}1$ & $P$(opt) $p{=}0$\\\midrule
+ours, uniform on $F$ & $1$ & 0.50 & 0.67 & 7\,\%\\
+ours, product tilt & $1$ & 0.80 & 0.85 & 27\,\%\\
+ours, Boltzmann (upper bound) & $1$ & 0.96 & 0.97 & 69\,\%\\\midrule
+Fourier-LCU variant, plain & 0.24 & -- & 0.74 & --\\
+Fourier-LCU variant, biased & 0.38 & -- & 0.91 & --\\
+unbalanced penalty, plain & 0.59 & -- & 0.51 & --\\
+unbalanced penalty, biased & 0.69 & -- & 0.84 & --\\
+XY mixer, plain & 0.24 & -- & 0.73 & --\\
+XY mixer, biased & 0.33 & -- & 0.91 & --\\
+\bottomrule\end{tabular}\end{table*}

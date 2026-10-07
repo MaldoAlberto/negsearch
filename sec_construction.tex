@@ -1,0 +1,36 @@
+\section{Constraint automata and the state \texorpdfstring{$A_q$}{Aq}}\label{sec:general}
+Every method below starts from one object: a quantum state whose support is exactly the set of feasible assignments, built from a constraint automaton. This section defines the automaton and the state, proves that the construction exists for \emph{every} constraint set, and states the one quantity that governs its cost, the automaton width. \Cref{sec:algorithms} uses the state for amplitude amplification and for QAOA, and \cref{sec:validation} runs one code path (constraint set $\to$ automaton $\to$ circuit) on seven constraint types.
+
+Let $F\subseteq\{0,1\}^n$ be the feasible set and fix a variable order. For a prefix $u\in\{0,1\}^k$ let $F_u=\{v: uv\in F\}$ be its set of feasible completions, and write $u\sim u'$ if $F_u=F_{u'}$. The classes with $F_u\neq\emptyset$ are the \emph{states} $S_k$ of level $k$; a prefix with $F_u=\emptyset$ is \emph{dead}. Appending a bit $b$ maps a state $s$ to a state $\delta_k(s,b)$, or to a dead prefix, and the \emph{live set} $L_k(s)=\{b:\delta_k(s,b)\ \text{is not dead}\}$ is non-empty. This is the reduced ordered binary decision diagram of $F$~\cite{bryant1986}; it is unique and minimal for the order, and its \emph{width} is $w=\max_k|S_k|$.
+
+\begin{definition}[general negation-forced preparation]
+Process the variables in order, keeping the current state $s$ in a register. If $L_k(s)=\{0,1\}$, rotate $x_k$ with $R_Y(\theta_q)$, $\sin^2(\theta_q/2)=q$ (a decision). If $L_k(s)=\{1\}$, apply $X$ (value $0$ is a forbidden pattern, so $x_k=1$ is forced); if $L_k(s)=\{0\}$, do nothing. Then update the register with $\delta_k$. We call the resulting unitary $A_q$.
+\end{definition}
+For a CNF clause this reduces to the rule of \cref{sec:nf}, where ``all other literals false'' is the condition that makes a value forbidden (this is the original negation-forced construction). For a counter it is the look-ahead of the portfolio circuit of \cref{sec:portfolio}.
+
+The existence of such a state is, in essence, decision-diagram state preparation~\cite{mozafari2020bdd}; Theorem~\ref{thm:universal} states it for biased coins, which need no solution counting, and fixes the notation used below.
+
+\begin{theorem}[exactness for every constraint set]\label{thm:universal}
+For every $F\neq\emptyset$ and every order, $A_q|0\rangle=\sum_{x\in F}\sqrt{\mu_q(x)}\,|x\rangle|g(x)\rangle$, where $g(x)$ is the sequence of automaton states along $x$ and $\mu_q(x)=\prod_{k\in\mathrm{Dec}(x)}q^{x_k}(1-q)^{1-x_k}$, with $\mathrm{Dec}(x)$ the positions at which both values are live. In particular the support on $x$ is exactly $F$, there are no dead ends, $\sum_x\mu_q(x)=1$, and $\mu_{1/2}(x)=2^{-D(x)}$ with $D(x)=|\mathrm{Dec}(x)|\le n$.
+\end{theorem}
+\begin{proof}
+By induction on the level: after $k$ steps the state is $\sum_u\sqrt{\mu(u)}|u\rangle|g(u)\rangle$ over the live prefixes $u$ reachable under the rule, because a branch is created only for a live value and, by definition of liveness, every live prefix has at least one feasible completion. The probability mass is never lost, so the final mass sums to one, and a string is reached if and only if all its prefixes are live, that is, if and only if it lies in $F$. The register $g(x)$ is a function of $x$.
+\end{proof}
+\paragraph{Worked example.} Take $n=3$ and $F=\{100,010,001\}$ (exactly one of three variables is $1$). The automaton has two states per level (``none placed yet'', ``one placed''), so $w=2$. With $q=\tfrac12$: $x_0$ is a decision (both values are live); if $x_0=1$, the rest is forced to $0$, giving $x=100$ with $\mu=\tfrac12$ ($D=1$); if $x_0=0$, $x_1$ is a decision, and then $x_2$ is forced, giving $010$ and $001$ with $\mu=\tfrac14$ each ($D=2$). The state is $\tfrac1{\sqrt2}|100\rangle+\tfrac12|010\rangle+\tfrac12|001\rangle$ (with the register values attached): its support is exactly $F$, no dead end occurs, and the infeasible strings $000,110,\dots$ have zero amplitude.
+
+\paragraph{Cost.} Level $k$ needs at most $|S_k|$ multi-controlled rotations or flips, controlled on the $\lceil\log_2|S_k|\rceil$ qubits of the state register, and at most $2|S_k|$ multi-controlled flips that write the next state into a fresh register. The total is $O(\sum_k|S_k|)\le O(nw)$ multi-controlled gates and $n+\sum_k\lceil\log_2|S_k|\rceil$ qubits. Running the register updates backwards returns the registers to $|0\rangle$ and leaves $\sum_x\sqrt{\mu_q(x)}|x\rangle|0\rangle$ (checked in simulation). Since XY mixers and diagonal phases do not change a conserved register, the registers of the portfolio circuit need not be uncomputed at all.
+
+\begin{proposition}[width of common constraints]\label{prop:width}
+(i) $\sum_ix_i=K$: $w\le\min(K,n-K)+1$. (ii) A linear inequality $\sum_iw_ix_i\le W$ with non-negative integer weights: $w\le W+1$. (iii) A conjunction of constraints (conflict edges, set-packing or exact-cover overlaps, colourings, one-hot rows): $|S_k|\le2^{f_k}+1$, where $f_k$ is the number of already placed variables that share a constraint with an unplaced variable (frontier). (iv) $m\times m$ permutation matrices in row-major order: $w\le(m+1)2^m$.
+\end{proposition}
+\begin{proof}
+(i), (ii), (iv): the future depends only on the number placed, the partial weight and the set of used columns, respectively. (iii): a completion of $u$ must satisfy the constraints that mix prefix and suffix, which see $u$ only through its frontier; constraints inside the prefix are either satisfied (all prefixes alike) or $u$ is dead.
+\end{proof}
+Exact feasibility look-ahead cannot be cheap for all constraints: for CNF it decides whether a restricted formula is satisfiable, which is NP-hard, and a constraint automaton of polynomial width for every formula would break this. The framework therefore includes a dial.
+\begin{definition}[sound relaxation]
+An automaton with live sets $L'_k(s)\supseteq L_k(s)$ (it forces only when the violation is certain) is a \emph{sound relaxation}.
+\end{definition}
+\begin{proposition}\label{prop:relax}
+For a sound relaxation the support of $A_{1/2}|0\rangle$ contains $F$, every $x\in F$ has weight $\mu(x)=2^{-D'(x)}\ge2^{-n}$, hence $\Pr[F]\ge|F|/2^n$, and the preparation is never worse than the uniform state. Bounded look-ahead on CNF clauses (\cref{sec:nf}) is a sound relaxation.
+\end{proposition}
+Width trades against the fraction of weight outside $F$ (\cref{tab:gen_relax}).

@@ -1,0 +1,42 @@
+{
+ "hybrid p=1 (lean, path XY, linear phase)": {
+  "qubits": 18,
+  "cz": 178,
+  "depth": 225,
+  "ideal": {
+   "p_feas": 0.9999999999999991,
+   "p_opt": 0.04184188380134217,
+   "quality": 0.7620503494863338
+  },
+  "noisy": {
+   "p_feas": 0.84825,
+   "quality": 0.628168328309761,
+   "p_opt": 0.0235,
+   "quality_feasible_only": 0.7405462166929101,
+   "kept_by_counter_check": 0.53675,
+   "quality_after_check": 0.7290212722209508,
+   "p_opt_after_check": 0.02934326967862133
+  },
+  "seconds": 2523.777190208435
+ },
+ "hybrid p=2 (lean, path XY, linear phase)": {
+  "qubits": 18,
+  "cz": 200,
+  "depth": 255,
+  "ideal": {
+   "p_feas": 0.9999999999999993,
+   "p_opt": 0.018030300992313387,
+   "quality": 0.827564497767664
+  },
+  "noisy": {
+   "p_feas": 0.80125,
+   "quality": 0.6259091119870163,
+   "p_opt": 0.01,
+   "quality_feasible_only": 0.781165818392532,
+   "kept_by_counter_check": 0.48125,
+   "quality_after_check": 0.7762538504852443,
+   "p_opt_after_check": 0.015584415584415584
+  },
+  "seconds": 915.3883538246155
+ }
+}

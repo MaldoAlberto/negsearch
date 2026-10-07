@@ -1,0 +1,10 @@
+\subsection{QAOA: feasibility at every depth}\label{sec:qaoa}
+The invariance below is the defining property of the Grover mixer~\cite{bartschi2020gm}, restated for our state and for any feasibility-preserving mixer.
+
+\begin{theorem}[feasibility invariance]\label{thm:qaoa}
+Let $|\psi_0\rangle=A_q|0\rangle$ and let $\mathcal H_F=\mathrm{span}\{|x\rangle|g(x)\rangle:x\in F\}$. For all depths $p$ and all angles, a QAOA circuit whose phase separators are diagonal in the computational basis and whose mixers are (a) the Grover mixer $e^{-i\beta|\psi_0\rangle\langle\psi_0|}$, or (b) any unitary that maps $\mathcal H_F$ to itself (XY on count constraints, neighbour or Hadfield-type mixers in general), keeps the state in $\mathcal H_F$: every sample is feasible. The phase separator needs the objective only, with no penalty weight and no slack qubits.
+\end{theorem}
+\begin{proof}
+Diagonal operators preserve coordinate subspaces. The Grover mixer maps $v\mapsto v+(e^{-i\beta}-1)\langle\psi_0|v\rangle\psi_0$, and $\psi_0\in\mathcal H_F$ by \cref{thm:universal}. Case (b) is the hypothesis.
+\end{proof}
+The Grover mixer is available for \emph{every} constraint at a price of two applications of $A_q$ per layer plus a multi-controlled phase; local mixers are cheaper but exist only when the constraint has the matching structure (counts for XY, a connected move graph for a neighbour mixer). The generality of the state and of the Grover mixer, and the structure-dependence of cheap mixers, are what the experiments below separate.

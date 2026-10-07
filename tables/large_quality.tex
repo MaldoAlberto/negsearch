@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering\small\setlength{\tabcolsep}{4pt}
+\caption{\orig{exact ideal numerics} Quality on the multi-constraint case at $n=16$ (4 assets, 2 periods, 2 sectors; $521$ feasible strings; uniform feasible share $0.8$\,\%; mean over 2 random objectives). QAOA depth $p$, exact numerics with locally optimised angles. Quality counts infeasible samples as $0$; $P(\mathrm{opt})$ is the probability of an optimal string (uniform feasible sampling: 0.0019). Preparation alone ($p=0$): feasible $1.00$, quality 0.44.}\label{tab:large_quality}
+\begin{tabular}{llrrr}
+\toprule
+$p$ & method & feasible & quality & $P(\mathrm{opt})$\\
+\midrule
+1 & $A_q$ + Grover mixer & 1.00 & 0.61 & 0.008\\
+1 & conditioned + Grover mixer & 1.00 & 0.61 & 0.008\\
+1 & penalty QAOA & 0.34 & 0.16 & 0.000\\
+1 & unbalanced QAOA & 0.65 & 0.26 & 0.000\\
+\midrule
+2 & $A_q$ + Grover mixer & 1.00 & 0.69 & 0.014\\
+2 & conditioned + Grover mixer & 1.00 & 0.69 & 0.012\\
+2 & penalty QAOA & 0.24 & 0.15 & 0.003\\
+2 & unbalanced QAOA & 0.73 & 0.41 & 0.005\\
+\midrule
+3 & $A_q$ + Grover mixer & 1.00 & 0.73 & 0.019\\
+3 & conditioned + Grover mixer & 1.00 & 0.71 & 0.016\\
+3 & penalty QAOA & 0.39 & 0.17 & 0.001\\
+3 & unbalanced QAOA & 0.83 & 0.44 & 0.001\\
+\bottomrule
+\end{tabular}
+\end{table}

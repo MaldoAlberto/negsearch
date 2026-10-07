@@ -1,0 +1,12 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{\orig{depolarising model checked against a gate-level noisy simulation; no hardware} The global-depolarising model against a gate-level noisy simulation (Aer, noise model of \texttt{FakeFez}: gate errors, thermal relaxation, readout; $600$ shots) on the $n=64$ case with $16$ free qubits. Model: feasible fraction $=\mathrm{ESP}\cdot P_\mathrm{ideal}+(1-\mathrm{ESP})|F|/2^f$. Quality after post-selecting the feasible shots is compared with its ideal value. The LCU-like row has untrained angles and is only a check of the noise model, not of that method.}\label{tab:core_noise}
+\begin{tabular}{lrrrrrrr}
+\toprule
+circuit & CZ & ESP & ideal feas.\,\% & model\,\% & simulated\,\% & ideal qual. & post-sel. qual.\\
+\midrule
+ours (QAOA layer) & 450 & 0.180 & 100.0 & 18.1 & 21.8$\pm$1.7 & 0.717 & 0.713\\
+single-basis LCU-like layer & 371 & 0.245 & 3.0 & 0.8 & 2.0$\pm$0.6 & 0.532 & 0.540\\
+\bottomrule
+\end{tabular}
+\end{table*}

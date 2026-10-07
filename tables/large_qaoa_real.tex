@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{\orig{compiled counts, ESP (model) and exact ideal simulation; nothing executed} Multi-constraint case, one QAOA layer ($p=1$), one interface tuple, compiled to the \texttt{ibm\_fez} topology (best of eight transpiler seeds; nothing executed). ESP is the product of one minus the error of every gate. Status: ``run today'' ESP $\ge0.3$, ``frontier'' $0.05$--$0.3$, ``out of reach'' below $0.05$. Quality is measured on the exact feasible set, averaged over all interface tuples (higher is better, $1$ is the optimum); the preparation alone is the uniform feasible state. Pruning drops the objective couplings below $25\%$ of the largest, which never affects feasibility. The pair-exchange mixer $e^{-i\beta P}$ with $P=\mathrm{SWAP}(\mathrm{long}_j,\mathrm{long}_k)\,\mathrm{SWAP}(\mathrm{short}_j,\mathrm{short}_k)$ conserves all counts and the exclusivity and needs the preparation registers uncomputed; the preparation-only row is that circuit without the QAOA layer (generic $A_q$, registers uncomputed).}\label{tab:large_qaoa_real}
+\begin{tabular}{llrrrrrll}
+\toprule
+$n$ & variant & qubits & CZ & depth & ESP & $d/T_2$ & quality & status\\
+\midrule
+8 & Grover mixer (first version) & 16 & 443 & 774 & 0.21 & 0.31 & 0.574 & frontier\\
+ & pair-exchange mixers & 12 & 243 & 385 & 0.45 & 0.13 & 0.574 & run today\\
+ & \quad + objective pruning 25\% & 12 & 190 & 310 & 0.54 & 0.10 & 0.567 & run today\\
+ & preparation only & 10 & 44 & 71 & 0.88 & 0.02 & 0.514 & run today\\
+\midrule
+12 & Grover mixer (first version) & 28 & 1\,481 & 2\,183 & $2.0\!\cdot\!10^{-3}$ & 1.36 & -- & out of reach\\
+ & pair-exchange mixers & 22 & 696 & 1\,037 & 0.08 & 0.38 & -- & frontier\\
+ & \quad + objective pruning 25\% & 20 & 579 & 881 & 0.12 & 0.33 & -- & frontier\\
+ & preparation only & 20 & 158 & 293 & 0.61 & 0.10 & -- & run today\\
+\midrule
+16 & Grover mixer (first version) & 29 & 1\,391 & 1\,551 & $2.9\!\cdot\!10^{-3}$ & 0.94 & 0.541 & out of reach\\
+ & pair-exchange mixers & 24 & 660 & 599 & 0.07 & 0.35 & 0.541 & frontier\\
+ & \quad + objective pruning 25\% & 24 & 378 & 318 & 0.29 & 0.10 & 0.531 & frontier\\
+ & preparation only & 20 & 88 & 73 & 0.75 & 0.02 & 0.474 & run today\\
+\midrule
+24 & Grover mixer (first version) & 48 & 4\,002 & 4\,143 & $4.3\!\cdot\!10^{-153}$ & 2.10 & -- & out of reach\\
+ & pair-exchange mixers & 40 & 1\,894 & 1\,202 & $9.6\!\cdot\!10^{-5}$ & 0.58 & -- & out of reach\\
+ & \quad + objective pruning 25\% & 43 & 1\,202 & 1\,144 & $1.0\!\cdot\!10^{-2}$ & 0.47 & -- & out of reach\\
+ & preparation only & 38 & 343 & 318 & 0.29 & 0.12 & -- & frontier\\
+\bottomrule
+\end{tabular}
+\end{table*}

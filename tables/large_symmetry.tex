@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\caption{\orig{compiled counts} Symmetry-aware lowering of $A_q$ for a block of $m$ interchangeable assets conditioned on $l$ longs and $s$ shorts (all units found interchangeable by the automatic check). CZ after routing to \texttt{ibm\_fez} (best of three seeds). The generic $A_q$ uses a one-hot automaton register, relative-phase Toffolis, and for QAOA the registers uncomputed; the lowering has no register, no uncomputation and no post-selection.}\label{tab:large_symmetry}
+\begin{tabular}{rrrrrrrr}
+\toprule
+$m$ & $(l,s)$ & $|F|$ & generic: qubits & CZ & CZ uncomputed & lowering: qubits & CZ\\
+\midrule
+3 & (1,1) & 6 & 21 & 190 & 281 & 6 & 46\\
+4 & (1,1) & 12 & 32 & 385 & 733 & 8 & 95\\
+4 & (1,2) & 12 & 33 & 430 & 773 & 8 & 112\\
+5 & (0,3) & 10 & 30 & 269 & 457 & 10 & 86\\
+5 & (1,1) & 20 & 43 & 598 & 1136 & 10 & 160\\
+5 & (1,2) & 30 & 49 & 872 & 1590 & 10 & 200\\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,154 @@
+{
+ "clauses": [
+  {
+   "n": 14,
+   "clauses_raw": 38,
+   "clauses_clean": 20,
+   "forced": 1,
+   "n_live": 12,
+   "width_raw_index": 10,
+   "width_clean_index": 10,
+   "width_orders": {
+    "index": 10,
+    "degree": 24,
+    "degeneracy": 12,
+    "colouring": 11
+   },
+   "width_best": 5
+  },
+  {
+   "n": 18,
+   "clauses_raw": 52,
+   "clauses_clean": 29,
+   "forced": 1,
+   "n_live": 17,
+   "width_raw_index": 22,
+   "width_clean_index": 20,
+   "width_orders": {
+    "index": 20,
+    "degree": 66,
+    "degeneracy": 23,
+    "colouring": 23
+   },
+   "width_best": 14
+  },
+  {
+   "n": 22,
+   "clauses_raw": 42,
+   "clauses_clean": 23,
+   "forced": 1,
+   "n_live": 19,
+   "width_raw_index": 34,
+   "width_clean_index": 20,
+   "width_orders": {
+    "index": 20,
+    "degree": 120,
+    "degeneracy": 20,
+    "colouring": 56
+   },
+   "width_best": 18
+  },
+  {
+   "n": 26,
+   "clauses_raw": 64,
+   "clauses_clean": 39,
+   "forced": 1,
+   "n_live": 25,
+   "width_raw_index": 318,
+   "width_clean_index": 269,
+   "width_orders": {
+    "index": 269,
+    "degree": 188,
+    "degeneracy": 100,
+    "colouring": 182
+   },
+   "width_best": 49
+  }
+ ],
+ "blocks": [
+  {
+   "m": 3,
+   "l": 1,
+   "s": 1,
+   "F": 6,
+   "classes": [
+    3
+   ],
+   "generic_qubits": 21,
+   "generic_cz": 190,
+   "generic_cz_uncomputed": 281,
+   "sym_qubits": 6,
+   "sym_cz": 46
+  },
+  {
+   "m": 4,
+   "l": 1,
+   "s": 1,
+   "F": 12,
+   "classes": [
+    4
+   ],
+   "generic_qubits": 32,
+   "generic_cz": 385,
+   "generic_cz_uncomputed": 733,
+   "sym_qubits": 8,
+   "sym_cz": 95
+  },
+  {
+   "m": 4,
+   "l": 1,
+   "s": 2,
+   "F": 12,
+   "classes": [
+    4
+   ],
+   "generic_qubits": 33,
+   "generic_cz": 430,
+   "generic_cz_uncomputed": 773,
+   "sym_qubits": 8,
+   "sym_cz": 112
+  },
+  {
+   "m": 5,
+   "l": 0,
+   "s": 3,
+   "F": 10,
+   "classes": [
+    5
+   ],
+   "generic_qubits": 30,
+   "generic_cz": 269,
+   "generic_cz_uncomputed": 457,
+   "sym_qubits": 10,
+   "sym_cz": 86
+  },
+  {
+   "m": 5,
+   "l": 1,
+   "s": 1,
+   "F": 20,
+   "classes": [
+    5
+   ],
+   "generic_qubits": 43,
+   "generic_cz": 598,
+   "generic_cz_uncomputed": 1136,
+   "sym_qubits": 10,
+   "sym_cz": 160
+  },
+  {
+   "m": 5,
+   "l": 1,
+   "s": 2,
+   "F": 30,
+   "classes": [
+    5
+   ],
+   "generic_qubits": 49,
+   "generic_cz": 872,
+   "generic_cz_uncomputed": 1590,
+   "sym_qubits": 10,
+   "sym_cz": 200
+  }
+ ]
+}

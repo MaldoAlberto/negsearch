@@ -1,0 +1,30 @@
+[
+ {
+  "n": 8,
+  "free_mean": 2.5,
+  "free_max": 4,
+  "blocks": 2,
+  "nontrivial_mean": 1.0
+ },
+ {
+  "n": 12,
+  "free_mean": 6.0,
+  "free_max": 6,
+  "blocks": 2,
+  "nontrivial_mean": 1.75
+ },
+ {
+  "n": 16,
+  "free_mean": 6.921052631578948,
+  "free_max": 8,
+  "blocks": 4,
+  "nontrivial_mean": 2.9210526315789473
+ },
+ {
+  "n": 24,
+  "free_mean": 11.131578947368421,
+  "free_max": 12,
+  "blocks": 4,
+  "nontrivial_mean": 3.1052631578947367
+ }
+]

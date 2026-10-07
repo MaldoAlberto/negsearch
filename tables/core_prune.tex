@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{\orig{compiled counts (CZ for this compiler and topology) and ESP (noise model); nothing executed} Exact pruning of one QAOA layer ($p=1$) for the multi-constraint case, averaged over interface tuples sampled with their weight (8--12 per size), compiled to the \texttt{ibm\_fez} topology (best of three seeds; nothing executed). S0: symmetric preparation, pair-exchange mixers, full objective. S2: variables fixed by the interface eliminated from the objective, blocks with a single feasible string get no mixer, two-qubit swap rotations when a block has no long or no short position. S3: S2 plus a constraint gauge that rewrites couplings with the constant group counts. All three give the same state on the feasible set (defect $\le10^{-14}$ against a dense simulation for $n\le16$ and $1.3\cdot10^{-14}$ by two statevector simulations at $n=24$). The reduction is large because the interface fixes most variables: the last column of the left block is the mean number of qubits that remain free.}\label{tab:core_prune}
+\begin{tabular}{rrrrrrrr}
+\toprule
+$n$ & free & \multicolumn{3}{c}{CZ (mean)} & \multicolumn{3}{c}{ESP (median)}\\ & qubits & S0 & S2 & S3 & S0 & S2 & S3\\
+\midrule
+8 & 2.5 & 178 & 27 & 22 & 0.57 & 0.93 & 0.93\\
+12 & 6.0 & 418 & 78 & 51 & 0.25 & 0.81 & 0.86\\
+16 & 6.9 & 506 & 88 & 91 & 0.17 & 0.74 & 0.72\\
+24 & 11.1 & 1131 & 262 & 259 & 0.01 & 0.36 & 0.38\\
+\bottomrule
+\end{tabular}
+\end{table}

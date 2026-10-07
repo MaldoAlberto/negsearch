@@ -1,0 +1,13 @@
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{3.5pt}
+\caption{\orig{exact ideal numerics} QAOA at depth $p=3$ on the same families (exact numerics, median over instances). Penalty: $|+\rangle^{\otimes n}$, X mixer, best of four penalty weights. $A_q$+GM: negation-forced initial state, objective-only phase, Grover mixer (valid for any constraint). $A_q$+NB: same state, mixer over single flips and swaps inside $F$ (numerics only). Quality: normalised objective with infeasible samples counted as 0; $p{=}0$ is $A_q$ alone.}\label{tab:gen_qaoa}
+\begin{tabular}{lrrrrrrrrrr}\toprule
+& & \multicolumn{3}{c}{P(feasible)} & \multicolumn{4}{c}{quality} & \multicolumn{2}{c}{P(optimum)}\\\cmidrule(lr){3-5}\cmidrule(lr){6-9}\cmidrule(lr){10-11}
+family & inst. & penalty & $A_q$+GM & $A_q$+NB & $A_q$ alone & penalty & $A_q$+GM & $A_q$+NB & penalty & $A_q$+GM\\\midrule
+cardinality ($\sum x=4$) & 5 & 0.95 & 1.00 & 1.00 & 0.53 & 0.52 & 0.82 & 0.90 & 0.007 & 0.022\\
+knapsack (weights $w_i$) & 5 & 0.89 & 1.00 & 1.00 & 0.53 & 0.42 & 0.80 & 0.63 & 0.002 & 0.037\\
+independent set & 5 & 0.89 & 1.00 & 1.00 & 0.58 & 0.57 & 0.86 & 0.65 & 0.035 & 0.161\\
+set packing & 5 & 0.82 & 1.00 & 1.00 & 0.55 & 0.50 & 0.87 & 0.74 & 0.063 & 0.472\\
+exact cover & 5 & 0.21 & 1.00 & 1.00 & 0.43 & 0.13 & 1.00 & 0.50 & 0.069 & 1.000\\
+3-colouring & 4 & 0.73 & 1.00 & 1.00 & 0.59 & 0.46 & 0.91 & 0.81 & 0.048 & 0.345\\
+assignment (permutations) & 5 & 0.38 & 1.00 & 1.00 & 0.63 & 0.28 & 1.00 & 0.63 & 0.262 & 1.000\\
+\bottomrule\end{tabular}\end{table*}

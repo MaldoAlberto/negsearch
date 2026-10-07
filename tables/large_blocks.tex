@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\caption{\orig{compiled counts and ESP (model); nothing executed} QAOA as many small blocks. The interface is drawn classically and every (period, sector) block is a separate $p=1$ circuit (pair-exchange mixers, preparation from the symmetry-aware lowering of $A_q$, exact and without registers), while the other blocks are held fixed and enter as linear fields. Compiled to the \texttt{ibm\_fez} topology, three random interface tuples per instance; CZ and ESP are over all blocks.}\label{tab:large_blocks}
+\begin{tabular}{lrrlrrrr}
+\toprule
+$A,T$ & $n$ & blocks & objective & qubits/block & CZ/block (med.\,/\,max) & ESP (med.\,/\,min) & CZ per sweep\\
+\midrule
+10,6 & 120 & 12 & full & 10 & 343\,/\,505 & 0.32\,/\,0.20 & 4\,471\\
+10,6 & 120 & 12 & pruned 25\% & 10 & 205\,/\,394 & 0.49\,/\,0.26 & 2\,901\\
+12,8 & 192 & 24 & full & 8 & 235\,/\,324 & 0.47\,/\,0.34 & 5\,766\\
+12,8 & 192 & 24 & pruned 25\% & 8 & 144\,/\,248 & 0.62\,/\,0.46 & 3\,583\\
+\bottomrule
+\end{tabular}
+\end{table*}

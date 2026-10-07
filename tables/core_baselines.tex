@@ -1,0 +1,15 @@
+\begin{table*}[t]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{\orig{compiled counts; ideal feasibility, quality and $P(\mathrm{opt})$ from exact dense simulation; per-shot values from the ESP and depolarising model; nothing executed} Stronger baselines on the residual core: ws = warm start: all baselines start from the warm-started product state of the Fourier-LCU paper (RY$(2\arcsin\sqrt{k/m})$ per qubit) and are trained with $12$ restarts ($p=1$). Mean $\pm$ standard deviation over instances (objective seeds $\times$ interface tuples). Feasible, quality (among feasible samples) and $P(\mathrm{opt})$: ideal. Last column: probability of the optimum per shot under the depolarising model with the ESP of the compiled circuit.}\label{tab:core_baselines}
+\begin{tabular}{llrrrrrr}\toprule
+core & method & CZ & ESP & feas. & quality & $P$(opt) ideal & $P$(opt) per shot (model)\\\midrule
+$n=64$, $f=16$ (6 inst.) & ours ($F$) & $352\pm100$ & $0.320\pm0.117$ & $100\pm0$\,\% & $0.71\pm0.03$ & $3.68\pm0.90$\,\% & $1.272\pm0.708$\,\%\\
+ & Fourier-LCU, ws & $277\pm94$ & $0.416\pm0.138$ & $18\pm4$\,\% & $0.72\pm0.11$ & $1.37\pm0.67$\,\% & $0.585\pm0.429$\,\%\\
+ & unbalanced, ws & $277\pm94$ & $0.417\pm0.139$ & $70\pm0$\,\% & $0.54\pm0.05$ & $1.15\pm0.00$\,\% & $0.481\pm0.160$\,\%\\
+ & XY mixer, ws & $363\pm111$ & $0.319\pm0.124$ & $15\pm0$\,\% & $0.70\pm0.03$ & $0.63\pm0.22$\,\% & $0.217\pm0.131$\,\%\\
+\midrule
+$n=100$, $f=20$ (4 inst.) & ours ($F$) & $555\pm0$ & $0.162\pm0.000$ & $100\pm0$\,\% & $0.75\pm0.06$ & $0.46\pm0.40$\,\% & $0.075\pm0.065$\,\%\\
+ & Fourier-LCU, ws & $299\pm0$ & $0.368\pm0.000$ & $3\pm1$\,\% & $0.72\pm0.05$ & $0.12\pm0.20$\,\% & $0.044\pm0.075$\,\%\\
+ & unbalanced, ws & $296\pm3$ & $0.373\pm0.004$ & $44\pm0$\,\% & $0.57\pm0.07$ & $0.00\pm0.00$\,\% & $0.002\pm0.000$\,\%\\
+ & XY mixer, ws & $391\pm0$ & $0.272\pm0.001$ & $1\pm0$\,\% & $0.76\pm0.06$ & $0.01\pm0.01$\,\% & $0.003\pm0.003$\,\%\\
+\bottomrule
+\end{tabular}\end{table*}

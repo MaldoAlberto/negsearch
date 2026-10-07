@@ -1,0 +1,88 @@
+{
+ "a003_t02": {
+  "A_q (lean)": {
+   "qiskit": {
+    "cz": 150,
+    "depth": 218,
+    "cz_depth": 68
+   },
+   "zx_full": {
+    "cz": 292,
+    "depth": 321,
+    "cz_depth": 131,
+    "exact": true,
+    "seconds": 2.4
+   },
+   "zx_tele": {
+    "cz": 162,
+    "depth": 222,
+    "cz_depth": 68,
+    "exact": true,
+    "seconds": 3.2
+   }
+  },
+  "hybrid p=1, linear phase": {
+   "qiskit": {
+    "cz": 185,
+    "depth": 227,
+    "cz_depth": 75
+   },
+   "zx_full": {
+    "cz": 481,
+    "depth": 439,
+    "cz_depth": 183,
+    "exact": true,
+    "seconds": 3.4
+   },
+   "zx_tele": {
+    "cz": 190,
+    "depth": 224,
+    "cz_depth": 73,
+    "exact": true,
+    "seconds": 3.4
+   }
+  },
+  "hybrid p=2, linear phase": {
+   "qiskit": {
+    "cz": 200,
+    "depth": 254,
+    "cz_depth": 81
+   },
+   "zx_full": {
+    "cz": 469,
+    "depth": 430,
+    "cz_depth": 162,
+    "exact": true,
+    "seconds": 3.7
+   },
+   "zx_tele": {
+    "cz": 198,
+    "depth": 248,
+    "cz_depth": 77,
+    "exact": true,
+    "seconds": 3.9
+   }
+  },
+  "hybrid p=1, full phase (all RZZ)": {
+   "qiskit": {
+    "cz": 316,
+    "depth": 364,
+    "cz_depth": 113
+   },
+   "zx_full": {
+    "cz": 924,
+    "depth": 846,
+    "cz_depth": 338,
+    "exact": true,
+    "seconds": 3.8
+   },
+   "zx_tele": {
+    "cz": 332,
+    "depth": 366,
+    "cz_depth": 112,
+    "exact": true,
+    "seconds": 4.7
+   }
+  }
+ }
+}

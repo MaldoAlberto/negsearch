@@ -1,0 +1,32 @@
+{
+ "sector + Dicke p=1": {
+  "mean_cz_per_shot": 26.508499999999998,
+  "ideal": {
+   "p_feas": 1.0,
+   "quality": 0.7425721735618905,
+   "p_opt": 0.054533800179045154
+  },
+  "noisy": {
+   "p_feas": 0.947,
+   "quality": 0.6961013795501967,
+   "p_opt": 0.0455,
+   "quality_feasible_only": 0.735059534899891
+  },
+  "seconds": 275.9351053237915
+ },
+ "sector + Dicke p=2": {
+  "mean_cz_per_shot": 52.42349999999999,
+  "ideal": {
+   "p_feas": 1.0,
+   "quality": 0.8397020368583108,
+   "p_opt": 0.013171000338234682
+  },
+  "noisy": {
+   "p_feas": 0.90175,
+   "quality": 0.7470884535126374,
+   "p_opt": 0.01225,
+   "quality_feasible_only": 0.8284873340866509
+  },
+  "seconds": 360.7512278556824
+ }
+}

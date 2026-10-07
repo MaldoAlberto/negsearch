@@ -1,0 +1,14 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\caption{\orig{resource estimate for a fault-tolerant machine; not a measurement} Amplitude amplification over the coherent state $A_q$ on a fault-tolerant machine (a model, not a measurement). A multi-controlled gate with $c$ controls costs $2(c-1)$ Toffoli gates, a Toffoli $7$ T gates, and one iteration is $A_q^\dagger$, the reflection and $A_q$ (the threshold oracle is common to all methods and not counted). With success probability $a$ the amplification needs $\frac\pi4/\sqrt a$ iterations and classical sampling from the same state needs $1/a$ samples. Times assume $1$--$10\,\mu$s per T gate and $1$--$10\,\mu$s per classical sample. $a^\star$ is the success probability below which amplification is faster than classical sampling.}\label{tab:large_grover_ft}
+\begin{tabular}{lrrrrr}
+\toprule
+$A,T$ & logical qubits & Toffoli / iteration & $a^\star$ (optimistic\,/\,conservative) & time at $a=10^{-9}$ & time at $a=10^{-12}$\\
+\midrule
+6,2 & 88 & 3\,954 & $2.1\!\cdot\!10^{-7}$\,/\,$2.1\!\cdot\!10^{-11}$ & 11\,min--1.9\,h & 6.0\,h--2.5\,d\\
+8,3 & 207 & 23\,736 & $5.9\!\cdot\!10^{-9}$\,/\,$5.9\!\cdot\!10^{-13}$ & 1.1\,h--11.5\,h & 36.2\,h--15\,d\\
+10,4 & 380 & 63\,710 & $8.2\!\cdot\!10^{-10}$\,/\,$8.2\!\cdot\!10^{-14}$ & 3.1\,h--30.8\,h & 4.1\,d--41\,d\\
+12,8 & 1\,156 & 682\,838 & $7.1\!\cdot\!10^{-12}$\,/\,$7.1\!\cdot\!10^{-16}$ & 33.0\,h--14\,d & 43\,d--435\,d\\
+\bottomrule
+\end{tabular}
+\end{table*}

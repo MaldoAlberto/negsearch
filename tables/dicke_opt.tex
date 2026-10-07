@@ -1,0 +1,11 @@
+\begin{table*}[t]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{\orig{compiled counts; exact state checked for $n\le12$; nothing executed} Dicke block $|D^n_k\rangle$: CZ count and two-qubit depth, logical (all-to-all) and routed on the \texttt{ibm\_fez} coupling map (best of $10$ transpiler seeds; $6$ for $n\ge16$). ref: generic controlled gates; 4cx: hand-decomposed doubly controlled RY; 3cx: that gate with $3$ CX, exact on the states the block produces.}\label{tab:dicke_opt}
+\begin{tabular}{lrrrrrr}\toprule
+$(n,k)$ & logical ref & logical 3cx & routed ref & routed 4cx & routed 3cx & 2q depth ref $\to$ 3cx\\\midrule
+$(6,3)$ & 73 & 45 & 116 & 65 & 58 & 110$\to$55\\
+$(8,4)$ & 149 & 89 & 238 & 152 & 139 & 223$\to$119\\
+$(10,5)$ & 252 & 148 & 432 & 277 & 249 & 383$\to$210\\
+$(12,6)$ & 382 & 222 & 698 & 432 & 387 & 524$\to$309\\
+$(16,8)$ & 723 & 415 & 1395 & 885 & 845 & 779$\to$568\\
+$(24,12)$ & 1729 & 981 & 3471 & 2163 & 2034 & 1394$\to$932\\
+\bottomrule\end{tabular}\end{table*}

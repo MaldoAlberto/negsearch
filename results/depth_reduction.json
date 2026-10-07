@@ -1,0 +1,278 @@
+[
+ {
+  "n": 14,
+  "m": 14,
+  "A[low-degree first]": {
+   "max_controls": 13,
+   "logical": {
+    "depth": 155,
+    "twoq": 84
+   },
+   "routed": {
+    "depth": 494,
+    "twoq": 229
+   }
+  },
+  "A[degeneracy]": {
+   "max_controls": 2,
+   "logical": {
+    "depth": 91,
+    "twoq": 41
+   },
+   "routed": {
+    "depth": 214,
+    "twoq": 88
+   }
+  },
+  "A[colouring layers]": {
+   "max_controls": 2,
+   "logical": {
+    "depth": 85,
+    "twoq": 40
+   },
+   "routed": {
+    "depth": 219,
+    "twoq": 96
+   }
+  },
+  "CG layer chain": {
+   "logical": {
+    "depth": 391,
+    "twoq": 200
+   },
+   "routed": {
+    "depth": 1056,
+    "twoq": 453
+   }
+  },
+  "CG layer tree": {
+   "logical": {
+    "depth": 331,
+    "twoq": 194
+   },
+   "routed": {
+    "depth": 887,
+    "twoq": 480
+   }
+  },
+  "penalty default": {
+   "routed": {
+    "depth": 137,
+    "twoq": 43
+   }
+  },
+  "penalty swap strategy": {
+   "routed": {
+    "depth": 126,
+    "twoq": 236
+   }
+  }
+ },
+ {
+  "n": 18,
+  "m": 32,
+  "A[low-degree first]": {
+   "max_controls": 17,
+   "logical": {
+    "depth": 338,
+    "twoq": 192
+   },
+   "routed": {
+    "depth": 1208,
+    "twoq": 694
+   }
+  },
+  "A[degeneracy]": {
+   "max_controls": 3,
+   "logical": {
+    "depth": 376,
+    "twoq": 205
+   },
+   "routed": {
+    "depth": 965,
+    "twoq": 390
+   }
+  },
+  "A[colouring layers]": {
+   "max_controls": 4,
+   "logical": {
+    "depth": 362,
+    "twoq": 186
+   },
+   "routed": {
+    "depth": 956,
+    "twoq": 414
+   }
+  },
+  "CG layer chain": {
+   "logical": {
+    "depth": 1260,
+    "twoq": 710
+   },
+   "routed": {
+    "depth": 4132,
+    "twoq": 2066
+   }
+  },
+  "CG layer tree": {
+   "logical": {
+    "depth": 1204,
+    "twoq": 704
+   },
+   "routed": {
+    "depth": 3245,
+    "twoq": 1785
+   }
+  },
+  "penalty default": {
+   "routed": {
+    "depth": 229,
+    "twoq": 143
+   }
+  },
+  "penalty swap strategy": {
+   "routed": {
+    "depth": 172,
+    "twoq": 416
+   }
+  }
+ },
+ {
+  "n": 26,
+  "m": 59,
+  "A[low-degree first]": {
+   "max_controls": 17,
+   "logical": {
+    "depth": 679,
+    "twoq": 358
+   },
+   "routed": {
+    "depth": 2853,
+    "twoq": 1734
+   }
+  },
+  "A[degeneracy]": {
+   "max_controls": 4,
+   "logical": {
+    "depth": 735,
+    "twoq": 389
+   },
+   "routed": {
+    "depth": 1969,
+    "twoq": 963
+   }
+  },
+  "A[colouring layers]": {
+   "max_controls": 6,
+   "logical": {
+    "depth": 692,
+    "twoq": 354
+   },
+   "routed": {
+    "depth": 2097,
+    "twoq": 1077
+   }
+  },
+  "CG layer chain": {
+   "logical": {
+    "depth": 2438,
+    "twoq": 1308
+   },
+   "routed": {
+    "depth": 8327,
+    "twoq": 4838
+   }
+  },
+  "CG layer tree": {
+   "logical": {
+    "depth": 2297,
+    "twoq": 1302
+   },
+   "routed": {
+    "depth": 6815,
+    "twoq": 4191
+   }
+  },
+  "penalty default": {
+   "routed": {
+    "depth": 473,
+    "twoq": 344
+   }
+  },
+  "penalty swap strategy": {
+   "routed": {
+    "depth": 239,
+    "twoq": 912
+   }
+  }
+ },
+ {
+  "n": 34,
+  "m": 78,
+  "A[low-degree first]": {
+   "max_controls": 17,
+   "logical": {
+    "depth": 896,
+    "twoq": 478
+   },
+   "routed": {
+    "depth": 4424,
+    "twoq": 2961
+   }
+  },
+  "A[degeneracy]": {
+   "max_controls": 4,
+   "logical": {
+    "depth": 960,
+    "twoq": 521
+   },
+   "routed": {
+    "depth": 2601,
+    "twoq": 1320
+   }
+  },
+  "A[colouring layers]": {
+   "max_controls": 6,
+   "logical": {
+    "depth": 920,
+    "twoq": 476
+   },
+   "routed": {
+    "depth": 2814,
+    "twoq": 1552
+   }
+  },
+  "CG layer chain": {
+   "logical": {
+    "depth": 3227,
+    "twoq": 1752
+   },
+   "routed": {
+    "depth": 11584,
+    "twoq": 7305
+   }
+  },
+  "CG layer tree": {
+   "logical": {
+    "depth": 3016,
+    "twoq": 1746
+   },
+   "routed": {
+    "depth": 9018,
+    "twoq": 6107
+   }
+  },
+  "penalty default": {
+   "routed": {
+    "depth": 582,
+    "twoq": 502
+   }
+  },
+  "penalty swap strategy": {
+   "routed": {
+    "depth": 321,
+    "twoq": 1600
+   }
+  }
+ }
+]

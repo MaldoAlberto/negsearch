@@ -1,0 +1,134 @@
+[
+ {
+  "cz": 180,
+  "depth": 329,
+  "qubits": 8,
+  "esp": 0.5656495444163981,
+  "dur_t2": 0.1199036052010784,
+  "n": 8,
+  "variant": "symmetric prep, full objective",
+  "generic_cz": 243,
+  "generic_esp": 0.45008851164135794
+ },
+ {
+  "cz": 124,
+  "depth": 222,
+  "qubits": 8,
+  "esp": 0.6754034174314789,
+  "dur_t2": 0.07744794091049248,
+  "n": 8,
+  "variant": "symmetric prep, prune 25%",
+  "generic_cz": 190,
+  "generic_esp": 0.5419515142492382
+ },
+ {
+  "cz": 4,
+  "depth": 11,
+  "qubits": 4,
+  "esp": 0.9885952473021672,
+  "dur_t2": 0.0017095690514176045,
+  "n": 8,
+  "variant": "preparation only",
+  "generic_cz": 44,
+  "generic_esp": 0.8831645591492784
+ },
+ {
+  "cz": 422,
+  "depth": 600,
+  "qubits": 12,
+  "esp": 0.2505072306224646,
+  "dur_t2": 0.1879631015594481,
+  "n": 12,
+  "variant": "symmetric prep, full objective",
+  "generic_cz": 696,
+  "generic_esp": 0.08388957762332674
+ },
+ {
+  "cz": 275,
+  "depth": 425,
+  "qubits": 12,
+  "esp": 0.3906722751996979,
+  "dur_t2": 0.16015695837572613,
+  "n": 12,
+  "variant": "symmetric prep, prune 25%",
+  "generic_cz": 579,
+  "generic_esp": 0.12080709753417135
+ },
+ {
+  "cz": 8,
+  "depth": 21,
+  "qubits": 6,
+  "esp": 0.975547965212523,
+  "dur_t2": 0.004549185806317269,
+  "n": 12,
+  "variant": "preparation only",
+  "generic_cz": 158,
+  "generic_esp": 0.6093417073167167
+ },
+ {
+  "cz": 491,
+  "depth": 536,
+  "qubits": 16,
+  "esp": 0.1796521859618542,
+  "dur_t2": 0.2012259823340547,
+  "n": 16,
+  "variant": "symmetric prep, full objective",
+  "generic_cz": 660,
+  "generic_esp": 0.0715235178064692
+ },
+ {
+  "cz": 253,
+  "depth": 236,
+  "qubits": 16,
+  "esp": 0.4449478793274402,
+  "dur_t2": 0.0728343453295713,
+  "n": 16,
+  "variant": "symmetric prep, prune 25%",
+  "generic_cz": 378,
+  "generic_esp": 0.294647129988176
+ },
+ {
+  "cz": 8,
+  "depth": 11,
+  "qubits": 8,
+  "esp": 0.9751417756913519,
+  "dur_t2": 0.0015185685109602959,
+  "n": 16,
+  "variant": "preparation only",
+  "generic_cz": 88,
+  "generic_esp": 0.7474688662632594
+ },
+ {
+  "cz": 1084,
+  "depth": 807,
+  "qubits": 25,
+  "esp": 0.011777915356785306,
+  "dur_t2": 0.3657749025752552,
+  "n": 24,
+  "variant": "symmetric prep, full objective",
+  "generic_cz": 1894,
+  "generic_esp": 9.605329940749447e-05
+ },
+ {
+  "cz": 546,
+  "depth": 502,
+  "qubits": 24,
+  "esp": 0.16297289569545836,
+  "dur_t2": 0.15545712146210522,
+  "n": 24,
+  "variant": "symmetric prep, prune 25%",
+  "generic_cz": 1202,
+  "generic_esp": 0.009974937286866457
+ },
+ {
+  "cz": 16,
+  "depth": 21,
+  "qubits": 12,
+  "esp": 0.9453522531684929,
+  "dur_t2": 0.004555711085818055,
+  "n": 24,
+  "variant": "preparation only",
+  "generic_cz": 343,
+  "generic_esp": 0.2911829602062107
+ }
+]

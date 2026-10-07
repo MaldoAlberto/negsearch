@@ -1,0 +1,154 @@
+{
+ "A": 6,
+ "T": 2,
+ "sectors": [
+  3,
+  3
+ ],
+ "seed": 5,
+ "n": 24,
+ "opt": -2.288185096417814,
+ "worst": 3.248593945328368,
+ "params": [
+  -10.947348085284403,
+  1.625474892454314
+ ],
+ "circuits": [
+  {
+   "index": 31,
+   "iface": [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   ],
+   "weight": 0.030916030534351144,
+   "name": "prep",
+   "qubits": 42,
+   "cz": 184,
+   "depth": 238,
+   "duration_us": 10.332,
+   "esp": 0.4172517926723789,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n24_31_prep.qpy"
+  },
+  {
+   "index": 33,
+   "iface": [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ]
+   ],
+   "weight": 0.030916030534351144,
+   "name": "prep",
+   "qubits": 40,
+   "cz": 182,
+   "depth": 215,
+   "duration_us": 8.868,
+   "esp": 0.3947853083019817,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n24_33_prep.qpy"
+  },
+  {
+   "index": 34,
+   "iface": [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   ],
+   "weight": 0.030916030534351144,
+   "name": "prep",
+   "qubits": 40,
+   "cz": 150,
+   "depth": 136,
+   "duration_us": 6.388000000000001,
+   "esp": 0.45842340875708165,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n24_34_prep.qpy"
+  },
+  {
+   "index": 60,
+   "iface": [
+    [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   ],
+   "weight": 0.030916030534351144,
+   "name": "prep",
+   "qubits": 40,
+   "cz": 167,
+   "depth": 152,
+   "duration_us": 6.72,
+   "esp": 0.4592466612249214,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n24_60_prep.qpy"
+  }
+ ]
+}

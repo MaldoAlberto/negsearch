@@ -1,0 +1,12 @@
+\begin{table*}[t]\centering\small
+\caption{\orig{ideal matrix-product-state simulation and compiled counts} Aer MPS simulation (bond dimension 64), $p=1$, 2000 shots. Quality: normalised, infeasible = 0; gap: best of 2000 shots, $(f_{best}-f_{opt})/(f_{worst}-f_{opt})$, exact $f_{opt}$ by dynamic programming. CZ on \texttt{ibm\_fez} only where the circuit fits (156 qubits).}\label{tab:pf_scaling}
+\resizebox{\linewidth}{!}{\begin{tabular}{lrrcccccccc}\toprule & & & \multicolumn{2}{c}{P(feasible)} & \multicolumn{3}{c}{quality} & \multicolumn{2}{c}{best-shot gap} & CZ (pen./hyb./per shot)\\
+instance & qubits & slack QUBO & pen. & hyb. & pen. & classical & hyb. & classical & hyb. & \\\midrule
+\texttt{a003\_t02} & 12 & 20 & 0.6355 & 1 & 0.501 & 0.598 & 0.735 & 0.000 & 0.000 & 101/124/39\\
+\texttt{a004\_t04} & 32 & 52 & 0.1710 & 1 & 0.128 & 0.652 & 0.746 & 0.078 & 0.016 & 572/904/241\\
+\texttt{a005\_t04} & 40 & 60 & 0.0935 & 1 & 0.070 & 0.648 & 0.687 & 0.061 & 0.016 & 963/1158/276\\
+\texttt{a010\_t04} & 80 & 100 & 0.0185 & 1 & 0.011 & 0.514 & 0.589 & 0.195 & 0.172 & 4056/2546/1205\\
+\texttt{a010\_t07} & 140 & 175 & 0.0055 & 1 & 0.004 & 0.516 & 0.625 & 0.291 & 0.185 & 7452/4655/2376\\
+\texttt{a010\_t10} & 200 & 250 & 0.0005 & 1 & 0.000 & 0.505 & 0.621 & 0.342 & 0.228 & --\\
+\texttt{a010\_t15} & 300 & 375 & 0.0000 & 1 & 0.000 & 0.517 & 0.650 & 0.363 & 0.230 & --\\
+\bottomrule\end{tabular}}\end{table*}

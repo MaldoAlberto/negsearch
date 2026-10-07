@@ -1,0 +1,162 @@
+{
+ "A": 4,
+ "T": 1,
+ "sectors": [
+  2,
+  2
+ ],
+ "seed": 5,
+ "n": 8,
+ "opt": -1.1182666245893138,
+ "worst": 1.5112420908534094,
+ "params": [
+  -4.0779208520867956,
+  0.8498292532357088
+ ],
+ "circuits": [
+  {
+   "index": 3,
+   "iface": [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   ],
+   "weight": 0.19047619047619047,
+   "name": "prep",
+   "qubits": 12,
+   "cz": 20,
+   "depth": 34,
+   "duration_us": 2.652,
+   "esp": 0.8899584033283265,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n8_3_prep.qpy"
+  },
+  {
+   "index": 3,
+   "iface": [
+    [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   ],
+   "weight": 0.19047619047619047,
+   "name": "qaoa1",
+   "qubits": 16,
+   "cz": 443,
+   "depth": 775,
+   "duration_us": 31.524000000000004,
+   "esp": 0.19713569777259654,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n8_3_qaoa1.qpy"
+  },
+  {
+   "index": 5,
+   "iface": [
+    [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ]
+   ],
+   "weight": 0.19047619047619047,
+   "name": "prep",
+   "qubits": 12,
+   "cz": 20,
+   "depth": 34,
+   "duration_us": 2.652,
+   "esp": 0.8899584033283265,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n8_5_prep.qpy"
+  },
+  {
+   "index": 5,
+   "iface": [
+    [
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      1
+     ]
+    ]
+   ],
+   "weight": 0.19047619047619047,
+   "name": "qaoa1",
+   "qubits": 16,
+   "cz": 488,
+   "depth": 693,
+   "duration_us": 28.112000000000002,
+   "esp": 0.17596160070325023,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n8_5_qaoa1.qpy"
+  },
+  {
+   "index": 6,
+   "iface": [
+    [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   ],
+   "weight": 0.19047619047619047,
+   "name": "prep",
+   "qubits": 12,
+   "cz": 22,
+   "depth": 34,
+   "duration_us": 2.652,
+   "esp": 0.8953742507426463,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n8_6_prep.qpy"
+  },
+  {
+   "index": 6,
+   "iface": [
+    [
+     [
+      1,
+      0
+     ],
+     [
+      1,
+      0
+     ]
+    ]
+   ],
+   "weight": 0.19047619047619047,
+   "name": "qaoa1",
+   "qubits": 16,
+   "cz": 458,
+   "depth": 759,
+   "duration_us": 30.636000000000003,
+   "esp": 0.18281841118838912,
+   "legal": true,
+   "file": "hardware_circuits/large_case_n8_6_qaoa1.qpy"
+  }
+ ]
+}

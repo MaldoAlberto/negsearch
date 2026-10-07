@@ -1,0 +1,19 @@
+\begin{table*}[t]\centering\small
+\caption{\orig{exact ideal simulation} Exact simulation on QOBLIB portfolio instances: P(feasible) / normalised quality (infeasible samples count 0) / P(optimum) for $p=1,2,3$. Penalty weights tuned over $\alpha\in[1/64,8]$; best value kept. $p=0$: uniform sampling (penalty rows) or $A_q$ alone (classically samplable).}\label{tab:pf_exact}
+\resizebox{\linewidth}{!}{\begin{tabular}{llcccc}\toprule instance (qubits ours/slack) & method & $p=0$ & $p=1$ & $p=2$ & $p=3$\\\midrule
+\texttt{a003\_t02} (12/20) & Penalty, slack QUBO & 0.17 / 0.08 / 2.4e-4 & 0.58 / 0.47 / 2.1e-2 & 0.72 / 0.61 / 2.5e-2 & 0.77 / 0.62 / 1.3e-2\\
+ & Penalty, unbalanced & 0.17 / 0.08 / 2.4e-4 & 0.63 / 0.50 / 6.2e-3 & 0.79 / 0.61 / 4.6e-4 & 0.81 / 0.72 / 1.4e-3\\
+ & $A_q$ + X mixer & 1.00 / 0.65 / 3.5e-2 & 0.96 / 0.47 / 2.2e-6 & 0.70 / 0.34 / 1.2e-6 & 0.57 / 0.27 / 3.0e-7\\
+ & $A_q$ + XY (hybrid) & 1.00 / 0.65 / 3.5e-2 & 1.00 / 0.76 / 3.1e-2 & 1.00 / 0.79 / 3.6e-2 & 1.00 / 0.81 / 3.3e-2\\
+ & $A_q$ + Grover (CG-QAOA) & 1.00 / 0.65 / 3.5e-2 & 1.00 / 0.79 / 1.2e-1 & 1.00 / 0.89 / 3.5e-1 & 1.00 / 0.94 / 5.3e-1\\
+\midrule
+\texttt{a004\_t04} (2 per.) (16/26) & Penalty, unbalanced & 0.17 / 0.10 / 1.5e-5 & 0.56 / 0.41 / 6.8e-5 & 0.61 / 0.51 / 4.8e-5 & 0.81 / 0.69 / 1.3e-4\\
+ & $A_q$ + X mixer & 1.00 / 0.64 / 4.8e-4 & 0.81 / 0.50 / 6.1e-5 & 0.55 / 0.34 / 1.8e-5 & 0.29 / 0.18 / 9.4e-7\\
+ & $A_q$ + XY (hybrid) & 1.00 / 0.64 / 4.8e-4 & 1.00 / 0.74 / 5.8e-4 & 1.00 / 0.79 / 1.7e-3 & 1.00 / 0.83 / 1.7e-3\\
+ & $A_q$ + Grover (CG-QAOA) & 1.00 / 0.64 / 4.8e-4 & 1.00 / 0.78 / 2.0e-3 & 1.00 / 0.85 / 2.9e-3 & 1.00 / 0.88 / 4.8e-3\\
+\midrule
+\texttt{a005\_t04} (2 per.) (20/30) & Penalty, unbalanced & 0.06 / 0.03 / 9.5e-7 & 0.43 / 0.28 / 9.0e-6 & 0.55 / 0.40 / 1.5e-5 & 0.84 / 0.61 / 7.1e-5\\
+ & $A_q$ + X mixer & 1.00 / 0.62 / 2.3e-5 & 0.87 / 0.52 / 6.1e-6 & 0.48 / 0.30 / 8.4e-6 & 0.68 / 0.41 / 2.8e-5\\
+ & $A_q$ + XY (hybrid) & 1.00 / 0.62 / 2.3e-5 & 1.00 / 0.70 / 2.0e-4 & 1.00 / 0.71 / 1.5e-4 & 1.00 / 0.75 / 3.1e-4\\
+ & $A_q$ + Grover (CG-QAOA) & 1.00 / 0.62 / 2.3e-5 & 1.00 / 0.73 / 2.9e-4 & 1.00 / 0.79 / 5.2e-4 & 1.00 / 0.82 / 7.4e-4\\
+\bottomrule\end{tabular}}\end{table*}

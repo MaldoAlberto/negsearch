@@ -1,0 +1,17 @@
+\begin{table*}[t]\centering\small
+\caption{\orig{compiled counts; ideal values from exact simulation; noisy values from the depolarising model; nothing executed} Predictions for the 120-qubit experiment (twelve blocks of $10$ qubits in one circuit; averages over blocks; CZ and ESP: median per block, depth: maximum). Feasible: share of shots of a block that satisfy its constraints; quality: $1-$normalised cost among feasible shots (uniform on the feasible set: about $0.5$). Not measured.}\label{tab:hw100_pred}
+\begin{tabular}{lrrrrrrr}\toprule
+method & CZ & depth & ESP & feas. ideal & feas. model & qual. ideal & qual. model\\\midrule
+ours, $p{=}1$ light & 338 & 1008 & 0.22 & 1.000 & 0.220 & 0.67 & 0.66\\
+ours, $p{=}1$ full & 447 & 1196 & 0.11 & 1.000 & 0.134 & 0.72 & 0.69\\
+ours, preparation only & 96 & 449 & 0.71 & 1.000 & 0.669 & 0.50 & 0.50\\
+uniform (Hadamards) & 0 & 4 & 1.00 & 0.017 & 0.017 & 0.50 & 0.50\\
+Fourier-LCU, warm start & 154 & 296 & 0.47 & 0.244 & 0.122 & 0.74 & 0.71\\
+unbalanced, warm start & 154 & 299 & 0.47 & 0.589 & 0.281 & 0.51 & 0.51\\
+XY mixer, warm start & 194 & 342 & 0.41 & 0.239 & 0.107 & 0.73 & 0.70\\
+ours, tilted preparation only & 99 & 457 & 0.69 & 1.000 & 0.660 & 0.80 & 0.79\\
+ours, tilted, $p{=}1$ light & 342 & 1028 & 0.21 & 1.000 & 0.217 & 0.85 & 0.82\\
+Fourier-LCU, tilted start & 154 & 298 & 0.47 & 0.375 & 0.182 & 0.91 & 0.88\\
+unbalanced, tilted start & 153 & 296 & 0.47 & 0.690 & 0.330 & 0.84 & 0.83\\
+XY mixer, tilted start & 192 & 344 & 0.40 & 0.326 & 0.138 & 0.91 & 0.87\\
+\bottomrule\end{tabular}\end{table*}

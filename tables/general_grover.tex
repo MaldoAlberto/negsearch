@@ -1,0 +1,13 @@
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{3.5pt}
+\caption{\orig{exact ideal numerics} Amplitude amplification on seven constraint types with the same pipeline (exact numerics, $n=10$ decision variables unless noted; median over the instances, optimal solutions marked). $w$: automaton width; $a_{\rm unif}$, $a_{1/2}$, $a_{q^*}$: probability of the marked set in the uniform state, in $A_{1/2}|0\rangle$ and in the best-biased $A_q|0\rangle$; $k$: optimal number of amplification iterations. Standard Grover must also verify feasibility in its oracle; $A_q$ does not.}\label{tab:gen_grover}
+\begin{tabular}{llrrrrrrrrr}\toprule
+family & constraint & inst. & $w$ & $|F|/2^n$ & $a_{\rm unif}$ & $a_{1/2}$ & $a_{q^*}$ & $k_{\rm std}$ & $k_{1/2}$ & $k_{q^*}$\\\midrule
+cardinality ($\sum x=4$) & count & 5 & 5 & 0.205 & $9.8\!\cdot\!10^{-4}$ & $2.0\!\cdot\!10^{-3}$ & $3.2\!\cdot\!10^{-3}$ & 25 & 17 & 13\\
+knapsack (weights $w_i$) & linear ineq. & 5 & 14 & 0.385 & $9.8\!\cdot\!10^{-4}$ & $2.9\!\cdot\!10^{-3}$ & $3.8\!\cdot\!10^{-3}$ & 25 & 14 & 12\\
+independent set & pairwise & 5 & 11 & 0.075 & $9.8\!\cdot\!10^{-4}$ & 0.016 & 0.022 & 25 & 6 & 5\\
+set packing & overlap $\le1$ & 5 & 6 & 0.024 & $9.8\!\cdot\!10^{-4}$ & 0.031 & 0.035 & 25 & 4 & 4\\
+exact cover & overlap $=1$ & 5 & 3 & $2.9\!\cdot\!10^{-3}$ & $9.8\!\cdot\!10^{-4}$ & 0.250 & 0.902 & 25 & 1 & 0\\
+3-colouring & one-hot + edges & 4 & 11 & 0.029 & $1.5\!\cdot\!10^{-3}$ & 0.039 & 0.069 & 21 & 3 & 2\\
+assignment (permutations) & row/col sums $=1$ & 5 & 5 & 0.012 & $7.8\!\cdot\!10^{-3}$ & 0.625 & 0.950 & 8 & 0 & 0\\
+assignment $4\times4$ ($n{=}16$) & row/col sums $=1$ & 1 & 9 & $3.7\!\cdot\!10^{-4}$ & $1.5\!\cdot\!10^{-5}$ & 0.031 & 0.082 & 201 & 4 & 2\\
+\bottomrule\end{tabular}\end{table*}

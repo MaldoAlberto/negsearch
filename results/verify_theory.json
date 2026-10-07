@@ -1,0 +1,186 @@
+{
+ "circuit": [
+  {
+   "n": 8,
+   "objective": "full",
+   "interface": "(((0, 1), (1, 0)),)",
+   "max_infeasible_mass": 1.687538997430238e-14,
+   "max_one_minus_overlap": 8.548717289613705e-15
+  },
+  {
+   "n": 8,
+   "objective": "pruned 25%",
+   "interface": "(((0, 1), (1, 0)),)",
+   "max_infeasible_mass": 1.8207657603852567e-14,
+   "max_one_minus_overlap": 9.2148511043888e-15
+  },
+  {
+   "n": 12,
+   "objective": "full",
+   "interface": "(((0, 1), (1, 0)),)",
+   "max_infeasible_mass": 3.419486915845482e-14,
+   "max_one_minus_overlap": 1.709743457922741e-14
+  },
+  {
+   "n": 12,
+   "objective": "pruned 25%",
+   "interface": "(((0, 1), (1, 0)),)",
+   "max_infeasible_mass": 3.197442310920451e-14,
+   "max_one_minus_overlap": 1.5765166949677223e-14
+  },
+  {
+   "n": 16,
+   "objective": "full",
+   "interface": "(((0, 1), (1, 0)), ((0, 1), (1, 0)))",
+   "max_infeasible_mass": 3.3084646133829665e-14,
+   "max_one_minus_overlap": 1.63202784619898e-14
+  },
+  {
+   "n": 16,
+   "objective": "pruned 25%",
+   "interface": "(((0, 1), (1, 0)), ((0, 1), (1, 0)))",
+   "max_infeasible_mass": 3.1530333899354446e-14,
+   "max_one_minus_overlap": 1.5987211554602254e-14
+  }
+ ],
+ "automaton_matches_F": true,
+ "amplification": [
+  {
+   "seed": 1,
+   "G": 1,
+   "a_standard": 1.52587890625e-05,
+   "a_uniformF": 0.0019193857965451055,
+   "a_coin": 0.000244140625,
+   "k_standard": 201,
+   "k_uniformF": 17,
+   "k_coin": 50,
+   "k_conditioned": 24.421875,
+   "w_group": 0.491362763915547,
+   "samples_classical": 521.0
+  },
+  {
+   "seed": 1,
+   "G": 5,
+   "a_standard": 7.62939453125e-05,
+   "a_uniformF": 0.009596928982725527,
+   "a_coin": 0.002685546875,
+   "k_standard": 89,
+   "k_uniformF": 8,
+   "k_coin": 15,
+   "k_conditioned": 10.17578125,
+   "w_group": 0.491362763915547,
+   "samples_classical": 104.2
+  },
+  {
+   "seed": 1,
+   "G": 26,
+   "a_standard": 0.000396728515625,
+   "a_uniformF": 0.04990403071017274,
+   "a_coin": 0.01904296875,
+   "k_standard": 39,
+   "k_uniformF": 3,
+   "k_coin": 5,
+   "k_conditioned": 6.10546875,
+   "w_group": 0.491362763915547,
+   "samples_classical": 20.03846153846154
+  },
+  {
+   "seed": 2,
+   "G": 1,
+   "a_standard": 1.52587890625e-05,
+   "a_uniformF": 0.0019193857965451055,
+   "a_coin": 0.0078125,
+   "k_standard": 201,
+   "k_uniformF": 17,
+   "k_coin": 8,
+   "k_conditioned": 24.421875,
+   "w_group": 0.491362763915547,
+   "samples_classical": 521.0
+  },
+  {
+   "seed": 2,
+   "G": 5,
+   "a_standard": 7.62939453125e-05,
+   "a_uniformF": 0.009596928982725527,
+   "a_coin": 0.0185546875,
+   "k_standard": 89,
+   "k_uniformF": 8,
+   "k_coin": 5,
+   "k_conditioned": 12.2109375,
+   "w_group": 0.491362763915547,
+   "samples_classical": 104.2
+  },
+  {
+   "seed": 2,
+   "G": 26,
+   "a_standard": 0.000396728515625,
+   "a_uniformF": 0.04990403071017274,
+   "a_coin": 0.063232421875,
+   "k_standard": 39,
+   "k_uniformF": 3,
+   "k_coin": 3,
+   "k_conditioned": 6.10546875,
+   "w_group": 0.491362763915547,
+   "samples_classical": 20.03846153846154
+  }
+ ],
+ "preprocessing": [
+  {
+   "seed": 0,
+   "n": 12,
+   "F": 92,
+   "cleaning_preserves_F": true,
+   "automaton_same_F_all_orders": true
+  },
+  {
+   "seed": 1,
+   "n": 10,
+   "F": 110,
+   "cleaning_preserves_F": true,
+   "automaton_same_F_all_orders": true
+  },
+  {
+   "seed": 2,
+   "n": 9,
+   "F": 76,
+   "cleaning_preserves_F": true,
+   "automaton_same_F_all_orders": true
+  },
+  {
+   "seed": 3,
+   "n": 10,
+   "F": 104,
+   "cleaning_preserves_F": true,
+   "automaton_same_F_all_orders": true
+  },
+  {
+   "seed": 4,
+   "n": 10,
+   "F": 96,
+   "cleaning_preserves_F": true,
+   "automaton_same_F_all_orders": true
+  },
+  {
+   "seed": 5,
+   "n": 11,
+   "F": 60,
+   "cleaning_preserves_F": true,
+   "automaton_same_F_all_orders": true
+  },
+  {
+   "seed": 6,
+   "n": 9,
+   "F": 42,
+   "cleaning_preserves_F": true,
+   "automaton_same_F_all_orders": true
+  },
+  {
+   "seed": 7,
+   "n": 11,
+   "F": 125,
+   "cleaning_preserves_F": true,
+   "automaton_same_F_all_orders": true
+  }
+ ],
+ "preprocessing_all_ok": true
+}

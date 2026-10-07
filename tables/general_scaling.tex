@@ -1,0 +1,12 @@
+\begin{table*}[t]\centering\small\setlength{\tabcolsep}{3.5pt}
+\caption{\orig{ideal (noiseless) matrix-product-state simulation} The generic compiler at scale (Aer matrix-product states, 2000 shots, automata written from the problem structure). Qubits include the automaton registers (interleaved with the variables); the bond dimension of the final state equals the automaton width. Feasible: share of samples accepted by the automaton. Uniform: share of feasible strings among all $2^n$ (exact). Mean: mean sample objective $\pm$ standard error against the exact expectation under $A_q$ (dynamic programme over the automaton). Best / opt.: best of 2000 shots / exact optimum.}\label{tab:gen_scale}
+\begin{tabular}{lrrrrrrrrr}\toprule
+family & $n$ & qubits & $w$ & bond & feasible & uniform & mean (MPS) & mean (exact) & best / opt.\\\midrule
+cardinality (count) & 24 & 85 & 5 & 5 & 1.000 & $6.3\!\cdot\!10^{-4}$ & $21.3\pm0.1$ & 21.3 & 32 / 36\\
+cardinality (count) & 60 & 274 & 11 & 11 & 1.000 & $6.5\!\cdot\!10^{-8}$ & $52.3\pm0.1$ & 52.2 & 73 / 96\\
+independent set (band) & 24 & 68 & 3 & 3 & 1.000 & $7.5\!\cdot\!10^{-4}$ & $23.8\pm0.1$ & 23.6 & 37 / 37\\
+independent set (band) & 60 & 176 & 3 & 3 & 1.000 & $1.0\!\cdot\!10^{-8}$ & $66.3\pm0.2$ & 66.1 & 100 / 109\\
+independent set (band) & 80 & 236 & 3 & 3 & 1.000 & $2.1\!\cdot\!10^{-11}$ & $83.3\pm0.2$ & 82.7 & 118 / 130\\
+knapsack & 18 & 77 & 17 & 17 & 1.000 & 0.218 & $70.9\pm0.3$ & 70.9 & 111 / 116\\
+knapsack & 30 & 145 & 25 & 25 & 1.000 & 0.156 & $118.7\pm0.3$ & 118.9 & 173 / 185\\
+\bottomrule\end{tabular}\end{table*}

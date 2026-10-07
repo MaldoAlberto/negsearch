@@ -1,0 +1,287 @@
+[
+ {
+  "n": 8,
+  "stage": "S0 baseline (full objective)",
+  "zz": 28,
+  "cz": 180,
+  "depth": 329,
+  "esp": 0.5656495444163981,
+  "qubits": 8,
+  "exact_overlap_defect": 5.662137425588298e-15,
+  "quality": 0.8292947646936386
+ },
+ {
+  "n": 8,
+  "stage": "S1 + eliminate forced variables",
+  "zz": 6,
+  "cz": 98,
+  "depth": 308,
+  "esp": 0.7347459996015171,
+  "qubits": 8,
+  "exact_overlap_defect": 4.440892098500626e-15,
+  "quality": 0.8292947646936386
+ },
+ {
+  "n": 8,
+  "stage": "S2 + trivial blocks, 2-qubit mixers",
+  "zz": 6,
+  "cz": 23,
+  "depth": 60,
+  "esp": 0.9339239242946423,
+  "qubits": 4,
+  "exact_overlap_defect": 6.661338147750939e-16,
+  "quality": 0.8292947646936386
+ },
+ {
+  "n": 8,
+  "stage": "S3 + constraint gauge",
+  "zz": 6,
+  "cz": 23,
+  "depth": 62,
+  "esp": 0.9339239242946423,
+  "qubits": 4,
+  "exact_overlap_defect": 0.0,
+  "quality": 0.8292947646936386
+ },
+ {
+  "n": 8,
+  "stage": "S4 + prune 10% of the largest",
+  "zz": 6,
+  "cz": 23,
+  "depth": 62,
+  "esp": 0.9339239242946423,
+  "qubits": 4,
+  "quality": 0.8292947646936386
+ },
+ {
+  "n": 8,
+  "stage": "S5 + prune 25% of the largest",
+  "zz": 6,
+  "cz": 23,
+  "depth": 62,
+  "esp": 0.9339239242946423,
+  "qubits": 4,
+  "quality": 0.8292947646936386
+ },
+ {
+  "n": 8,
+  "stage": "S6 + prune 50% of the largest",
+  "zz": 6,
+  "cz": 23,
+  "depth": 62,
+  "esp": 0.9339239242946423,
+  "qubits": 4,
+  "quality": 0.8292947646936386
+ },
+ {
+  "n": 12,
+  "stage": "S0 baseline (full objective)",
+  "zz": 66,
+  "cz": 422,
+  "depth": 600,
+  "esp": 0.2505072306224646,
+  "qubits": 12,
+  "exact_overlap_defect": 1.0880185641326534e-14,
+  "quality": 0.7708402452272024
+ },
+ {
+  "n": 12,
+  "stage": "S1 + eliminate forced variables",
+  "zz": 15,
+  "cz": 224,
+  "depth": 387,
+  "esp": 0.4844387745129754,
+  "qubits": 12,
+  "exact_overlap_defect": 1.021405182655144e-14,
+  "quality": 0.7708402452272024
+ },
+ {
+  "n": 12,
+  "stage": "S2 + trivial blocks, 2-qubit mixers",
+  "zz": 15,
+  "cz": 66,
+  "depth": 141,
+  "esp": 0.8186063801780792,
+  "qubits": 6,
+  "exact_overlap_defect": -6.661338147750939e-16,
+  "quality": 0.7708402452272024
+ },
+ {
+  "n": 12,
+  "stage": "S3 + constraint gauge",
+  "zz": 9,
+  "cz": 47,
+  "depth": 89,
+  "esp": 0.8606166653959862,
+  "qubits": 6,
+  "exact_overlap_defect": 1.5543122344752192e-15,
+  "quality": 0.7708402452272024
+ },
+ {
+  "n": 12,
+  "stage": "S4 + prune 10% of the largest",
+  "zz": 8,
+  "cz": 52,
+  "depth": 121,
+  "esp": 0.8434339844606934,
+  "qubits": 6,
+  "quality": 0.7708420232899617
+ },
+ {
+  "n": 12,
+  "stage": "S5 + prune 25% of the largest",
+  "zz": 7,
+  "cz": 55,
+  "depth": 100,
+  "esp": 0.8423299206088218,
+  "qubits": 6,
+  "quality": 0.7662268873975979
+ },
+ {
+  "n": 12,
+  "stage": "S6 + prune 50% of the largest",
+  "zz": 4,
+  "cz": 41,
+  "depth": 110,
+  "esp": 0.8750688924864017,
+  "qubits": 6,
+  "quality": 0.7769326206453202
+ },
+ {
+  "n": 16,
+  "stage": "S0 baseline (full objective)",
+  "zz": 72,
+  "cz": 491,
+  "depth": 536,
+  "esp": 0.1796521859618542,
+  "qubits": 16,
+  "exact_overlap_defect": 1.176836406102666e-14,
+  "quality": 0.7415156709238702
+ },
+ {
+  "n": 16,
+  "stage": "S1 + eliminate forced variables",
+  "zz": 16,
+  "cz": 243,
+  "depth": 269,
+  "esp": 0.41710295212564347,
+  "qubits": 16,
+  "exact_overlap_defect": 9.658940314238862e-15,
+  "quality": 0.7415156709238702
+ },
+ {
+  "n": 16,
+  "stage": "S2 + trivial blocks, 2-qubit mixers",
+  "zz": 16,
+  "cz": 86,
+  "depth": 161,
+  "esp": 0.7621987219198939,
+  "qubits": 8,
+  "exact_overlap_defect": -2.220446049250313e-16,
+  "quality": 0.7415156709238702
+ },
+ {
+  "n": 16,
+  "stage": "S3 + constraint gauge",
+  "zz": 20,
+  "cz": 101,
+  "depth": 182,
+  "esp": 0.7284145827195115,
+  "qubits": 8,
+  "exact_overlap_defect": 1.1102230246251565e-15,
+  "quality": 0.7415156709238702
+ },
+ {
+  "n": 16,
+  "stage": "S4 + prune 10% of the largest",
+  "zz": 20,
+  "cz": 101,
+  "depth": 182,
+  "esp": 0.7284145827195115,
+  "qubits": 8,
+  "quality": 0.7415156768611386
+ },
+ {
+  "n": 16,
+  "stage": "S5 + prune 25% of the largest",
+  "zz": 12,
+  "cz": 46,
+  "depth": 62,
+  "esp": 0.871132320937566,
+  "qubits": 8,
+  "quality": 0.7421441478559634
+ },
+ {
+  "n": 16,
+  "stage": "S6 + prune 50% of the largest",
+  "zz": 12,
+  "cz": 46,
+  "depth": 62,
+  "esp": 0.871132320937566,
+  "qubits": 8,
+  "quality": 0.7421441478559634
+ },
+ {
+  "n": 24,
+  "stage": "S0 baseline (full objective)",
+  "zz": 156,
+  "cz": 1084,
+  "depth": 807,
+  "esp": 0.011777915356785306,
+  "qubits": 25
+ },
+ {
+  "n": 24,
+  "stage": "S1 + eliminate forced variables",
+  "zz": 36,
+  "cz": 555,
+  "depth": 538,
+  "esp": 0.12466858998610045,
+  "qubits": 24
+ },
+ {
+  "n": 24,
+  "stage": "S2 + trivial blocks, 2-qubit mixers",
+  "zz": 36,
+  "cz": 186,
+  "depth": 179,
+  "esp": 0.5256874144833653,
+  "qubits": 12
+ },
+ {
+  "n": 24,
+  "stage": "S3 + constraint gauge",
+  "zz": 36,
+  "cz": 202,
+  "depth": 184,
+  "esp": 0.4936933639738537,
+  "qubits": 12
+ },
+ {
+  "n": 24,
+  "stage": "S4 + prune 10% of the largest",
+  "zz": 34,
+  "cz": 206,
+  "depth": 179,
+  "esp": 0.4886250302275907,
+  "qubits": 12
+ },
+ {
+  "n": 24,
+  "stage": "S5 + prune 25% of the largest",
+  "zz": 32,
+  "cz": 206,
+  "depth": 207,
+  "esp": 0.48799480160786546,
+  "qubits": 12
+ },
+ {
+  "n": 24,
+  "stage": "S6 + prune 50% of the largest",
+  "zz": 14,
+  "cz": 134,
+  "depth": 120,
+  "esp": 0.6195160881285768,
+  "qubits": 14
+ }
+]

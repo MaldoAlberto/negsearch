@@ -1,0 +1,128 @@
+{
+ "penalty_unbalanced p=1": {
+  "cz": 101,
+  "depth": 138,
+  "shots": 2000,
+  "ideal": {
+   "p_feas": 0.634,
+   "quality": 0.5036796893113844,
+   "p_opt": 0.006,
+   "quality_feasible_only": 0.7944474594816788
+  },
+  "noisy": {
+   "p_feas": 0.5955,
+   "quality": 0.46572374217482043,
+   "p_opt": 0.008,
+   "quality_feasible_only": 0.7820717752725783
+  },
+  "seconds": 35.648658752441406
+ },
+ "penalty_slack p=1": {
+  "cz": 339,
+  "depth": 356,
+  "shots": 2000,
+  "ideal": {
+   "p_feas": 0.5785,
+   "quality": 0.4663415256202176,
+   "p_opt": 0.023,
+   "quality_feasible_only": 0.8061219111844729
+  },
+  "noisy": {
+   "p_feas": 0.4675,
+   "quality": 0.3582690702527244,
+   "p_opt": 0.0085,
+   "quality_feasible_only": 0.7663509524122447
+  },
+  "seconds": 1960.2007451057434
+ },
+ "A_init_XYmixer p=1": {
+  "cz": 531,
+  "depth": 1018,
+  "shots": 2000,
+  "ideal": {
+   "p_feas": 1.0,
+   "quality": 0.7564261534894506,
+   "p_opt": 0.024,
+   "quality_feasible_only": 0.7564261534894506
+  },
+  "noisy": {
+   "p_feas": 0.5945,
+   "quality": 0.3942755622536517,
+   "p_opt": 0.0135,
+   "quality_feasible_only": 0.6632053191819204
+  },
+  "seconds": 101.54761028289795
+ },
+ "penalty_unbalanced p=2": {
+  "cz": 206,
+  "depth": 258,
+  "shots": 2000,
+  "ideal": {
+   "p_feas": 0.781,
+   "quality": 0.6026347090192443,
+   "p_opt": 0.001,
+   "quality_feasible_only": 0.7716193457352679
+  },
+  "noisy": {
+   "p_feas": 0.6765,
+   "quality": 0.5003803616971942,
+   "p_opt": 0.001,
+   "quality_feasible_only": 0.7396605494415288
+  },
+  "seconds": 34.39562797546387
+ },
+ "penalty_slack p=2": {
+  "cz": 693,
+  "depth": 651,
+  "shots": 2000,
+  "ideal": {
+   "p_feas": 0.731,
+   "quality": 0.6218102249014614,
+   "p_opt": 0.025,
+   "quality_feasible_only": 0.8506295826285382
+  },
+  "noisy": {
+   "p_feas": 0.5185,
+   "quality": 0.3894150243450028,
+   "p_opt": 0.01,
+   "quality_feasible_only": 0.7510415127193882
+  },
+  "seconds": 3793.6840119361877
+ },
+ "A_init_XYmixer p=2": {
+  "cz": 642,
+  "depth": 1304,
+  "shots": 2000,
+  "ideal": {
+   "p_feas": 1.0,
+   "quality": 0.7870165777880829,
+   "p_opt": 0.029,
+   "quality_feasible_only": 0.7870165777880829
+  },
+  "noisy": {
+   "p_feas": 0.498,
+   "quality": 0.3325296777185252,
+   "p_opt": 0.014,
+   "quality_feasible_only": 0.6677302765432233
+  },
+  "seconds": 459.1678817272186
+ },
+ "A_q alone": {
+  "cz": 324,
+  "depth": 799,
+  "shots": 2000,
+  "ideal": {
+   "p_feas": 1.0,
+   "quality": 0.6496276373753764,
+   "p_opt": 0.0365,
+   "quality_feasible_only": 0.6496276373753764
+  },
+  "noisy": {
+   "p_feas": 0.789,
+   "quality": 0.5030781358683052,
+   "p_opt": 0.0165,
+   "quality_feasible_only": 0.6376148743578013
+  },
+  "seconds": 70.09284591674805
+ }
+}

@@ -1,0 +1,11 @@
+\begin{table*}[t]\centering\small
+\caption{\orig{compiled counts and ideal (noiseless) simulation} Generic compiler (automaton $\to$ circuit), $n=6$ decision variables, Qiskit Aer. $q$: total qubits (decisions + automaton registers); CZ and depth of $A_q$ after transpilation to $\{$CZ, $R_z$, $\sqrt X$, $X$, $R_y\}$ without any hand optimisation; errors are the largest deviation of the simulated circuit probabilities from the exact formula over all Grover iterations / the $p{=}2$ Grover-mixer QAOA circuit.}\label{tab:gen_circ}
+\begin{tabular}{lrrrrrr}\toprule
+family & $q$ & $w$ & CZ($A_q$) & $k_{\rm std}\to k_{A_q}$ & err.\ Grover & err.\ QAOA\\\midrule
+cardinality & 14 & 4 & 200 & $6\to3$ & 3e-15 & 1e-16\\
+knapsack & 15 & 5 & 297 & $6\to6$ & 8e-15 & 3e-16\\
+independent set & 13 & 3 & 107 & $6\to4$ & 4e-15 & 5e-16\\
+set packing & 13 & 3 & 97 & $6\to3$ & 2e-15 & 2e-16\\
+exact cover & 9 & 2 & 24 & $6\to0$ & 2e-15 & 1e-16\\
+3-colouring & 12 & 3 & 88 & $6\to4$ & 2e-15 & 2e-16\\
+\bottomrule\end{tabular}\end{table*}

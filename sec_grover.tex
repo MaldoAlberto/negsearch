@@ -1,0 +1,15 @@
+\subsection{Amplitude amplification}\label{sec:grover}
+Let $G\subseteq F$ be the marked set (optimal solutions, or all with $C(x)\le c$), and $a_q=\mu_q(G)=\sum_{x\in G}\mu_q(x)$. Amplitude amplification~\cite{bhmt2002} with $A_q$ reflects about $A_q|0\rangle$ with $A_q(2|0\rangle\langle0|-I)A_q^\dagger$ and marks with an oracle $S_G$.
+\begin{theorem}[amplification over any constraint set]\label{thm:grover}
+After $k$ iterations the success probability is $\sin^2((2k+1)\vartheta)$ with $\sin\vartheta=\sqrt{a_q}$, so $k^\star=\lfloor\pi/(4\vartheta)\rfloor$ iterations suffice. The oracle only needs to test the objective ($C(x)\le c$): it acts as $S_G$ on $\mathrm{span}\{|x\rangle|g(x)\rangle:x\in F\}$, which contains every vector the iteration visits, so feasibility need not be verified. For $q=\tfrac12$, $a_{1/2}=\sum_{x\in G}2^{-D(x)}\ge|G|/2^n$, so $k^\star\le k^\star_{\rm Grover}$ for every instance, and for small $a$ the gain factor is
+\[
+\sqrt{a_{1/2}\,2^n/|G|}=\Big(\tfrac{1}{|G|}\sum\nolimits_{x\in G}2^{\,n-D(x)}\Big)^{1/2}\ \ge1 .
+\]
+\end{theorem}
+\begin{proof}
+The standard amplitude-amplification analysis in the plane spanned by the good and bad components of $A_q|0\rangle$; the last two claims follow from \cref{thm:universal}, $\mu_{1/2}=2^{-D}$ and $D\le n$.
+\end{proof}
+\begin{remark}[any preparation with support $F$]\label{rem:anyA}
+Theorems~\ref{thm:grover} and~\ref{thm:qaoa} use only that $A|0\rangle$ has support exactly $F$ (on the $x$ register, with deterministic garbage). The distribution $\mu_{1/2}(x)=2^{-D(x)}$ belongs to our automaton compiler, not to the theorems. Any other exact preparation can replace it, with $a=\sum_{x\in G}|\langle x|A|0\rangle|^2$ in place of $a_q$. For count constraints the Dicke state $|D^n_k\rangle$ is such a preparation, with $\mu(x)=1/|F|$, no register and $a=|G|/|F|\ge|G|/2^n$; it is a structure-specific implementation of the automaton of width $\le\min(k,n-k)+1$ and needs no solution counting. A circuit that only approximates $A$ (for example one produced by a transpiler with approximation degree below one) leaves the support $F$, and the theorems no longer apply; \cref{sec:general-depth} gives an instance in which the amplified probability falls to zero.
+\end{remark}
+Two caveats keep the claim honest. First, Grover's oracle on the uniform state must also check feasibility with an automaton run of the same order as $A_q$ itself; \cref{tab:gen_cost} measures the resulting gate counts. Second, drawing from $A_q$ and testing classically succeeds after $1/a_q$ samples, so the quadratic gap to the \emph{same} preparation is all that remains; this is not a gain over classical solvers.

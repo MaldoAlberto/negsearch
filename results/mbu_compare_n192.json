@@ -1,0 +1,41 @@
+{
+ "cAq_prep": {
+  "cz": 4791,
+  "depth": 5429,
+  "qubits": 132,
+  "esp": 0.0,
+  "dur_t2": 2.458392431915939
+ },
+ "onehot_rc_prep": {
+  "qubits": 179,
+  "cz": null,
+  "note": "does not fit in 156 qubits"
+ },
+ "onehot_rc_layer": {
+  "qubits": 179,
+  "cz": null,
+  "note": "does not fit in 156 qubits"
+ },
+ "mbu0_prep": {
+  "cz": 2817,
+  "depth": 1904,
+  "qubits": 87,
+  "esp": 3.301195698132888e-152,
+  "dur_t2": 2.1204465778916934
+ },
+ "mbuU_prep": {
+  "cz": 3257,
+  "depth": 1993,
+  "qubits": 88,
+  "esp": 5.607332677076726e-181,
+  "dur_t2": 1.8468202849893793
+ },
+ "mbuU_layer": {
+  "cz": 4937,
+  "depth": 2792,
+  "qubits": 89,
+  "esp": 2.5e-323,
+  "dur_t2": 2.4374646364570394
+ },
+ "mbu_expected_prep_cz": 3037.0
+}

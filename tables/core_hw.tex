@@ -1,0 +1,13 @@
+\begin{table*}[t]
+\centering\footnotesize\setlength{\tabcolsep}{4pt}
+\caption{\orig{estimate, an extrapolation of the ESP model; no hardware} What one QAOA layer needs. Effective error per CZ $\varepsilon=-\ln(\mathrm{ESP})/\#\mathrm{CZ}$ over nine compiled circuits (median $0.0035$). ESP of our layer at $473$, $669$, $923$ CZ if the error per CZ were reduced by the factor shown; last columns: free qubits whose layer keeps ESP $\ge0.3$ and $\ge0.1$ at $\approx31$ CZ per free qubit (a dense objective gives fewer). The scaling of the error rate is an assumption.}\label{tab:core_hw}
+\begin{tabular}{lrrrrr}
+\toprule
+error per CZ & ESP$_{16}$ & ESP$_{20}$ & ESP$_{30}$ & free qubits, ESP$\ge0.3$ & ESP$\ge0.1$\\
+\midrule
+today ($\varepsilon\approx0.0035$) & 0.19 & 0.09 & 0.04 & 11 & 21\\
+$3\times$ better & 0.57 & 0.46 & 0.34 & 33 & 63\\
+$10\times$ better & 0.85 & 0.79 & 0.72 & 110 & 211\\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,29 @@
+digraph G {
+  graph [rankdir=TB, fontname="Helvetica", nodesep=0.35, ranksep=0.32, bgcolor="white", pad=0.25];
+  node  [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=11, color="#bdbcb6", fillcolor="#fcfcfb", fontcolor="#0b0b0b", width=3.2];
+  edge  [color="#52514e", arrowsize=0.7, fontname="Helvetica", fontsize=9, fontcolor="#52514e"];
+
+  in   [label="Constrained problem\n(variables, constraints, objective)", fillcolor="#e8f0fb", color="#2a78d6"];
+  enc  [label="Read every constraint as a forbidden pattern\n(clause = negation of a pattern)"];
+  guard[label="Measure-and-flip dynamic circuit?\n(Z-basis checks + X corrections)", shape=diamond, width=2.6, fillcolor="#fdf1e8", color="#eb6834"];
+  cls  [label="Lemma 1: exactly a classical\nrandomized algorithm -> no quantum gain", fillcolor="#fdf1e8", color="#eb6834"];
+  pick [label="Choose variable order pi and condition budget K"];
+  pre  [label="Classical pre-analysis (no quantum hardware)\nLemma 3:  p = sum over solutions of 2^(-decisions)\nZX-calculus: T-count of A(pi, K)"];
+  sel  [label="Select K* = argmin  (pi/4) p^(-1/2) (2 T_A + T_O + T_S0)\n(more conditions: higher p, but costlier A)"];
+  prep [label="In-place preparation A: for each variable\nforced by a condition -> set it;  otherwise -> coin (H or Ry(q))"];
+  typ  [label="Constraint type?", shape=diamond, width=2.2, fillcolor="#eef7f2", color="#1baf7a"];
+  dc   [label="Downward-closed (packing, MIS, capacity):\nsupport = feasible set exactly", fillcolor="#eef7f2", color="#1baf7a"];
+  gen  [label="General (equalities, permutations):\nsound but dead ends possible -> flag + amplify", fillcolor="#eef7f2", color="#1baf7a"];
+  aa   [label="Amplitude amplification over A\n~ (pi/4) / sqrt(p) rounds\n(unknown p: exponential schedule or heralded weak measurement)"];
+  qaoa [label="CG-QAOA: initial state A_q|0>, cost phase,\nGrover mixer A_q e^{-i beta |0><0|} A_q^dagger  (q variational)"];
+  ver  [label="Measure + classical verification (Las Vegas):\nerrors cost repetitions, never wrong answers"];
+  res  [label="Resource chain: T-count -> code distance d\n-> physical qubits and runtime", fillcolor="#efedf9", color="#4a3aa7"];
+
+  in -> enc -> guard;
+  guard -> cls [label=" yes"];
+  guard -> pick [label=" no: use conditions coherently"];
+  pick -> pre -> sel -> prep -> typ;
+  typ -> dc; typ -> gen;
+  dc -> aa; dc -> qaoa; gen -> aa;
+  aa -> ver; qaoa -> ver; ver -> res;
+}

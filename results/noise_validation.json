@@ -1,0 +1,28 @@
+{
+ "ours_qaoa": {
+  "esp": 0.17992777903173465,
+  "cz": 450,
+  "depth": 472,
+  "qubits_used": 16,
+  "ideal_feasible": 1.0,
+  "ideal_quality": 0.717427966947344,
+  "model_feasible": 0.18072863081002397,
+  "sim_feasible": 0.21833333333333332,
+  "sim_feasible_se": 0.01686534360203832,
+  "sim_quality_postselected": 0.7128885927591837,
+  "shots": 600
+ },
+ "lcu_like": {
+  "esp": 0.24506207789860063,
+  "cz": 371,
+  "depth": 421,
+  "qubits_used": 16,
+  "ideal_feasible": 0.029537469527074332,
+  "ideal_quality": 0.5317961068222936,
+  "model_feasible": 0.00797575772272358,
+  "sim_feasible": 0.02,
+  "sim_feasible_se": 0.005715476066494082,
+  "sim_quality_postselected": 0.5397125267898484,
+  "shots": 600
+ }
+}

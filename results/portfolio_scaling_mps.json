@@ -1,0 +1,543 @@
+{
+ "a003_t02": {
+  "qubits": 12,
+  "periods": 2,
+  "assets": 3,
+  "f_opt": -1595.0,
+  "f_worst": 2718.0,
+  "qubits_slack_qubo": 20,
+  "opt_solution": [
+   "0 AAPL 0 1",
+   "0 MSFT 1 0"
+  ],
+  "uniform": {
+   "p_feas": 0.18,
+   "quality": 0.08770728031532576,
+   "best_gap": 0.029445861349408763,
+   "p_opt": 0.0,
+   "mean_f": 754.741
+  },
+  "A_q classical": {
+   "q": 0.1,
+   "p_feas": 1.0,
+   "quality": 0.5984367029909576,
+   "best_gap": 0.0,
+   "p_opt": 0.016,
+   "mean_f": 136.9425
+  },
+  "unbalanced p=1": {
+   "gamma": 1.35,
+   "beta": -0.7,
+   "grid_seconds": 0.28011083602905273,
+   "hardware": {
+    "cz": 101,
+    "depth": 137
+   },
+   "p_feas": 0.6355,
+   "quality": 0.5014812195687457,
+   "best_gap": 0.0,
+   "p_opt": 0.005,
+   "mean_f": -641.774
+  },
+  "hybrid p=1": {
+   "q": 0.35,
+   "gamma": 1.8,
+   "beta": -0.8,
+   "grid_seconds": 0.900874137878418,
+   "hardware": {
+    "cz": 124,
+    "depth": 187
+   },
+   "p_feas": 1.0,
+   "quality": 0.7354535126362162,
+   "best_gap": 0.0,
+   "p_opt": 0.023,
+   "mean_f": -454.011,
+   "hardware_per_shot_version": {
+    "cz": 38.8,
+    "depth": 70.2
+   }
+  },
+  "seconds": 47.952826261520386
+ },
+ "a004_t04": {
+  "qubits": 32,
+  "periods": 4,
+  "assets": 4,
+  "f_opt": -5055.0,
+  "f_worst": 11758.0,
+  "qubits_slack_qubo": 52,
+  "opt_solution": [
+   "0 AAPL 0 1",
+   "0 MSFT 1 0",
+   "0 GOOG 1 0",
+   "1 MSFT 0 1",
+   "1 GOOG 1 0",
+   "2 AAPL 1 0",
+   "2 NVDA 0 1",
+   "2 MSFT 0 1",
+   "2 GOOG 1 0"
+  ],
+  "uniform": {
+   "p_feas": 0.0305,
+   "quality": 0.016639891750431214,
+   "best_gap": 0.19675251293641824,
+   "p_opt": 0.0,
+   "mean_f": 2389.1225
+  },
+  "A_q classical": {
+   "q": 0.1,
+   "p_feas": 1.0,
+   "quality": 0.6521878308451793,
+   "best_gap": 0.07761850948670672,
+   "p_opt": 0.0,
+   "mean_f": 792.766
+  },
+  "unbalanced p=1": {
+   "gamma": 1.35,
+   "beta": -0.7,
+   "grid_seconds": 12.831774711608887,
+   "hardware": {
+    "cz": 572,
+    "depth": 394
+   },
+   "p_feas": 0.171,
+   "quality": 0.1280055611729019,
+   "best_gap": 0.06387914114078391,
+   "p_opt": 0.0,
+   "mean_f": -815.905
+  },
+  "hybrid p=1": {
+   "q": 0.45,
+   "gamma": 3.2,
+   "beta": -0.8,
+   "grid_seconds": 3.0733978748321533,
+   "hardware": {
+    "cz": 904,
+    "depth": 608
+   },
+   "p_feas": 1.0,
+   "quality": 0.7462341343008386,
+   "best_gap": 0.015880568607625052,
+   "p_opt": 0.0,
+   "mean_f": -788.4345,
+   "hardware_per_shot_version": {
+    "cz": 241.0,
+    "depth": 141.8
+   }
+  },
+  "seconds": 120.13839340209961
+ },
+ "a005_t04": {
+  "qubits": 40,
+  "periods": 4,
+  "assets": 5,
+  "f_opt": -7199.0,
+  "f_worst": 16705.0,
+  "qubits_slack_qubo": 60,
+  "opt_solution": [
+   "0 AAPL 0 1",
+   "0 MSFT 1 0",
+   "0 GOOG 1 0",
+   "0 GOOGL 1 0",
+   "1 MSFT 0 1",
+   "1 GOOG 1 0",
+   "2 AAPL 1 0",
+   "2 MSFT 0 1",
+   "2 GOOG 1 0"
+  ],
+  "uniform": {
+   "p_feas": 0.004,
+   "quality": 0.002252761044176707,
+   "best_gap": 0.2140227576974565,
+   "p_opt": 0.0,
+   "mean_f": 3953.612
+  },
+  "A_q classical": {
+   "q": 0.1,
+   "p_feas": 1.0,
+   "quality": 0.6476210676037483,
+   "best_gap": 0.06099397590361446,
+   "p_opt": 0.0,
+   "mean_f": 1224.266
+  },
+  "unbalanced p=1": {
+   "gamma": 1.35,
+   "beta": -0.5,
+   "grid_seconds": 27.847973585128784,
+   "hardware": {
+    "cz": 963,
+    "depth": 648
+   },
+   "p_feas": 0.0935,
+   "quality": 0.06994785391566265,
+   "best_gap": 0.05367302543507363,
+   "p_opt": 0.0,
+   "mean_f": -877.762
+  },
+  "hybrid p=1": {
+   "q": 0.25,
+   "gamma": 3.2,
+   "beta": -0.65,
+   "grid_seconds": 4.281527280807495,
+   "hardware": {
+    "cz": 1158,
+    "depth": 709
+   },
+   "p_feas": 1.0,
+   "quality": 0.6873123117469879,
+   "best_gap": 0.01639892904953146,
+   "p_opt": 0.0,
+   "mean_f": 275.4865,
+   "hardware_per_shot_version": {
+    "cz": 276.2,
+    "depth": 189.6
+   }
+  },
+  "seconds": 142.18800568580627
+ },
+ "a010_t04": {
+  "qubits": 80,
+  "periods": 4,
+  "assets": 10,
+  "f_opt": -19174.0,
+  "f_worst": 22907.0,
+  "qubits_slack_qubo": 100,
+  "opt_solution": [
+   "0 AAPL 0 1",
+   "0 GOOG 1 0",
+   "0 GOOGL 1 0",
+   "0 AVGO 1 0",
+   "1 AMZN 1 0",
+   "1 META 1 0",
+   "1 TSLA 0 1",
+   "1 WMT 0 1",
+   "2 NVDA 0 1",
+   "2 AMZN 1 0",
+   "2 META 1 0",
+   "2 AVGO 1 0"
+  ],
+  "uniform": {
+   "p_feas": 0.0,
+   "quality": 0.0,
+   "best_gap": null,
+   "p_opt": 0.0,
+   "mean_f": 4805.356
+  },
+  "A_q classical": {
+   "q": 0.1,
+   "p_feas": 1.0,
+   "quality": 0.5135437727240323,
+   "best_gap": 0.1948385257004349,
+   "p_opt": 0.0,
+   "mean_f": 1296.5645
+  },
+  "unbalanced p=1": {
+   "gamma": 1.0,
+   "beta": -0.5,
+   "grid_seconds": 234.0769166946411,
+   "hardware": {
+    "cz": 4056,
+    "depth": 1354
+   },
+   "p_feas": 0.0185,
+   "quality": 0.011137045222309355,
+   "best_gap": 0.19980513771060573,
+   "p_opt": 0.0,
+   "mean_f": -3650.4445
+  },
+  "hybrid p=1": {
+   "q": 0.35,
+   "gamma": 1.8,
+   "beta": -0.65,
+   "grid_seconds": 7.924226999282837,
+   "hardware": {
+    "cz": 2546,
+    "depth": 1214
+   },
+   "p_feas": 1.0,
+   "quality": 0.5894411492122336,
+   "best_gap": 0.17200161593118035,
+   "p_opt": 0.0,
+   "mean_f": -1897.273,
+   "hardware_per_shot_version": {
+    "cz": 1204.8,
+    "depth": 449.8
+   }
+  },
+  "seconds": 392.8046073913574
+ },
+ "a010_t07": {
+  "qubits": 140,
+  "periods": 7,
+  "assets": 10,
+  "f_opt": -47054.0,
+  "f_worst": 55099.0,
+  "qubits_slack_qubo": 175,
+  "opt_solution": [
+   "0 AAPL 0 1",
+   "0 GOOG 1 0",
+   "0 GOOGL 1 0",
+   "0 AVGO 1 0",
+   "1 AMZN 1 0",
+   "1 META 1 0",
+   "1 TSLA 0 1",
+   "1 WMT 0 1",
+   "2 NVDA 0 1",
+   "2 AMZN 1 0",
+   "2 META 1 0",
+   "2 AVGO 1 0",
+   "3 NVDA 0 1",
+   "3 META 1 0",
+   "3 TSLA 1 0",
+   "3 AVGO 0 1",
+   "4 NVDA 1 0",
+   "4 AMZN 1 0",
+   "4 META 1 0",
+   "4 TSLA 0 1",
+   "5 GOOG 1 0",
+   "5 GOOGL 1 0",
+   "5 META 0 1",
+   "5 TSLA 1 0"
+  ],
+  "uniform": {
+   "p_feas": 0.0,
+   "quality": 0.0,
+   "best_gap": null,
+   "p_opt": 0.0,
+   "mean_f": 8730.493
+  },
+  "A_q classical": {
+   "q": 0.1,
+   "p_feas": 1.0,
+   "quality": 0.5162443883194817,
+   "best_gap": 0.29098509099096453,
+   "p_opt": 0.0,
+   "mean_f": 2363.087
+  },
+  "unbalanced p=1": {
+   "gamma": 1.0,
+   "beta": -0.7,
+   "grid_seconds": 781.606139421463,
+   "hardware": {
+    "cz": 7452,
+    "depth": 2210
+   },
+   "p_feas": 0.0055,
+   "quality": 0.003556253854512349,
+   "best_gap": 0.24061946296241912,
+   "p_opt": 0.0,
+   "mean_f": -17313.7725
+  },
+  "hybrid p=1": {
+   "q": 0.35,
+   "gamma": 1.8,
+   "beta": -0.65,
+   "grid_seconds": 13.933827877044678,
+   "hardware": {
+    "cz": 4655,
+    "depth": 1399
+   },
+   "p_feas": 1.0,
+   "quality": 0.6245310416727851,
+   "best_gap": 0.18489912190537722,
+   "p_opt": 0.0,
+   "mean_f": -8698.7195,
+   "hardware_per_shot_version": {
+    "cz": 2375.6,
+    "depth": 607.8
+   }
+  },
+  "seconds": 939.7533845901489
+ },
+ "a010_t10": {
+  "qubits": 200,
+  "periods": 10,
+  "assets": 10,
+  "f_opt": -72203.0,
+  "f_worst": 79704.0,
+  "qubits_slack_qubo": 250,
+  "opt_solution": [
+   "0 AAPL 0 1",
+   "0 GOOG 1 0",
+   "0 GOOGL 1 0",
+   "0 AVGO 1 0",
+   "1 AMZN 1 0",
+   "1 META 1 0",
+   "1 TSLA 0 1",
+   "1 WMT 0 1",
+   "2 NVDA 0 1",
+   "2 AMZN 1 0",
+   "2 META 1 0",
+   "2 AVGO 1 0",
+   "3 NVDA 0 1",
+   "3 META 1 0",
+   "3 TSLA 1 0",
+   "3 AVGO 0 1",
+   "4 NVDA 1 0",
+   "4 AMZN 1 0",
+   "4 META 1 0",
+   "4 TSLA 0 1",
+   "5 GOOG 1 0",
+   "5 GOOGL 1 0",
+   "5 META 0 1",
+   "5 TSLA 1 0",
+   "6 NVDA 0 1",
+   "6 GOOG 1 0",
+   "6 GOOGL 1 0",
+   "6 TSLA 1 0",
+   "7 AAPL 0 1",
+   "7 NVDA 1 0",
+   "7 TSLA 0 1",
+   "7 WMT 1 0",
+   "8 AAPL 1 0",
+   "8 NVDA 1 0",
+   "8 AVGO 1 0",
+   "8 WMT 0 1"
+  ],
+  "uniform": {
+   "p_feas": 0.0,
+   "quality": 0.0,
+   "best_gap": null,
+   "p_opt": 0.0,
+   "mean_f": 11735.217
+  },
+  "A_q classical": {
+   "q": 0.1,
+   "p_feas": 1.0,
+   "quality": 0.5054818276972095,
+   "best_gap": 0.34243978223518334,
+   "p_opt": 0.0,
+   "mean_f": 2917.772
+  },
+  "unbalanced p=1": {
+   "gamma": 1.0,
+   "beta": -0.7,
+   "grid_seconds": 659.7822601795197,
+   "hardware": null,
+   "p_feas": 0.0005,
+   "quality": 0.00032317799706399307,
+   "best_gap": 0.3536440058720138,
+   "p_opt": 0.0,
+   "mean_f": -30313.8345
+  },
+  "hybrid p=1": {
+   "q": 0.35,
+   "gamma": 1.8,
+   "beta": -0.65,
+   "grid_seconds": 24.208550453186035,
+   "hardware": null,
+   "p_feas": 1.0,
+   "quality": 0.6206189444857709,
+   "best_gap": 0.2277906877234097,
+   "p_opt": 0.0,
+   "mean_f": -14572.362
+  },
+  "seconds": 687.2563760280609
+ },
+ "a010_t15": {
+  "qubits": 300,
+  "periods": 15,
+  "assets": 10,
+  "f_opt": -104003.0,
+  "f_worst": 127659.0,
+  "qubits_slack_qubo": 375,
+  "opt_solution": [
+   "0 AAPL 0 1",
+   "0 GOOG 1 0",
+   "0 GOOGL 1 0",
+   "0 AVGO 1 0",
+   "1 AMZN 1 0",
+   "1 META 1 0",
+   "1 TSLA 0 1",
+   "1 WMT 0 1",
+   "2 NVDA 0 1",
+   "2 AMZN 1 0",
+   "2 META 1 0",
+   "2 AVGO 1 0",
+   "3 NVDA 0 1",
+   "3 META 1 0",
+   "3 TSLA 1 0",
+   "3 AVGO 0 1",
+   "4 NVDA 1 0",
+   "4 AMZN 1 0",
+   "4 META 1 0",
+   "4 TSLA 0 1",
+   "5 GOOG 1 0",
+   "5 GOOGL 1 0",
+   "5 META 0 1",
+   "5 TSLA 1 0",
+   "6 NVDA 0 1",
+   "6 GOOG 1 0",
+   "6 GOOGL 1 0",
+   "6 TSLA 1 0",
+   "7 AAPL 0 1",
+   "7 NVDA 1 0",
+   "7 TSLA 0 1",
+   "7 WMT 1 0",
+   "8 AAPL 1 0",
+   "8 NVDA 1 0",
+   "8 AVGO 1 0",
+   "8 WMT 0 1",
+   "9 AAPL 1 0",
+   "9 NVDA 0 1",
+   "9 AVGO 0 1",
+   "9 WMT 1 0",
+   "10 AMZN 1 0",
+   "10 TSLA 0 1",
+   "10 AVGO 0 1",
+   "10 WMT 1 0",
+   "11 AAPL 0 1",
+   "11 NVDA 1 0",
+   "11 TSLA 0 1",
+   "11 AVGO 1 0",
+   "12 NVDA 0 1",
+   "12 GOOG 1 0",
+   "12 GOOGL 1 0",
+   "12 AVGO 0 1",
+   "13 NVDA 1 0",
+   "13 META 1 0",
+   "13 TSLA 0 1",
+   "13 AVGO 0 1"
+  ],
+  "uniform": {
+   "p_feas": 0.0,
+   "quality": 0.0,
+   "best_gap": null,
+   "p_opt": 0.0,
+   "mean_f": 17588.119
+  },
+  "A_q classical": {
+   "q": 0.1,
+   "p_feas": 1.0,
+   "quality": 0.5168502128100422,
+   "best_gap": 0.3626231319767592,
+   "p_opt": 0.0,
+   "mean_f": 7924.446
+  },
+  "unbalanced p=1": {
+   "gamma": 1.0,
+   "beta": -0.7,
+   "grid_seconds": 1454.1074402332306,
+   "hardware": null,
+   "p_feas": 0.0,
+   "quality": 0.0,
+   "best_gap": null,
+   "p_opt": 0.0,
+   "mean_f": -32482.2235
+  },
+  "hybrid p=1": {
+   "q": 0.45,
+   "gamma": 2.5,
+   "beta": -0.65,
+   "grid_seconds": 36.34882855415344,
+   "hardware": null,
+   "p_feas": 1.0,
+   "quality": 0.6502205411332027,
+   "best_gap": 0.23002477747753192,
+   "p_opt": 0.0,
+   "mean_f": -22972.391
+  },
+  "seconds": 1497.457703590393
+ }
+}

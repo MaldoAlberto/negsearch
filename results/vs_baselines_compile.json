@@ -1,0 +1,134 @@
+[
+ {
+  "cz": 92,
+  "depth": 168,
+  "qubits": 8,
+  "esp": 0.7357380269895579,
+  "dur_t2": 0.06706605224183623,
+  "n": 8,
+  "method": "unbalanced",
+  "pruned": false,
+  "zz": 28
+ },
+ {
+  "cz": 92,
+  "depth": 167,
+  "qubits": 8,
+  "esp": 0.7357380269895579,
+  "dur_t2": 0.06706605224183623,
+  "n": 8,
+  "method": "Fourier LCU (1 basis circuit)",
+  "pruned": false,
+  "zz": 28
+ },
+ {
+  "cz": 72,
+  "depth": 163,
+  "qubits": 8,
+  "esp": 0.7970921018060977,
+  "dur_t2": 0.041469379686325004,
+  "n": 8,
+  "method": "unbalanced",
+  "pruned": true,
+  "zz": 20
+ },
+ {
+  "cz": 34,
+  "depth": 96,
+  "qubits": 8,
+  "esp": 0.9021897241745689,
+  "dur_t2": 0.026741839027580053,
+  "n": 8,
+  "method": "Fourier LCU (1 basis circuit)",
+  "pruned": true,
+  "zz": 12
+ },
+ {
+  "cz": 581,
+  "depth": 505,
+  "qubits": 16,
+  "esp": 0.13347365075952677,
+  "dur_t2": 0.22051659636810572,
+  "n": 16,
+  "method": "unbalanced",
+  "pruned": false,
+  "zz": 120
+ },
+ {
+  "cz": 283,
+  "depth": 273,
+  "qubits": 16,
+  "esp": 0.3757657881259767,
+  "dur_t2": 0.10460977800706328,
+  "n": 16,
+  "method": "Fourier LCU (1 basis circuit)",
+  "pruned": false,
+  "zz": 72
+ },
+ {
+  "cz": 417,
+  "depth": 406,
+  "qubits": 16,
+  "esp": 0.23773039415502167,
+  "dur_t2": 0.15885188512183684,
+  "n": 16,
+  "method": "unbalanced",
+  "pruned": true,
+  "zz": 104
+ },
+ {
+  "cz": 70,
+  "depth": 104,
+  "qubits": 16,
+  "esp": 0.7794268926163928,
+  "dur_t2": 0.022025212631579142,
+  "n": 16,
+  "method": "Fourier LCU (1 basis circuit)",
+  "pruned": true,
+  "zz": 24
+ },
+ {
+  "cz": 1262,
+  "depth": 791,
+  "qubits": 24,
+  "esp": 0.005069320104607431,
+  "dur_t2": 0.36677352629465415,
+  "n": 24,
+  "method": "unbalanced",
+  "pruned": false,
+  "zz": 276
+ },
+ {
+  "cz": 633,
+  "depth": 734,
+  "qubits": 24,
+  "esp": 0.06716701741592725,
+  "dur_t2": 0.3601010228448453,
+  "n": 24,
+  "method": "Fourier LCU (1 basis circuit)",
+  "pruned": false,
+  "zz": 156
+ },
+ {
+  "cz": 1122,
+  "depth": 812,
+  "qubits": 27,
+  "esp": 0.01445008705432834,
+  "dur_t2": 0.33551051296221407,
+  "n": 24,
+  "method": "unbalanced",
+  "pruned": true,
+  "zz": 228
+ },
+ {
+  "cz": 101,
+  "depth": 95,
+  "qubits": 24,
+  "esp": 0.6854180723121126,
+  "dur_t2": 0.029409119198911315,
+  "n": 24,
+  "method": "Fourier LCU (1 basis circuit)",
+  "pruned": true,
+  "zz": 36
+ }
+]

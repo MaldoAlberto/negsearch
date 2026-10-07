@@ -17,6 +17,11 @@ negsearch/core.py        problem families, negative-condition planner, exact suc
 negsearch/circuits.py    Clifford+T circuits: in-place preparation A, oracle O, reflection S0, amplification
 negsearch/zxtools.py     PyZX simplification, gate accounting, equivalence checks
 negsearch/heralded.py    heralded weak-measurement search for unknown success probability (Appendix A)
+negsearch/qaoa_mis.py    constraint-guided QAOA (CG-QAOA) for maximum independent set: exact simulation + baselines
+negsearch/qaoa_circuits.py  hardware-ready Qiskit circuits: A_q, CG-QAOA (Grover mixer), penalty QAOA, Hadfield QAOA
+negsearch/portfolio*.py  QOBLIB portfolio model (exact objective), negation-forced A_q for inequalities, QAOA variants
+negsearch/automaton.py   general theory: constraint automaton of ANY feasible set -> A_q (exact) -> circuit compiler, Grover / QAOA numerics
+negsearch/families.py    seven constraint families (cardinality, knapsack, independent set, set packing, exact cover, colouring, assignment)
 experiments/             one script per experiment (E0–E6) + analysis.py (figures, tables, numbers.tex)
 instances/               every problem instance used, DIMACS (.cnf) with seeds and variable orders
 results/                 raw results (JSON / JSONL) produced by the scripts
@@ -46,6 +51,71 @@ latexmk -pdf main.tex
 All random streams are seeded with fixed integers (E3 uses `zlib.crc32(family)`), so instances are
 reproducible; the generated instances are also stored in `instances/`.
 
+## CG-QAOA on QOBLIB (extension to QAOA)
+`notebooks/CG_QAOA_QOBLIB_tutorial.ipynb` extends the method to QAOA: the initial state and the Grover mixer use the
+negation-forced preparation A_q, which for independence constraints has support exactly on the feasible set.
+It compares CG-QAOA with penalty (QUBO) QAOA and Hadfield's constraint-preserving QAOA on QOBLIB maximum-independent-set
+instances (`instances/qoblib/`, CC BY 4.0), quantifies the amplification advantage over classical sampling of the same
+distribution, and contains a hardware cell (`RUN_HARDWARE = True`).
+Reproduce the study: `git clone https://github.com/ZIB-AOPT/QOBLIB qoblib` and
+`python experiments/cg_qaoa_experiments.py results/cg_qaoa_benchmark_subinstances.json results/cg_qaoa_sub.json 2`.
+
+## Beyond MIS: QOBLIB portfolio optimisation (inequality constraints)
+`notebooks/Portfolio_QOBLIB_constraint_guided_QAOA.ipynb` applies the negation-forced preparation to QOBLIB class
+`06-portfolio` (budget and capital inequalities per period). `negsearch/portfolio.py` reproduces the official checker's
+objective exactly and builds A_q with exact look-ahead forcing (support = feasible set, no slack qubits);
+`negsearch/portfolio_circuits.py` gives the Qiskit circuits (counter-based A_q, XY and Grover mixers).
+Compared designs: slack-QUBO penalty QAOA, unbalanced-penalty QAOA, A_q + X mixer, A_q + XY mixer (hybrid), A_q + Grover mixer.
+```bash
+python experiments/portfolio_qaoa.py 3                 # exact simulation, p = 1..3, three instances
+python experiments/portfolio_penalty_scan.py 3         # penalty weights re-tuned (also PEN_ALPHAS=0.015625,0.03125)
+python experiments/portfolio_resources.py              # CZ / depth on ibm_fez (FakeFez)
+python experiments/portfolio_noisy.py 2000             # ibm_fez noise model
+python experiments/portfolio_hardware_opt.py 4000     # shorts-first order + lean counters: CZ and noise model
+python experiments/portfolio_prune.py                  # path XY and sparse phase operator (ideal quality vs CZ)
+python experiments/portfolio_noisy_lean.py 4000        # noise model for the cheapest hybrid
+python experiments/portfolio_analysis.py               # figures/fig_portfolio_*.png, tables/portfolio.md
+```
+Instances: `instances/qoblib_portfolio/` (CC BY 4.0, see the README there).
+
+## General constraint problems (Sections 3-7 of the paper)
+`negsearch/automaton.py` builds the minimal constraint automaton (reduced OBDD) of any feasible set, the state
+A_q|0> = sum_{x in F} sqrt(mu_q(x)) |x> (support exactly F), and compiles it to a Qiskit circuit with no problem-specific code.
+The same pipeline runs amplitude amplification and QAOA (penalty, A_q + Grover mixer, A_q + neighbour mixer) on seven
+constraint types, validates the circuits against the exact formulas, and measures the width-vs-completeness dial.
+```bash
+python experiments/general_grover.py       # amplification iterations, 7 families x 5 instances (+ 4x4 assignment, n = 16)
+python experiments/general_qaoa.py         # QAOA p = 1..3 (about 15 min on 2 cores)
+python experiments/general_circuits.py     # gate-level Grover / QAOA on Aer vs exact formulas (n = 6)
+python experiments/general_relaxation.py   # sound-but-incomplete automaton (knapsack)
+python experiments/general_tables.py       # tables/general_*.tex and figures/fig_general.*
+```
+The automaton is built from the truth table (n <= 16); its existence and width are the general result. For larger
+instances it is written from the problem structure, as the counters of the portfolio circuit.
+
+## Hardware-ready example for the general construction
+`notebooks/General_constraints_Grover_QAOA_hardware.ipynb` (English): a six-variable exact-cover instance, the automaton, the circuit A_q
+(24 CZ), one amplification iteration (333 CZ on the ibm_fez layout with the default multi-controlled synthesis; about 224 CZ with the V-chain of `negsearch/depth_study.py`), the ibm_fez noise-model prediction, and a cell that runs it on real
+hardware (`RUN_HARDWARE = True`, your own key in `apikey_personal.json`, which is git-ignored). Builder: `notebooks/build_general_notebook.py`.
+Scale and limits: `experiments/general_scaling_mps.py` (structural automata, Aer MPS up to 80 variables), `experiments/general_cost.py`
+(gate cost per iteration, standard Grover vs A_q), `experiments/general_limits.py` (market split: where the width explodes).
+
+## Running the hardware experiment (predictions -> data)
+```bash
+python experiments/hardware_general.py --dry-run --seeds 2 --shots 2000        # pipeline check on the FakeFez noise model (no account)
+python experiments/hardware_general.py --estimate --seeds 3 --shots 8000        # circuit / shot budget, nothing is run
+python experiments/hardware_general.py --backend ibm_fez --apikey apikey_personal.json --shots 8000 --seeds 3 --modes plain,dd_twirl
+python experiments/hardware_general_report.py results/hardware_general_<tag>.json --pred results/hardware_general_dryrun.json
+```
+Circuits: uniform |+>^6 (reference), A_q (24 CZ), A_q + one amplification iteration (about 330 CZ), and a depth-matched noise control
+(A_q followed by barrier-separated CZ pairs). Several transpiler seeds give different layouts; modes are plain and dynamical decoupling +
+gate twirling. The report gives 95 % Wilson intervals and three one-sided tests: H1 A_q > uniform (feasibility by construction), H2 iteration > A_q,
+H3 iteration > noise control. A dry run is a noise-model prediction and is labelled as such. The API key file is git-ignored; never commit it.
+
+Depth and legality without running anything: `python experiments/hardware_depth_check.py` (20 transpiler seeds on the ibm_fez topology:
+CZ, depth, 2-qubit depth, scheduled duration against T1/T2, estimated success probability = product of gate errors; all circuits checked native and on coupling-map edges).
+The noise-control padding is serial (full-width barriers), so its duration matches the amplification circuit (30 us vs 30 us).
+
 ## Hardware example
 `notebooks/Mochila_multiple_condiciones_negadas.ipynb` encodes a multiple-knapsack problem as negative
 conditions, simulates it (ideal and `ibm_fez` noise model) and runs it on IBM Quantum when
@@ -56,3 +126,136 @@ See `CITATION.cff`.
 
 ## License
 MIT (see `LICENSE`).
+
+
+## Depth study across constraint families (compile only)
+
+`python experiments/hardware_depth_multi.py` and `python experiments/hardware_depth_variants.py` compile A_q, one Grover iteration and one
+Grover-mixer QAOA layer for seven families on the ibm_fez topology (FakeFez), comparing binary and one-hot automaton registers and, for
+cardinality constraints, a Dicke-state preparation (`negsearch/dicke.py`). Nothing is executed; results in `results/hardware_depth_*.json`.
+Summary: only the exact-cover instance (6 sets, 4 elements) and the Dicke-based 3-of-6 cardinality instance have an iteration/QAOA layer
+within reach of current hardware (about 200-530 CZ); the other families are worth running only for A_q alone.
+
+`python experiments/qaoa_xy_vs_grover.py`: QAOA on the 3-of-6 cardinality instance with the Dicke state, XY-ring mixer against Grover mixer
+(angles optimised without noise, compiled on ibm_fez, nothing executed). Negative results kept in the repository: QAP-based initial layout
+(`negsearch/qap_layout.py`, worse than the default layout) and transpiler approximation (invalid: it breaks the support-F condition).
+Note: A can be any preparation with support exactly F (Remark in the paper); mu = 2^-D is specific to the automaton compiler.
+
+## Paper layout (v9)
+Main text: constraint automata and the state A_q (Sec. 3), Grover on A_q (4), QAOA on A_q (5), one pipeline on seven constraint types (6),
+gate cost and hardware viability (7), portfolio case study (8), discussion, conclusion. Appendices: classicality of measure-and-flip circuits,
+negation-forced preparation for CNF, ZX co-design, CNF experiments, heralded measurement, noisy simulation. Source files: `main.tex`,
+`sec_construction.tex`, `sec_grover.tex`, `sec_qaoa.tex`, `sec_pipeline.tex`, `sec_hardware.tex`, `sec_portfolio.tex`, `app_cnf.tex`.
+
+## Larger multi-constraint case, classical preprocessing and device circuits (Section 8 of the paper)
+- `python experiments/large_case.py`: scaling of the coherent state, variable order, interface conditioning (writes `results/large_case.json`).
+- `python experiments/large_case_quality.py`: quality against penalty and unbalanced QAOA at n=16 (`results/large_case_quality.json`).
+- `python experiments/hardware_large_case_validate.py`: validation of the circuits (n=8 QAOA against exact numerics, n=24 preparation on MPS).
+- `python experiments/hardware_large_case.py --dry-run --skip-qaoa --tag _n24` and `... --dry-run --assets 4 --periods 1 --sectors 2,2 --tag _n8`:
+  build and compile the circuits on the ibm_fez topology, write QPY/OpenQASM 3 to `hardware_circuits/`. Add `--run --apikey apikey_personal.json
+  --backend ibm_fez --shots 4000` to submit (circuits below `--min-esp 0.05` are skipped); analyse with
+  `python experiments/hardware_large_case_report.py results/hardware_large_case_n24_raw.json`. No device data are included.
+- `python experiments/large_case_tables.py` regenerates the LaTeX tables of that section.
+- Ideal / optimised / executable analysis (all compile-only on the `ibm_fez` topology, nothing executed):
+  - `python experiments/qaoa_realistic.py`: one QAOA layer with Grover mixers, pair-exchange mixers and objective pruning at n=8, 12, 16, 24 (`results/qaoa_realistic.json`).
+  - `python experiments/qaoa_realistic_quality.py`: exact quality of those variants at n=8 and n=16 (`results/qaoa_realistic_quality.json`; slow).
+  - `python experiments/preprocess_study.py`: clause cleaning, variable-order search (`negsearch/preprocess.py`) and the symmetry-aware lowering of the block preparation (`negsearch/symlower.py`, `negsearch/onehot_rc.py`) (`results/preprocess_study.json`).
+  - `python experiments/block_decomposition.py`: problems of 120 and 192 variables as many small block circuits, with an exact simulation of the block scheme and a simple noise model (`results/block_decomposition_sym.json`). In these blocks QAOA matches uniform sampling with the same shots; the experiment shows executability, not a benefit.
+  - `python experiments/grover_future.py`: fault-tolerant cost model for amplitude amplification over the coherent state (`results/grover_future.json`; a model, not a measurement).
+  - `python experiments/large_case_tables2.py` regenerates the tables of those analyses (`tables/large_qaoa_real.tex`, `large_blocks.tex`, `large_grover_ft.tex`, `large_order.tex`, `large_symmetry.tex`).
+
+
+## v12: residual core, four methods, hardware estimate (Section `sec_core`)
+```bash
+python experiments/prune_circuit.py && python experiments/prune_circuit_tuples.py   # exact pruning stages (compile only)
+python experiments/core_map.py                      # residual quantum core vs constraint looseness (counting)
+python experiments/four_methods.py                  # gate counts of the four methods on the core (not routed)
+python experiments/four_methods_routed.py           # routed to ibm_fez topology
+python experiments/case_four.py                     # n=64 case, ours/LCU/unbalanced/Grover (ideal + compile + depolarising model)
+CF_M=5 CF_T=5 CF_FAM=medium CF_FMIN=18 CF_FMAX=20 CF_TAG=case_four_n100 CF_RESTARTS=3 CF_MAXIT=40 python experiments/case_four.py   # n=100
+CF_BIAS=0.35 CF_M=6 CF_T=8 CF_FAM=medium CF_FMIN=24 CF_FMAX=30 CF_LOGFMAX=19 CF_TAG=case_large_n192 python experiments/case_large.py   # n=192 (compile + ours ideal)
+python experiments/noise_validation.py              # ESP / depolarising model vs gate-level Aer noise (FakeFez)
+python experiments/make_tables_v12.py               # tables/core_*.tex
+```
+Nothing here was executed on a device. Never commit `apikey*.json` (excluded in `.gitignore`).
+python experiments/grover_cheaper.py   # one Grover iteration: ancilla-free vs V-chain reflection (also CF_TAG=grover_cheaper_n100 / _n192 with the case env vars)
+python experiments/fused_mixer.py && python experiments/swap_network_objective.py   # fusion of objective with swaps (negative results; CF_* env vars select the case)
+python experiments/generic_vs_symmetric.py   # generic automaton preparation vs symmetric lowering (CF_* env vars select the case)
+python experiments/mbu_compare.py   # measurement-based uncomputation of the generic register (CF_* env vars select the case)
+python experiments/hybrid_nocost.py && python experiments/hybrid_quality.py   # layer without two-qubit objective; mean-field stand-in quality (CF_* env vars select the case)
+
+## v19: ~100-qubit hardware package (notebooks/HW100_*.ipynb, negsearch/hw100.py)
+Twelve independent 10-qubit blocks (n = 120 variables, interface drawn classically) run in one 120-qubit circuit; methods: ours (p=1 light / full / p=0 preparation only),
+uniform control, single-basis Fourier-LCU and unbalanced penalty (same block decomposition, angles trained by exact simulation).
+1. `notebooks/HW100_01_build.ipynb`: instance, training, compilation onto disjoint regions, noise-model prediction; writes `hardware_circuits/hw100/` (already provided, built on the FakeFez snapshot).
+2. `notebooks/HW100_02_run.ipynb`: `MODE = 'model' | 'aer' | 'ibm'`. For `ibm` put your key in `apikey_personal.json` (`{"apikey": "..."}`; ignored by git, never in the zip) and rerun notebook 1 first with `USE_LIVE_BACKEND = True`.
+3. `notebooks/HW100_03_analyze.ipynb`: feasibility per block with Wilson intervals, assembled feasible assignments, quality, pre-stated PASS/FAIL criteria.
+`python experiments/make_hw100_notebooks.py` regenerates the notebooks.
+
+## v20: paper restructured
+Main text: theory (`sec_construction`, `sec_grover`, `sec_qaoa`), validation (`sec_validation`), classical reduction and residual core (`sec_reduction`), comparison with the quantum state of the art and hardware reach (`sec_sota`), discussion and conclusion.
+Appendices: `app_pipeline` (A), `app_hardware` (B), `app_large` (C), `app_core` (D), `app_hw100` (E), `app_portfolio` (F), `app_cnf` (G--).
+Every table and figure has an `\orig{...}` line (exact / compiled / noise model / gate-level simulation / estimate); nothing is measured on a device.
+
+## v21: stronger baselines
+
+```
+BS_SEEDS=5,6,7 python experiments/baselines_strong.py   # env: BS_TUPLES, BS_RESTARTS, BS_PMAX, BS_TAG, CF_*
+python experiments/make_baselines_table.py             # tables/core_baselines.tex
+python experiments/make_hw100_table.py                 # tables/hw100_pred.tex
+```
+
+All baselines (Fourier-LCU variant, unbalanced penalty, XY mixer) use the warm start; the 120-qubit notebooks (`HW100_*`) now have seven circuits and the criterion 2 split into 2a (preparation) and 2b (p=1 layer), the latter predicted to fail against `unbalanced`. Everything is exact simulation, compiled counts or noise models; nothing is measured.
+
+## v22: how the block scales with the number of constraints
+
+```
+python experiments/constraint_scaling_structured.py   # disjoint groups (Dicke) vs penalty layer, generic automaton at n=12
+CS_SEEDS=1,2 CS_M=8 CS_NP=6 python experiments/constraint_scaling.py   # random overlapping constraints, generic automaton circuit
+python experiments/constraint_interface.py            # interface conditioning: width and CZ per branch vs s
+python experiments/plot_constraint_scaling.py         # figures/constraint_scaling.pdf
+```
+Exact enumeration and compiled counts (all-to-all CX basis); no noise, no device.
+
+## v23: optimised Dicke block
+
+`negsearch/dicke_opt.py` (same state as `negsearch.dicke`, fidelity 1 for n<=14): 4-CX / 3-CX doubly controlled RY, pruned controlled-swap decompression (`symmetric_block_prep_opt`).
+`negsearch/symlower.py` uses it when `NS_OPT_PREP=1`; `negsearch/hw100.py` sets it by default (set `NS_OPT_PREP=0` to reproduce v21 numbers). Older core tables (`core_*`) were computed with the previous preparation.
+
+```
+python experiments/dicke_optimised.py     # results/dicke_optimised.json (routed on FakeFez snapshot)
+python experiments/make_dicke_table.py    # tables/dicke_opt.tex
+```
+- `experiments/three_symbol_exchange.py`: negative result (three-symbol exchange network costs more than the controlled-swap chain).
+- `negsearch/dicke_opt.py`: `NS_REL_PHASE=1` replaces the Toffoli in each controlled swap by a relative-phase Toffoli (5 instead of 7 CX per swap; same support and magnitudes, phases in multiples of pi/2). Off by default; angles must be retrained on the actual circuit.
+- `experiments/cswap_resynth.py`: phase-exact numerical resynthesis of the controlled move (no exact solution with up to 3 CX; longer templates not finished).
+
+## v27: cost-informed preparation and retraining
+
+```
+python experiments/retrain_relphase.py      # retrain gamma, beta on the actual circuit: exact vs relative-phase swaps (12 blocks)
+python experiments/cost_informed_prep.py    # ideal potential: uniform / product tilt / Boltzmann starts
+python experiments/tilted_prep.py           # same tilts realised by changing only the Dicke angles (circuit state vector)
+python experiments/baselines_biased.py      # fairness: baselines with the same classical information
+python experiments/make_tilt_table.py       # tables/tilted_prep.tex
+```
+All exact simulation of the logical circuits; classical information from the block QUBO; nothing is measured.
+- `python experiments/make_arxiv.py` builds `arxiv_package.zip` (main.tex, all inputs, figures, main.bbl) and test-compiles it in a clean directory.
+- The 120-qubit package now has 12 circuits (v28): `ours_tilt_p0`, `ours_tilt` and the biased baselines `lcu_b`, `unbalanced_b`, `xy_b` (classical tilt, `negsearch/tilt.py`); notebook criteria 2c and 4b.
+
+## v30
+- Compaction: merged the Dicke-block and swap-chain paragraphs, shortened the generic-automaton, combining, techniques and hardware paragraphs of the core appendix and the 100-200-variable block paragraph, and removed duplicates between Sec. sota and the 120-qubit appendix (35 -> 34 pages; all numbers kept).
+- New `results/hw100_depths.json`, `tables/hw100_cost.tex`: total depth, two-qubit depth, CZ count, scheduled duration and estimated IBM QPU time/cost of the twelve 120-qubit circuits (compiled on the FakeFez snapshot; estimate only, nothing executed).
+
+## v31
+- Panel cross-references (a,b,c) to Fig. 2 in the constraint-scaling paragraph; Table 3 mean±std now set in math mode; conclusion states the predicted failure of criterion 2b as a calibration check.
+
+## v32
+- Reading guide paragraph in the introduction (key idea, two uses, where to read what, impact stated plainly).
+
+## v33
+- `experiments/architectures.py`, `results/architectures_b{1,8}.json`, `tables/arch.tex`: one block compiled to all-to-all, grid, ring, heavy-hex patch and line, with CZ and CZ+fractional RZZ gate sets (compiled counts, uniform error model; Sec. "Does the architecture matter?" in the 120-qubit appendix).
+- `notebooks/Colab_architectures_and_baselines.ipynb`: Colab runner (GPU optional); untested on a GPU runtime.
+
+## v34
+- Intro: long sentences split; AI-use statement now states that the final reading and every claim are the author's.
